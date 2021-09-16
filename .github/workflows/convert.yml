@@ -11,6 +11,7 @@ jobs:
     name: convert
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         svn_repo:
           - ghostlinkd
