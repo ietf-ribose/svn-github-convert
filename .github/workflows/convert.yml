@@ -56,6 +56,8 @@ jobs:
 
       - name: Convert SVN to Git via reposurgeon
         working-directory: conversion/${{ matrix.svn_repo }}
+        env:
+          TERM: xterm-256color
         run: |
           ln -s  ../../trac-svn-db/svn/${{ matrix.svn_repo }} ${{ matrix.svn_repo }}-mirror
           make
@@ -64,7 +66,7 @@ jobs:
       - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
         working-directory: git/${{ matrix.svn_repo }}
         run: |
-          git remote set-url origin \
+          git remote add origin \
             https://${{ secrets.IETF_RIBOSE_CI_USERNAME }}:${{ secrets.IETF_RIBOSE_CI_PAT }}@github.com/ietf-ribose/${{ matrix.svn_repo }}
 
       # - name: Git diff
