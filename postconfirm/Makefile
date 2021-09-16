@@ -9,8 +9,8 @@
 #    set REMOTE_URL to either the normal cloning URL (starting with hg://,
 #    git://, etc.) or to the path of a local clone.
 # 3. For cvs, set CVS_HOST to the repo hostname and CVS_MODULE to the module,
-#    then uncomment the line that builds REMOTE_URL 
-#    Note: for CVS hosts other than Sourceforge or Savannah you will need to 
+#    then uncomment the line that builds REMOTE_URL
+#    Note: for CVS hosts other than Sourceforge or Savannah you will need to
 #    include the path to the CVS modules directory after the hostname.
 # 4. Set any required read options, such as --user-ignores or --nobranch,
 #    by setting READ_OPTIONS.
@@ -32,14 +32,14 @@
 # Afterwards, you can use the *compare productions to check your work.
 #
 
-EXTRAS = 
+EXTRAS =
 REMOTE_URL = svn://svn.debian.org/postconfirm
 #REMOTE_URL = https://postconfirm.googlecode.com/svn/
 CVS_HOST = postconfirm.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = postconfirm
 #REMOTE_URL = cvs://$(CVS_HOST)/postconfirm\#$(CVS_MODULE)
-READ_OPTIONS =
+READ_OPTIONS = --branchify=trunk:branch/*:personal/*:tags/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
