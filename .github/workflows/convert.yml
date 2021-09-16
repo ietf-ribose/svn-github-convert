@@ -1,0 +1,99 @@
+name: convert
+
+on:
+  push:
+    branches: [ main ]
+  # schedule:
+  #   - cron: '0 1 * * *'  # every day at 1:00
+
+jobs:
+  convert:
+    name: convert
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        svn_repo:
+          - ghostlinkd
+          - ietfdb
+          - mailreplay
+          - postconfirm
+          - postfind
+          - xml2rfc
+
+    # continue-on-error: ${{ matrix.experimental }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: conversion
+
+      - name: Add svn/ directory
+        run: |
+          mkdir -p svn git
+
+      - name: Checkout trac-svn-db repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/trac-svn-db
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: trac-svn-db
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "ietf-ribose-ci"
+          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
+
+      - name: Setup reposurgeon
+        run: |
+          sudo apt-get -y update
+          sudo apt-get install -y reposurgeon
+
+      # - name: Checkout ${{ matrix.svn_repo }} repo
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: ietf-ribose/${{ matrix.svn_repo }}
+      #     token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+      #     path: git/${{ matrix.svn_repo }}
+
+      - name: Convert SVN to Git via reposurgeon
+        working-directory: conversion/${{ matrix.svn_repo }}
+        run: |
+          ln -s  ../../trac-svn-db/svn/${{ matrix.svn_repo }} ${{ matrix.svn_repo }}-mirror
+          make
+          mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
+
+      - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git remote set-url origin \
+            https://${{ secrets.IETF_RIBOSE_CI_USERNAME }}:${{ secrets.IETF_RIBOSE_CI_PAT }}@github.com/ietf-ribose/${{ matrix.svn_repo }}
+
+      # - name: Git diff
+      #   working-directory: trac-svn-db
+      #   run: |
+      #     git diff
+
+      # - name: Skip the rest if no changes
+      #   id: git_status
+      #   working-directory: trac-svn-db
+      #   run: |
+      #     echo ::set-output name=STATUS::$(git status --porcelain | tr -d [:space:])
+
+      # - name: Add changes
+      #   if: steps.git_status.outputs.STATUS != ''
+      #   working-directory: trac-svn-db
+      #   run: |
+      #     git add -A
+      #     git commit -m 'Import latest changes'
+
+      # - name: Git log
+      #   if: steps.git_status.outputs.STATUS != ''
+      #   working-directory: trac-svn-db
+      #   run: |
+      #     git log | head -100
+
+      - name: Git push to GitHub ${{ matrix.svn_repo }}
+        # if: steps.git_status.outputs.STATUS != ''
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git push --all -f
+          git push --tags -f
