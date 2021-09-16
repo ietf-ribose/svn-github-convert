@@ -3,8 +3,8 @@ name: convert
 on:
   push:
     branches: [ main ]
-  # schedule:
-  #   - cron: '0 1 * * *'  # every day at 1:00
+  schedule:
+    - cron: '0 2 * * *'  # every day at 2:00
 
 jobs:
   convert:
