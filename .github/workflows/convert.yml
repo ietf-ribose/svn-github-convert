@@ -60,7 +60,7 @@ jobs:
         env:
           TERM: xterm-256color
         run: |
-          ln -s  ../../trac-svn-db/svn/${{ matrix.svn_repo }} ${{ matrix.svn_repo }}-mirror
+          ln -s ../../trac-svn-db/svn/${{ matrix.svn_repo }} ${{ matrix.svn_repo }}-mirror
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
