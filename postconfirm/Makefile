@@ -33,7 +33,7 @@
 #
 
 EXTRAS =
-REMOTE_URL = svn://svn.debian.org/postconfirm
+REMOTE_URL = https://svn.ietf.org/svn/tools/postconfirm
 #REMOTE_URL = https://postconfirm.googlecode.com/svn/
 CVS_HOST = postconfirm.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org

@@ -33,7 +33,7 @@
 #
 
 EXTRAS =
-REMOTE_URL = svn://svn.debian.org/ietfdb
+REMOTE_URL = https://svn.ietf.org/svn/tools/ietfdb
 #REMOTE_URL = https://ietfdb.googlecode.com/svn/
 CVS_HOST = ietfdb.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
