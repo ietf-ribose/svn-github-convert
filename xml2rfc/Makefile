@@ -39,7 +39,7 @@ CVS_HOST = xml2rfc.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = xml2rfc
 #REMOTE_URL = cvs://$(CVS_HOST)/xml2rfc\#$(CVS_MODULE)
-READ_OPTIONS = --branchify=trunk:archive:personal/*/*:releases/*:tags/cli/*:tags/dev/cli/*:version1:vocabulary:branches/*:*
+READ_OPTIONS = --branchify=trunk/cli:trunk/gui:trunk/package:archive:personal/*/*:tags/cli/*:tags/dev/cli/*:version1:vocabulary/v2:vocabulary/v3:vocabulary
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
