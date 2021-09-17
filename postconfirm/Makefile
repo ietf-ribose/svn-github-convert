@@ -39,7 +39,7 @@ CVS_HOST = postconfirm.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = postconfirm
 #REMOTE_URL = cvs://$(CVS_HOST)/postconfirm\#$(CVS_MODULE)
-READ_OPTIONS = --branchify=trunk:branch/*:personal/*:tags/*:*
+READ_OPTIONS = --branchify=trunk:branch/*:personal/*/*:tags/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
