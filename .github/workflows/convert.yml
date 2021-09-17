@@ -78,7 +78,7 @@ jobs:
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
-          - name: Convert SVN to Git via reposurgeon
+      - name: Convert SVN to Git via reposurgeon
         if: ${{ matrix.svn_repo == 'mailarch' }}
         working-directory: conversion/${{ matrix.svn_repo }}
         env:
