@@ -59,7 +59,7 @@ jobs:
       #     path: git/${{ matrix.svn_repo }}
 
       - name: Convert SVN to Git via reposurgeon
-        if: ${{ matrix.svn_repo }} != "xml2rfc-bibxml" && ${{ matrix.svn_repo }} != "xml2rfc-website" && ${{ matrix.svn_repo }} != "mailarch"
+        if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'mailarch' }}
         working-directory: conversion/${{ matrix.svn_repo }}
         env:
           TERM: xterm-256color
@@ -69,7 +69,7 @@ jobs:
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
       - name: Convert SVN to Git via reposurgeon
-        if: ${{ matrix.svn_repo }} == "xml2rfc-bibxml" || ${{ matrix.svn_repo }} == "xml2rfc-website"
+        if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' || matrix.svn_repo == 'xml2rfc-website' }}
         working-directory: conversion/${{ matrix.svn_repo }}
         env:
           TERM: xterm-256color
@@ -78,8 +78,8 @@ jobs:
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
-      - name: Convert SVN to Git via reposurgeon
-        if: ${{ matrix.svn_repo }} == "mailarch"
+          - name: Convert SVN to Git via reposurgeon
+        if: ${{ matrix.svn_repo == 'mailarch' }}
         working-directory: conversion/${{ matrix.svn_repo }}
         env:
           TERM: xterm-256color
