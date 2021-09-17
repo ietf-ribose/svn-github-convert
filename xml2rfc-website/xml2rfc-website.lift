@@ -1,0 +1,14 @@
+# Lift commands for xml2rfc-website
+expunge /website/rfcs/bibxml/*/
+lint
+gitify
+# branchlift master website
+branch delete heads/master
+branch rename heads/website heads/master
+tag create cutover-git @max(=C)
+msgin <<EOF
+Tag-Name: cutover-git
+Tagger: J. Random Hacker <jrh@random.org> America/Los_Angeles
+
+This tag marks the last Subversion commit before the move to Git.
+EOF
