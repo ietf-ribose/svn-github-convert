@@ -39,7 +39,7 @@ CVS_HOST = postfind.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = postfind
 #REMOTE_URL = cvs://$(CVS_HOST)/postfind\#$(CVS_MODULE)
-READ_OPTIONS =
+READ_OPTIONS = --branchify=trunk:tags/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
