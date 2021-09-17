@@ -39,7 +39,7 @@ CVS_HOST = ietfdb.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = ietfdb
 #REMOTE_URL = cvs://$(CVS_HOST)/ietfdb\#$(CVS_MODULE)
-READ_OPTIONS = --branchify=trunk:attic/*:archive:personal/*/*:sprint/*/*:branches/*:tags/*:*
+READ_OPTIONS = --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
