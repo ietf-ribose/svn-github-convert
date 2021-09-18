@@ -78,11 +78,15 @@ jobs:
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_KEY }}
+
       - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
         working-directory: git/${{ matrix.svn_repo }}
         run: |
           git remote add origin \
-            https://${{ secrets.IETF_RIBOSE_CI_USERNAME }}:${{ secrets.IETF_RIBOSE_CI_PAT }}@github.com/ietf-ribose/${{ matrix.svn_repo }}
+            git@github.com:${{ secrets.IETF_RIBOSE_CI_USERNAME }}@github.com/ietf-ribose/${{ matrix.svn_repo }}.git
 
       # - name: Git diff
       #   working-directory: trac-svn-db
