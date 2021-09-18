@@ -80,7 +80,7 @@ jobs:
 
       - uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_KEY }}
+          ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_PRIVATE }}
 
       - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
         working-directory: git/${{ matrix.svn_repo }}
