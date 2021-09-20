@@ -1,1 +1,12 @@
 # Lift commands for postconfirm
+msgin --create <<EOF
+Tag-Name: git-conversion
+
+Marks the spot where this repository was migrated from Subversion to git.
+
+This repository was converted from Subversion to git on 2021-09-20 by
+Ribose &lt;open.source@ribose.com&gt;. Conversion notes are enclosed
+in double square brackets. Commit references have been mapped into a
+uniform VCS-independent syntax, and some comments edited into
+summary-plus-continuation form.
+EOF
