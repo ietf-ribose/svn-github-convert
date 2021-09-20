@@ -1,0 +1,7 @@
+*-git
+*-git.*
+*-mirror
+*.svn
+*.log
+*.svn
+*.fo
