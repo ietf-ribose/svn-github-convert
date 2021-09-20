@@ -40,7 +40,7 @@ jobs:
           cd reposurgeon
           sed -i 's/sudo apt-get install asciidoctor awk/sudo apt-get install asciidoctor/' Makefile
           sed -i 's/hg-git-fast-import //' Makefile
-          sed -i 's/apt-get install /apt-get install -y/' Makefile
+          sed -i 's/apt-get install /apt-get install -y /' Makefile
 
       - name: Build reposurgeon
         if: steps.cache-reposurgeon.outputs.cache-hit != 'true'
