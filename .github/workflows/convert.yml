@@ -3,6 +3,8 @@ name: convert
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '.github/workflows/install_reposurgeon.yml'
   schedule:
     - cron: '0 2 * * *'  # every day at 2:00
 
@@ -26,6 +28,11 @@ jobs:
 
     # continue-on-error: ${{ matrix.experimental }}
     steps:
+      - name: Setup Git
+        run: |
+          git config --global user.name "ietf-ribose-ci"
+          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
+
       - uses: actions/checkout@v2
         with:
           path: conversion
@@ -40,11 +47,6 @@ jobs:
           repository: ietf-ribose/trac-svn-db
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: trac-svn-db
-
-      - name: Setup Git
-        run: |
-          git config --global user.name "ietf-ribose-ci"
-          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
 
       - name: Setup reposurgeon
         run: |

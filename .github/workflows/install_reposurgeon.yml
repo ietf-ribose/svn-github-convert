@@ -1,0 +1,55 @@
+name: install_reposurgeon
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  install:
+    name: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Git
+        run: |
+          git config --global user.name "ietf-ribose-ci"
+          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
+
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: hg-git-fast-import
+          version: latest
+
+      - name: Install gawk
+        run: |
+          apt-get -y update
+          apt-get -y install gawk
+
+      - name: Cache reposurgeon
+        id: cache-reposurgeon
+        uses: actions/cache@v2
+        with:
+          path: reposurgeon
+          key: ${{ runner.os }}-${{ hashFiles('reposurgeon-cache-key') }}
+
+      - name: Clone reposurgeon and prepare
+        if: steps.cache-reposurgeon.outputs.cache-hit != 'true'
+        run: |
+          git clone https://gitlab.com/esr/reposurgeon
+          cd reposurgeon
+          sed -i 's/sudo apt-get install asciidoctor awk/sudo apt-get install asciidoctor/' Makefile
+          sed -i 's/hg-git-fast-import //' Makefile
+          sed -i 's/apt-get install /apt-get install -y/' Makefile
+
+      - name: Build reposurgeon
+        if: steps.cache-reposurgeon.outputs.cache-hit != 'true'
+        working-directory: reposurgeon
+        run: |
+          make fullinstall
+          make check
+          make install
+
+      - name: Install reposurgeon
+        if: steps.cache-reposurgeon.outputs.cache-hit == 'true'
+        working-directory: reposurgeon
+        run: |
+          make install
