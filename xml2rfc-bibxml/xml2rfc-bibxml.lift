@@ -1,9 +1,9 @@
 # Lift commands for bibxml
+# read --branchify=website/rfcs <xml2rfc-bibxml.svn
 lint
 gitify
 # branchlift master website/rfcs/bibxml
-branch delete heads/master
-branch rename heads/website/rfcs heads/master
+branch rename refs/heads/website/rfcs refs/heads/master
 msgin --create <<EOF
 Tag-Name: git-conversion
 
