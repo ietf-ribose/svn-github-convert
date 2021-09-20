@@ -3,11 +3,15 @@ lint
 gitify
 # branchlift master website/rfcs/bibxml
 branch delete heads/master
-branch rename heads/website/rfcs/bibxml heads/master
-tag create cutover-git @max(=C)
-msgin <<EOF
-Tag-Name: cutover-git
-Tagger: J. Random Hacker <jrh@random.org> America/Los_Angeles
+branch rename heads/website/rfcs heads/master
+msgin --create <<EOF
+Tag-Name: git-conversion
 
-This tag marks the last Subversion commit before the move to Git.
+Marks the spot where this repository was migrated from Subversion to git.
+
+This repository was converted from Subversion to git on 2021-09-20 by
+Ribose &lt;open.source@ribose.com&gt;. Conversion notes are enclosed
+in double square brackets. Commit references have been mapped into a
+uniform VCS-independent syntax, and some comments edited into
+summary-plus-continuation form.
 EOF

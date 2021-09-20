@@ -39,7 +39,7 @@ CVS_HOST = xml2rfc-bibxml.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = xml2rfc-bibxml
 #REMOTE_URL = cvs://$(CVS_HOST)/xml2rfc-bibxml\#$(CVS_MODULE)
-READ_OPTIONS = --branchify=website/rfcs/bibxml
+READ_OPTIONS = --branchify=website/rfcs
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
