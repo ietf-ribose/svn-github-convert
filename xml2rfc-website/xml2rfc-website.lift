@@ -6,6 +6,7 @@ lint
 gitify
 msgin --create <<EOF
 Tag-Name: git-conversion
+Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles
 
 Marks the spot where this repository was migrated from Subversion to git.
 
