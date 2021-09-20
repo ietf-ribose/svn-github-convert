@@ -1,9 +1,8 @@
 # Lift commands for xml2rfc
 lint
 gitify
-# branch rename heads/vocabulary/v2 heads/vocabulary-v2
-# branch rename heads/vocabulary/v3 heads/vocabulary-v3
-# branchlift main vocabulary
+branch rename refs/heads/master refs/heads/main
+
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles

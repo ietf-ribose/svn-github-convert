@@ -1,4 +1,6 @@
 # Lift commands for postconfirm
+branch rename refs/heads/master refs/heads/main
+
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles

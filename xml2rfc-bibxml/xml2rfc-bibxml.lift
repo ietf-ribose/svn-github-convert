@@ -2,8 +2,8 @@
 # read --branchify=website/rfcs <xml2rfc-bibxml.svn
 lint
 gitify
-# branchlift main website/rfcs/bibxml
 branch rename refs/heads/website/rfcs refs/heads/main
+
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles
