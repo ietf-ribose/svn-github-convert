@@ -14,15 +14,17 @@ jobs:
           git config --global user.name "ietf-ribose-ci"
           git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
 
-      - uses: actions-rs/install@v0.1
+      - name: Install hg-git-fast-import
+        uses: actions-rs/install@v0.1
         with:
           crate: hg-git-fast-import
           version: latest
+          use-tool-cache: true
 
       - name: Install gawk
         run: |
-          apt-get -y update
-          apt-get -y install gawk
+          sudo apt-get -y update
+          sudo apt-get -y install gawk
 
       - name: Cache reposurgeon
         id: cache-reposurgeon
