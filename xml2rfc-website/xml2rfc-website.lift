@@ -1,4 +1,5 @@
 # Lift commands for xml2rfc-website
+# read --branchify=website <xml2rfc-website.svn
 1..$ expunge /^rfcs.*/
 branch rename refs/heads/website refs/heads/master
 lint
