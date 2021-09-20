@@ -3,7 +3,7 @@ lint
 gitify
 # branch rename heads/vocabulary/v2 heads/vocabulary-v2
 # branch rename heads/vocabulary/v3 heads/vocabulary-v3
-# branchlift master vocabulary
+# branchlift main vocabulary
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles
