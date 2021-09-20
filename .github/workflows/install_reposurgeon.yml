@@ -43,10 +43,10 @@ jobs:
           sed -i 's/apt-get install /apt-get install -y /' Makefile
           make fullinstall
           make all
-          make install
+          sudo make install
 
       - name: Install reposurgeon
         if: steps.cache-reposurgeon.outputs.cache-hit == 'true'
         working-directory: reposurgeon
         run: |
-          make install
+          sudo make install
