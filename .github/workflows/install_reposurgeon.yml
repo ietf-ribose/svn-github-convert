@@ -3,6 +3,8 @@ name: install_reposurgeon
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '.github/workflows/convert.yml'
 
 jobs:
   install:

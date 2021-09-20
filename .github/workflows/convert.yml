@@ -33,6 +33,41 @@ jobs:
           git config --global user.name "ietf-ribose-ci"
           git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
 
+      - name: reposurgeon - Install hg-git-fast-import
+        uses: actions-rs/install@v0.1
+        with:
+          crate: hg-git-fast-import
+          version: latest
+          use-tool-cache: true
+
+      - name: reposurgeon - Install gawk
+        run: |
+          sudo apt-get -y update
+          sudo apt-get -y install gawk
+
+      - name: reposurgeon - Cache reposurgeon
+        id: cache-reposurgeon
+        uses: actions/cache@v2
+        with:
+          path: reposurgeon
+          key: ${{ runner.os }}-${{ hashFiles('reposurgeon-cache-key') }}
+
+      - name: reposurgeon - Clone and build reposurgeon
+        if: steps.cache-reposurgeon.outputs.cache-hit != 'true'
+        run: |
+          git clone https://gitlab.com/esr/reposurgeon
+          cd reposurgeon
+          sed -i 's/sudo apt-get install asciidoctor awk/sudo apt-get install asciidoctor/' Makefile
+          sed -i 's/hg-git-fast-import //' Makefile
+          sed -i 's/apt-get install /apt-get install -y /' Makefile
+          make fullinstall
+          make all
+
+      - name: reposurgeon - Install reposurgeon
+        working-directory: reposurgeon
+        run: |
+          sudo make install
+
       - uses: actions/checkout@v2
         with:
           path: conversion
@@ -47,11 +82,6 @@ jobs:
           repository: ietf-ribose/trac-svn-db
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: trac-svn-db
-
-      - name: Setup reposurgeon
-        run: |
-          sudo apt-get -y update
-          sudo apt-get install -y reposurgeon
 
       # - name: Checkout ${{ matrix.svn_repo }} repo
       #   uses: actions/checkout@v2
