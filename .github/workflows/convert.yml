@@ -149,5 +149,11 @@ jobs:
         # if: steps.git_status.outputs.STATUS != ''
         working-directory: git/${{ matrix.svn_repo }}
         run: |
+          max=$(git log --oneline|wc -l); \
+          for i in $(seq $max -500 1); do \
+            echo $i; g=$(git log --reverse --oneline --skip $i -n1|perl -alne'print $F[0]'); \
+            git push origin $g:refs/heads/gitconvert -f; \
+          done
+          git push origin :refs/heads/gitconvert -f
           git push origin --all -f
           git push origin --tags -f
