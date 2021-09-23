@@ -27,7 +27,6 @@ jobs:
           - xml2rfc-bibxml
           - xml2rfc-website
 
-    # continue-on-error: ${{ matrix.experimental }}
     steps:
       - name: Setup Git
         run: |
@@ -70,13 +69,6 @@ jobs:
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: trac-svn-db
 
-      # - name: Checkout ${{ matrix.svn_repo }} repo
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: ietf-ribose/${{ matrix.svn_repo }}
-      #     token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
-      #     path: git/${{ matrix.svn_repo }}
-
       - name: Convert SVN to Git via reposurgeon
         if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' }}
         working-directory: conversion/${{ matrix.svn_repo }}
@@ -106,24 +98,6 @@ jobs:
         run: |
           git remote add origin \
             git@github.com:ietf-ribose/${{ matrix.svn_repo }}.git
-
-      # - name: Git diff
-      #   working-directory: trac-svn-db
-      #   run: |
-      #     git diff
-
-      # - name: Skip the rest if no changes
-      #   id: git_status
-      #   working-directory: trac-svn-db
-      #   run: |
-      #     echo ::set-output name=STATUS::$(git status --porcelain | tr -d [:space:])
-
-      # - name: Add changes
-      #   if: steps.git_status.outputs.STATUS != ''
-      #   working-directory: trac-svn-db
-      #   run: |
-      #     git add -A
-      #     git commit -m 'Import latest changes'
 
       - name: Git branch
         # if: steps.git_status.outputs.STATUS != ''
