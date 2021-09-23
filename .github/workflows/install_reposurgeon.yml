@@ -28,6 +28,7 @@ jobs:
         run: |
           git clone https://gitlab.com/esr/reposurgeon
           cd reposurgeon
+          git checkout 2f5f83ec63da34beaf8293434b5e1627366dfa7c
           sed -i 's/apt-get install /apt-get install -y /' Makefile
           make fullinstall
           make all
