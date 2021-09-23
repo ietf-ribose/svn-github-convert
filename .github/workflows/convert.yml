@@ -115,6 +115,17 @@ jobs:
             echo $i; g=$(git log --reverse --oneline --skip $i -n1|perl -alne'print $F[0]'); \
             git push origin $g:refs/heads/gitconvert -f; \
           done
-          git push origin --all -f
-          git push origin --tags -f
+
+          for x in $(git branch | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
+            y="${x//#/ }"; \
+            echo $y; \
+            git push origin -f $y; \
+          done
+
+          for x in $(git tag | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
+            y="${x//#/ }"; \
+            echo $y; \
+            git push origin -f $y; \
+          done
+
           git push origin :refs/heads/gitconvert -f
