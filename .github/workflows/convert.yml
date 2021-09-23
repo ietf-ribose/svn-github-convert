@@ -115,6 +115,6 @@ jobs:
             echo $i; g=$(git log --reverse --oneline --skip $i -n1|perl -alne'print $F[0]'); \
             git push origin $g:refs/heads/gitconvert -f; \
           done
-          git push origin :refs/heads/gitconvert -f
           git push origin --all -f
           git push origin --tags -f
+          git push origin :refs/heads/gitconvert -f
