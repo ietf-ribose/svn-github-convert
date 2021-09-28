@@ -136,3 +136,20 @@ jobs:
           done
 
           git push origin :refs/heads/gitconvert -f
+
+      - name: Checkout svn-git-maps repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/svn-git-maps
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: svn-git-maps
+
+      - name: Copy and commit ${{ matrix.svn_repo }}.fo to svn-git-maps
+        working-directory: svn-git-maps
+        run: |
+          git remote set-url origin \
+            git@github.com:ietf-ribose/svn-git-maps.git
+          cp ${GITHUB_WORKSPACE}/conversion/${{ matrix.svn_repo }}/${{ matrix.svn_repo }}.fo .
+          git add ${{ matrix.svn_repo }}.fo
+          git commit -m 'Update ${{ matrix.svn_repo }} mapping'
+          git pull --rebase && git push
