@@ -144,12 +144,23 @@ jobs:
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: svn-git-maps
 
-      - name: Copy and commit ${{ matrix.svn_repo }}.fo to svn-git-maps
+      - name: Copy ${{ matrix.svn_repo }}.fo to svn-git-maps
         working-directory: svn-git-maps
         run: |
           git remote set-url origin \
             git@github.com:ietf-ribose/svn-git-maps.git
           cp ${GITHUB_WORKSPACE}/conversion/${{ matrix.svn_repo }}/${{ matrix.svn_repo }}.fo .
+
+      - name: Skip push to svn-git-maps if no changes
+        id: git_status
+        working-directory: svn-git-maps
+        run: |
+          echo ::set-output name=STATUS::$(git status --porcelain | tr -d [:space:])
+
+      - name: Add and push changes to svn-git-maps
+        if: steps.git_status.outputs.STATUS != ''
+        working-directory: svn-git-maps
+        run: |
           git add ${{ matrix.svn_repo }}.fo
           git commit -m 'Update ${{ matrix.svn_repo }} mapping'
           timeout 30s bash -c 'until git pull --rebase && git push; do sleep 3; done'
