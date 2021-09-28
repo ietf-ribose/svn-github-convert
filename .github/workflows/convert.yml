@@ -152,4 +152,4 @@ jobs:
           cp ${GITHUB_WORKSPACE}/conversion/${{ matrix.svn_repo }}/${{ matrix.svn_repo }}.fo .
           git add ${{ matrix.svn_repo }}.fo
           git commit -m 'Update ${{ matrix.svn_repo }} mapping'
-          git pull --rebase && git push
+          timeout 30s bash -c 'until git pull --rebase && git push; do sleep 3; done'
