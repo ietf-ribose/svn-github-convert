@@ -1,0 +1,107 @@
+= IETF SVN to Git conversion scripts
+
+== Purpose
+
+This repository provides `reposurgeon` workflows that migrate IETF SVN
+repositories to Git.
+
+
+== Prerequisites
+
+=== General
+
+* Git version > 2.16
+* `reposurgeon` version >= 4.29
+* macOS or Linux (only tested on Ubuntu)
+
+=== macOS
+
+[source,sh]
+----
+brew install reposurgeon
+----
+
+=== Ubuntu
+
+The default `reposurgeon` has a version 4.3 which does not provide sufficient
+functionality.
+
+Please compile the latest `reposurgeon` from
+https://gitlab.com/esr/reposurgeon[source] as shown in
+`.github/workflows/install_reposurgeon.yml`.
+
+NOTE: Thank you Eric S. Raymond for the fantastic `reposurgeon`!
+
+
+== Usage
+
+=== Local development
+
+==== Preparation
+
+. Clone this repo, e.g. to `./svn-github-convert`
+
+. Clone the https://github.com/ietf-ribose/trac-svn-db/ repo to a level up, e.g.
+  `./trac-svn-db` (remember this is a private repo)
+
+. Change directory to the target repo name, e.g.
+  `./svn-github-convert/xml2rfc-bibxml`
+
+. Within this directory run:
++
+----
+ln -s ../../trac-svn-db/svn/xml2rfc xml2rfc-bibxml-mirror
+----
+
+.. Notice that the `xml2rfc-*` and `vocabulary...` target repositories are all
+  created from the `xml2rfc` SVN repository
+
+
+==== Single-step scripted conversion
+
+This step uses the `*.lift` files which are custom reposurgeon conversion
+scripts.
+
+. Run `make` to create `xml2rfc-bibxml.{svn,fo,map}` etc.
+
+. The resulting Git repository will be at `xml2rfc-bibxml-git`.
+
+
+==== Script development
+
+In order to develop the `*.lift` files we use the `reposurgeon` console
+functionality.
+
+After preparation, simply run `reposurgeon` from shell.
+
+e.g.
+[source,sh]
+----
+ietfdb $ reposurgeon
+reposurgeon%
+reposurgeon% read --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:* <ietfdb.svn
+... processing ...
+reposurgeon% names
+branch refs/heads/master
+branch refs/heads/branch/2.00/ietf
+branch refs/heads/branch/2.00/static
+branch refs/heads/branch/2.00/test
+...
+tag    2.00-root
+tag    emptycommit-987
+tag    sprint/73/magnus-root
+tag    branch/iesg-tracker/south-root
+...
+----
+
+The set of commands used here can be stored into a `ietfdb.lift` script for
+the single-step conversion process.
+
+
+=== Running in GitHub Actions
+
+Refer to the `.github/workflows/convert.yml` workflow.
+
+== License
+
+Copyright IETF / Ribose.
