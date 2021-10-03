@@ -1,4 +1,5 @@
 # Lift commands for postconfirm
+# read --branchify=trunk:branch/*:personal/*/*:tags/*:* <postconfirm.svn
 branch rename refs/heads/master refs/heads/main
 
 msgin --create <<EOF
