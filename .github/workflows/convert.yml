@@ -140,14 +140,13 @@ jobs:
       - name: Checkout svn-git-maps repo
         uses: actions/checkout@v2
         with:
-          ruby-version: 2.7.0
           repository: ietf-ribose/svn-git-maps
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: svn-git-maps
 
       - name: Tractive - Install tractive
         run: |
-          gem install tractive
+          sudo gem install tractive
 
       - name: Copy ${{ matrix.svn_repo }}.fo to svn-git-maps
         working-directory: svn-git-maps
