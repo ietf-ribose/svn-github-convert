@@ -138,6 +138,8 @@ jobs:
           git push origin :refs/heads/gitconvert -f
 
       - name: Tractive - Install tractive
+        with:
+          ruby-version: 2.7.0
         run: |
           gem install tractive
 
