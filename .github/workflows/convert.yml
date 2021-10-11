@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, generating_revmap_from_fo_files ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
