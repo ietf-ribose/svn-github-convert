@@ -160,7 +160,7 @@ jobs:
         working-directory: svn-git-maps
         run: |
           tractive generate-revmap \
-            --svn-local-path ${GITHUB_WORKSPACE}/conversion/${{ matrix.svn_repo }}/${{ matrix.svn_repo }}-mirror \
+            --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
             --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
