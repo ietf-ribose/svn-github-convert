@@ -2,15 +2,15 @@
 mapping:
   - name: Adam Roach
     email: adam@nostrum.com
-    username:
+    username: adamroach
 
   - name: Alireza Mohammadi
     email: alireza.mohammadi@icann.org
-    username:
+    username: alireza83
 
   - name: Anurag Bhargava
     email: anurag_nc@yahoo.com
-    username:
+    username: anuragnc72
 
   - name: Matsumoto Arifumi
     email: matsumoto.arifumi@lab.ntt.co.jp
@@ -18,7 +18,7 @@ mapping:
 
   - name: Alice Russo
     email: arusso@amsl.com
-    username:
+    username: arusso-rpc
 
   - name: Alexey Zarubin
     email: azarubin@yaco.es
@@ -26,11 +26,11 @@ mapping:
 
   - name: Bartosz Balazinski
     email: bartosz.balazinski@interdigital.com
-    username:
+    username: bartbalaz
 
   - name: Ben Campbell
     email: ben@nostrum.com
-    username:
+    username: bacampbe
 
   - name: bmheight
     email: bmheight@gmail.com
@@ -42,7 +42,7 @@ mapping:
 
   - name: Carsten Bormann
     email: cabo@tzi.org
-    username:
+    username: cabo
 
   - name: Chris Newman
     email: chris.newman@oracle.com
@@ -62,11 +62,11 @@ mapping:
 
   - name: Deng Lingli
     email: denglingli@chinamobile.com
-    username:
+    username: DeniseDeng
 
   - name: Erik Wilde
     email: dret@berkeley.edu
-    username:
+    username: dret
 
   - name: Emilio Jiménez
     email: ejimenez@yaco.es
@@ -74,11 +74,11 @@ mapping:
 
   - name: Eric Rescorla
     email: ekr@rtfm.com
-    username:
+    username: ekr
 
   - name: Emilio A. Sánchez López
     email: esanchez@yaco.es
-    username:
+    username: emiliosanchez
 
   - name: Peng Fan
     email: fanp08@gmail.com
@@ -86,59 +86,59 @@ mapping:
 
   - name: Bill Fenner
     email: fenner@fenron.net
-    username:
+    username: fenner
 
   - name: Jim Fenton
     email: fenton@bluepopcorn.net
-    username:
+    username: jimfenton
 
   - name: Cullen Jennings
     email: fluffy@cisco.com
-    username:
+    username: fluffy
 
   - name: Mat Ford
     email: ford@isoc.org
-    username:
+    username: madofo
 
   - name: Cong Liu
     email: gnocuil@gmail.com
-    username:
+    username: gnocuil
 
   - name: Harald T. Alvestrand
     email: harald@alvestrand.no
-    username:
+    username: alvestrand
 
   - name: Henrik Levkowetz
     email: henrik@levkowetz.com
-    username:
+    username: levkowetz
 
   - name: Russ Housley
     email: housley@vigilsec.com
-    username:
+    username: russhousley
 
   - name: Jim Schaad
     email: ietf@augustcellars.com
-    username:
+    username: coffindragger
 
   - name: Josh Bothun
     email: jbothun@concentricsky.com
-    username:
+    username: minism
 
   - name: Jelte Jansen
     email: github@tjeb.nl
-    username:
+    username: tjeb
 
   - name: Jennifer Richards
     email: jennifer@painless-security.com
-    username:
+    username: jennifer-richards
 
   - name: Joel M. Halpern
     email: jmh@joelhalpern.com
-    username:
+    username: JoelHalpern
 
   - name: John R. Levine
     email: johnl@taugh.com
-    username:
+    username: jrlevine
 
   - name: jtarragon
     email: jtarragon@yaco.es
@@ -146,23 +146,19 @@ mapping:
 
   - name: Julian Reschke
     email: julian.reschke@gmx.de
-    username:
+    username: reschke
 
   - name: Tero Kivinen
     email: kivinen@iki.fi
-    username:
+    username: kivinen
 
   - name: Kesara Rathnayake
     email: krathnayake@ietf.org
-    username:
+    username: kesara
 
   - name: Lars Eggert
     email: lars@eggert.org
-    username:
-
-  - name: Lars Eggert
-    email: lars@eggert.org
-    username:
+    username: larseggert
 
   - name: Dapeng Liu
     email: maxpassion@gmail.com
@@ -170,19 +166,19 @@ mapping:
 
   - name: Magnus Westerlund
     email: magnus.westerlund@ericsson.com
-    username:
+    username: gloinul
 
   - name: Jean Mahoney
     email: mahoney@nostrum.com
-    username:
+    username: ajeanmahoney
 
   - name: Mark J. Donnelly
     email: mark@painless-security.com
-    username:
+    username: meadmaker
 
   - name: Markus Stenberg
     email: markus.stenberg@iki.fi
-    username:
+    username: fingon
 
   - name: Martin Qvist
     email: martin@iola.dk
@@ -190,15 +186,15 @@ mapping:
 
   - name: Matthijs Mekking
     email: matthijs.mekking@oracle.com
-    username:
+    username: matje
 
   - name: Michael Richardson
     email: mcr@sandelman.ca
-    username:
+    username: mcr
 
   - name: Mike Douglass
     email: mdouglass@sphericalcowgroup.com
-    username:
+    username: douglm
 
   - name: Michael Lee
     email: michael.lee@neustar.biz
@@ -210,19 +206,19 @@ mapping:
 
   - name: Nathan Cassano
     email: nathan@resolutehosting.com
-    username:
+    username: nathancassano
 
   - name: Ole Laursen
     email: olau@iola.dk
-    username:
+    username: OleLaursen
 
   - name: Pasi Eronen
     email: pe@iki.fi
-    username:
+    username: pasieronen
 
   - name: Paul Hoffman
     email: paul.hoffman@vpnc.org
-    username:
+    username: paulvpnc
 
   - name: Peter E. Yee
     email: peter@akayla.com
@@ -234,19 +230,19 @@ mapping:
 
   - name: Gang Chen
     email: phdgang@gmail.com
-    username:
+    username: phdgang
 
   - name: Pete Resnick
     email: presnick@qti.qualcomm.com
-    username:
+    username: peteresnick
 
   - name: Tom Pusateri
     email: pusateri@bangj.com
-    username:
+    username: pusateri
 
   - name: Richard Barnes
     email: rlb@ipv.sx
-    username:
+    username: bifurcation
 
   - name: Ryan Cross
     email: rcross@amsl.com
@@ -254,19 +250,11 @@ mapping:
 
   - name: Robert Sparks
     email: rjsparks@nostrum.com
-    username:
-
-  - name: Robert Sparks
-    email: rjsparks@nostrum.com
-    username:
-
-  - name: Henrik Levkowetz
-    email: henrik@levkowetz.com
-    username:
+    username: rjsparks
 
   - name: Sasha Romijn
     email: sasha@dashcare.nl
-    username:
+    username: mxsasha
 
   - name: Seth Birkholz
     email: sbirkholz@amsl.com
@@ -274,15 +262,15 @@ mapping:
 
   - name: Shane Kerr
     email: shane@time-travellers.org
-    username:
+    username: shane-kerr
 
   - name: Spike^ekipS
     email: spikeekips@gmail.com
-    username:
+    username: spikeekips
 
   - name: Stephen Farrell
     email: stephen.farrell@cs.tcd.ie
-    username:
+    username: sftcd
 
   - name: Sun Qi
     email: qui.sun@external.telekom.de
@@ -292,13 +280,9 @@ mapping:
     email: suresh.krishnan@gmail.com
     username:
 
-  - name: Suresh Krishnan
-    email: suresh.krishnan@gmail.com
-    username:
-
   - name: Tim Wicinski
     email: tjw.ietf@gmail.com
-    username:
+    username: moonshiner
 
   - name: Tom Taylor
     email: tom.taylor.stds@gmail.com
@@ -306,7 +290,7 @@ mapping:
 
   - name: Tony Hansen
     email: tony@att.com
-    username:
+    username: TonyLHansen
 
   - name: Timothy B. Terriberry
     email: tterriberry@mozilla.com
@@ -314,20 +298,20 @@ mapping:
 
   - name: Valery Smyslov
     email: valery@smyslov.net
-    username:
+    username: smyslov
 
   - name: Vidyut Luther
     email: vidyut.luther@neustar.biz
-    username:
+    username: vidluther
 
   - name: Wiggins
     email: wiggins@concentricsky.com
-    username:
+    username: coffindragger
 
   - name: Willem Toorop
     email: willem@nlnetlabs.nl
-    username:
+    username: wtoorop
 
   - name: Dan York
     email: york@isoc.org
-    username:
+    username: danyork
