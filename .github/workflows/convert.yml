@@ -144,12 +144,26 @@ jobs:
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: svn-git-maps
 
+      - name: Tractive - Install tractive
+        run: |
+          sudo gem install tractive
+
       - name: Copy ${{ matrix.svn_repo }}.fo to svn-git-maps
         working-directory: svn-git-maps
         run: |
           git remote set-url origin \
             git@github.com:ietf-ribose/svn-git-maps.git
           cp ${GITHUB_WORKSPACE}/conversion/${{ matrix.svn_repo }}/${{ matrix.svn_repo }}.fo .
+
+      - name: Convert ${{ matrix.svn_repo }}.fo to ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
 
       - name: Skip push to svn-git-maps if no changes
         id: git_status
@@ -161,6 +175,6 @@ jobs:
         if: steps.git_status.outputs.STATUS != ''
         working-directory: svn-git-maps
         run: |
-          git add ${{ matrix.svn_repo }}.fo
+          git add ${{ matrix.svn_repo }}.fo ${{ matrix.svn_repo }}-revmap.txt
           git commit -m 'Update ${{ matrix.svn_repo }} mapping'
           timeout 30s bash -c 'until git pull --rebase && git push; do sleep 3; done'
