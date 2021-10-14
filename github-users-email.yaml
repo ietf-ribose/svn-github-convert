@@ -69,8 +69,8 @@ mapping:
     username: dret
 
   - name: Emilio Jiménez
-    email: ejimenez@yaco.es
-    username:
+    email: jimenezmoral@gmail.com
+    username: ejimenez
 
   - name: Eric Rescorla
     email: ekr@rtfm.com
@@ -140,9 +140,9 @@ mapping:
     email: johnl@taugh.com
     username: jrlevine
 
-  - name: jtarragon
-    email: jtarragon@yaco.es
-    username:
+  - name: Jacobo Tarragón
+    email: jacobo.tarragon@gmail.com
+    username: jminuscula
 
   - name: Julian Reschke
     email: julian.reschke@gmx.de
@@ -278,7 +278,7 @@ mapping:
 
   - name: Suresh Krishnan
     email: suresh.krishnan@gmail.com
-    username:
+    username: sureshkrishnan
 
   - name: Tim Wicinski
     email: tjw.ietf@gmail.com
@@ -294,7 +294,7 @@ mapping:
 
   - name: Timothy B. Terriberry
     email: tterriberry@mozilla.com
-    username:
+    username: tterribe
 
   - name: Valery Smyslov
     email: valery@smyslov.net
