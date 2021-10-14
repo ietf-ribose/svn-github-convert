@@ -181,8 +181,8 @@ mapping:
     username: fingon
 
   - name: Martin Qvist
-    email: martin@iola.dk
-    username:
+    email: martin@laenke.io
+    username: marqvi
 
   - name: Matthijs Mekking
     email: matthijs.mekking@oracle.com
@@ -221,12 +221,12 @@ mapping:
     username: paulvpnc
 
   - name: Peter E. Yee
-    email: peter@akayla.com
-    username:
+    email: github@houseofyee.com
+    username: Spectre17
 
   - name: Peter Musgrave
     email: peter.musgrave@magorcorp.com
-    username:
+    username: "" # does not want to be mapped
 
   - name: Gang Chen
     email: phdgang@gmail.com
@@ -246,7 +246,7 @@ mapping:
 
   - name: Ryan Cross
     email: rcross@amsl.com
-    username:
+    username: rpcross
 
   - name: Robert Sparks
     email: rjsparks@nostrum.com
