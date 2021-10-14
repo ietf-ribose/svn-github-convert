@@ -14,7 +14,7 @@ mapping:
 
   - name: Matsumoto Arifumi
     email: matsumoto.arifumi@lab.ntt.co.jp
-    username:
+    username: arifumi-jiw
 
   - name: Alice Russo
     email: arusso@amsl.com
@@ -32,9 +32,9 @@ mapping:
     email: ben@nostrum.com
     username: bacampbe
 
-  - name: bmheight
+  - name: Brandon Height
     email: bmheight@gmail.com
-    username:
+    username: lasko
 
   - name: buildbot
     email: buildbot@tools.ietf.org
@@ -46,7 +46,7 @@ mapping:
 
   - name: Chris Newman
     email: chris.newman@oracle.com
-    username:
+    username: cjnewman
 
   - name: comimom
     email: comimom@gmail.com
