@@ -162,7 +162,7 @@ mapping:
 
   - name: Dapeng Liu
     email: maxpassion@gmail.com
-    username:
+    username: maxpassion
 
   - name: Magnus Westerlund
     email: magnus.westerlund@ericsson.com
@@ -202,7 +202,7 @@ mapping:
 
   - name: Margaret Cullen
     email: mrcullen42@gmail.com
-    username:
+    username: mrw42
 
   - name: Nathan Cassano
     email: nathan@resolutehosting.com
@@ -226,7 +226,7 @@ mapping:
 
   - name: Peter Musgrave
     email: peter.musgrave@magorcorp.com
-    username: "" # does not want to be mapped
+    username: nil # does not want to be mapped
 
   - name: Gang Chen
     email: phdgang@gmail.com
@@ -286,7 +286,7 @@ mapping:
 
   - name: Tom Taylor
     email: tom.taylor.stds@gmail.com
-    username:
+    username: nil # cannot be mapped
 
   - name: Tony Hansen
     email: tony@att.com
