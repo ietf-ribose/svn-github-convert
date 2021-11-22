@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main, adding_revmap_for_xml2rfc_repos ]
+    branches: [ main ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
