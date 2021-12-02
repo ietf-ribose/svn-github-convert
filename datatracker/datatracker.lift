@@ -1,5 +1,5 @@
-# Lift commands for ietfdb
-# read --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:* <ietfdb.svn
+# Lift commands for datatracker
+# read --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:* <datatracker.svn
 lint
 gitify
 branch rename refs/heads/master refs/heads/main

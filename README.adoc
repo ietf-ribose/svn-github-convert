@@ -77,9 +77,9 @@ After preparation, simply run `reposurgeon` from shell.
 e.g.
 [source,sh]
 ----
-ietfdb $ reposurgeon
+datatracker $ reposurgeon
 reposurgeon%
-reposurgeon% read --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:* <ietfdb.svn
+reposurgeon% read --branchify=trunk:attic/*:branch/*/*:personal/*/*:sprint/*/*:tags/*:tags/dev/*:* <datatracker.svn
 ... processing ...
 reposurgeon% names
 branch refs/heads/master
@@ -94,7 +94,7 @@ tag    branch/iesg-tracker/south-root
 ...
 ----
 
-The set of commands used here can be stored into a `ietfdb.lift` script for
+The set of commands used here can be stored into a `datatracker.lift` script for
 the single-step conversion process.
 
 

@@ -17,7 +17,7 @@ jobs:
       matrix:
         svn_repo:
           - ghostlinkd
-          - ietfdb
+          - datatracker
           - mailarch
           - mailreplay
           - postconfirm
