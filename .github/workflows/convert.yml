@@ -72,8 +72,7 @@ jobs:
           path: trac-svn-db
 
       - name: Convert SVN to Git via reposurgeon
-        if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker'
-        }}
+        if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker' }}
         working-directory: conversion/${{ matrix.svn_repo }}
         env:
           TERM: xterm-256color
