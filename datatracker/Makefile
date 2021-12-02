@@ -33,7 +33,7 @@
 #
 
 EXTRAS =
-REMOTE_URL = https://svn.ietf.org/svn/tools/datatracker
+REMOTE_URL = https://svn.ietf.org/svn/tools/ietfdb
 #REMOTE_URL = https://datatracker.googlecode.com/svn/
 CVS_HOST = datatracker.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
