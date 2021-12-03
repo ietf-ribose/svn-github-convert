@@ -180,8 +180,8 @@ jobs:
             --single-branch \
             git@github.com:riboseinc/git-filter-repo.git
           cd git-filter-repo
-          cp -a git-filter-repo $(git --exec-path)
-          ln -s $(git --exec-path)/git-filter-repo \
+          sudo cp -a git-filter-repo $(git --exec-path)
+          sudo ln -s $(git --exec-path)/git-filter-repo \
               $(python -c "import site; print(site.getsitepackages()[-1])")/git_filter_repo.py
 
       - name: Add references to commit SHA in commit messages
