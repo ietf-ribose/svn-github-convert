@@ -1,6 +1,8 @@
 # Lift commands for mailarch
 branch rename refs/heads/master refs/heads/main
 
+=C append " - Legacy-Id: %LEGACY%" --legacy
+
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles

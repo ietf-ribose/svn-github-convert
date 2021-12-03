@@ -1,4 +1,4 @@
-# Makefile for ietfdb conversion using reposurgeon
+# Makefile for datatracker conversion using reposurgeon
 #
 # Steps to using this:
 # 1. Make sure reposurgeon and repotool are on your $PATH.
@@ -34,11 +34,11 @@
 
 EXTRAS =
 REMOTE_URL = https://svn.ietf.org/svn/tools/ietfdb
-#REMOTE_URL = https://ietfdb.googlecode.com/svn/
-CVS_HOST = ietfdb.cvs.sourceforge.net
+#REMOTE_URL = https://datatracker.googlecode.com/svn/
+CVS_HOST = datatracker.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
-CVS_MODULE = ietfdb
-#REMOTE_URL = cvs://$(CVS_HOST)/ietfdb\#$(CVS_MODULE)
+CVS_MODULE = datatracker
+#REMOTE_URL = cvs://$(CVS_HOST)/datatracker\#$(CVS_MODULE)
 READ_OPTIONS = --branchify=trunk:attic/*:branch/*:branch/*/*:personal/*:personal/*/*:sprint/*:sprint/*/*:tags/*:tags/dev/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
@@ -53,19 +53,19 @@ LOGFILE = conversion.log
 
 .PHONY: local-clobber remote-clobber gitk gc compare clean dist stubmap
 
-default: ietfdb-git
+default: datatracker-git
 
 # Build the repository from the stream dump
-ietfdb-git: ietfdb.svn ietfdb.opts ietfdb.lift ietfdb.map $(EXTRAS)
-	$(REPOSURGEON) $(VERBOSITY) 'logfile $(LOGFILE)' 'script ietfdb.opts' "read $(READ_OPTIONS) <ietfdb.svn" 'authors read <ietfdb.map' 'sourcetype svn' 'prefer git' 'script ietfdb.lift' 'legacy write >ietfdb.fo' 'rebuild ietfdb-git'
+datatracker-git: datatracker.svn datatracker.opts datatracker.lift datatracker.map $(EXTRAS)
+	$(REPOSURGEON) $(VERBOSITY) 'logfile $(LOGFILE)' 'script datatracker.opts' "read $(READ_OPTIONS) <datatracker.svn" 'authors read <datatracker.map' 'sourcetype svn' 'prefer git' 'script datatracker.lift' 'legacy write >datatracker.fo' 'rebuild datatracker-git'
 
 # Build a stream dump from the local mirror
-ietfdb.svn: ietfdb-mirror
-	(cd ietfdb-mirror/ >/dev/null; repotool export) | $(DUMPFILTER) >ietfdb.svn
+datatracker.svn: datatracker-mirror
+	(cd datatracker-mirror/ >/dev/null; repotool export) | $(DUMPFILTER) >datatracker.svn
 
 # Build a local mirror of the remote repository
-ietfdb-mirror:
-	repotool mirror $(REMOTE_URL) ietfdb-mirror
+datatracker-mirror:
+	repotool mirror $(REMOTE_URL) datatracker-mirror
 
 # Make a local checkout of the source mirror for inspection
 %-checkout: %-mirror
@@ -73,48 +73,48 @@ ietfdb-mirror:
 
 # Force rebuild of stream from the local mirror on the next make
 local-clobber: clean
-	rm -fr ietfdb.fi ietfdb-git
+	rm -fr datatracker.fi datatracker-git
 
 # Force full rebuild from the remote repo on the next make.
 remote-clobber: local-clobber
-	rm -fr ietfdb.svn *-mirror *-checkout
+	rm -fr datatracker.svn *-mirror *-checkout
 
 # Get the (empty) state of the author mapping from the first-stage stream
-stubmap: ietfdb.svn
-	$(REPOSURGEON) $(VERBOSITY) "read $(READ_OPTIONS) <ietfdb.svn" 'authors write >ietfdb.map'
+stubmap: datatracker.svn
+	$(REPOSURGEON) $(VERBOSITY) "read $(READ_OPTIONS) <datatracker.svn" 'authors write >datatracker.map'
 
 # Compare the histories of the unconverted and converted repositories at head
 # and all tags.
-headcompare: ietfdb-mirror ietfdb-git
-	repotool compare ietfdb-mirror ietfdb-git
-tagscompare: ietfdb-mirror ietfdb-git
-	repotool compare-tags ietfdb-mirror ietfdb-git
-branchescompare: ietfdb-mirror ietfdb-git
-	repotool compare-branches ietfdb-mirror ietfdb-git
-allcompare: ietfdb-mirror ietfdb-git
-	repotool compare-all ietfdb-mirror ietfdb-git
+headcompare: datatracker-mirror datatracker-git
+	repotool compare datatracker-mirror datatracker-git
+tagscompare: datatracker-mirror datatracker-git
+	repotool compare-tags datatracker-mirror datatracker-git
+branchescompare: datatracker-mirror datatracker-git
+	repotool compare-branches datatracker-mirror datatracker-git
+allcompare: datatracker-mirror datatracker-git
+	repotool compare-all datatracker-mirror datatracker-git
 
 # General cleanup and utility
 clean:
-	rm -fr *~ .rs* ietfdb-conversion.tar.gz *.svn *.fi *.fo
+	rm -fr *~ .rs* datatracker-conversion.tar.gz *.svn *.fi *.fo
 
 # Bundle up the conversion metadata for shipping
-SOURCES = Makefile ietfdb.opts ietfdb.lift ietfdb.map $(EXTRAS)
-ietfdb-conversion.tar.gz: $(SOURCES)
-	tar --dereference --transform 's:^:ietfdb-conversion/:' -czvf ietfdb-conversion.tar.gz $(SOURCES)
+SOURCES = Makefile datatracker.opts datatracker.lift datatracker.map $(EXTRAS)
+datatracker-conversion.tar.gz: $(SOURCES)
+	tar --dereference --transform 's:^:datatracker-conversion/:' -czvf datatracker-conversion.tar.gz $(SOURCES)
 
-dist: ietfdb-conversion.tar.gz
+dist: datatracker-conversion.tar.gz
 
 #
 # The following productions are git-specific
 #
 
 # Browse the generated git repository
-gitk: ietfdb-git
-	cd ietfdb-git; gitk --all
+gitk: datatracker-git
+	cd datatracker-git; gitk --all
 
 # Run a garbage-collect on the generated git repository.  Import doesn't.
 # This repack call is the active part of gc --aggressive.  This call is
 # tuned for very large repositories.
-gc: ietfdb-git
-	cd ietfdb-git; time git -c pack.threads=1 repack -AdF --window=1250 --depth=250
+gc: datatracker-git
+	cd datatracker-git; time git -c pack.threads=1 repack -AdF --window=1250 --depth=250
