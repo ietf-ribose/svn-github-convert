@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, use_forked_version_of_git_filter_repo ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
@@ -105,53 +105,6 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_PRIVATE }}
 
-      - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
-        working-directory: git/${{ matrix.svn_repo }}
-        run: |
-          git remote add origin \
-            git@github.com:ietf-ribose/${{ matrix.svn_repo }}.git
-
-      - name: Checkout to main branch
-        working-directory: git/${{ matrix.svn_repo }}
-        run: |
-          git checkout main
-
-      - name: List git branches
-        # if: steps.git_status.outputs.STATUS != ''
-        working-directory: git/${{ matrix.svn_repo }}
-        run: |
-          git branch
-
-      - name: List git tags
-        # if: steps.git_status.outputs.STATUS != ''
-        working-directory: git/${{ matrix.svn_repo }}
-        run: |
-          git tag
-
-      - name: Git push to GitHub ${{ matrix.svn_repo }}
-        # if: steps.git_status.outputs.STATUS != ''
-        working-directory: git/${{ matrix.svn_repo }}
-        run: |
-          max=$(git log --oneline|wc -l); \
-          for i in $(seq $max -500 1); do \
-            echo $i; g=$(git log --reverse --oneline --skip $i -n1|perl -alne'print $F[0]'); \
-            git push origin $g:refs/heads/gitconvert -f; \
-          done
-
-          for x in $(git branch | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
-            y="${x//#/ }"; \
-            echo $y; \
-            git push origin -f $y; \
-          done
-
-          for x in $(git tag | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
-            y="${x//#/ }"; \
-            echo $y; \
-            git push origin -f $y; \
-          done
-
-          git push origin :refs/heads/gitconvert -f
-
       - name: Checkout svn-git-maps repo
         uses: actions/checkout@v2
         with:
@@ -219,6 +172,94 @@ jobs:
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
             --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
+      - name: git-filter-repo clone and install
+        run: |
+          git clone \
+            --branch changing_order_of_msg_update \
+            --single-branch \
+            git@github.com:riboseinc/git-filter-repo.git
+          cd git-filter-repo
+          make snag_docs
+          cp -a git-filter-repo $(git --exec-path)
+          cp -a git-filter-repo.1 $(git --man-path)/man1 && mandb
+          cp -a git-filter-repo.html $(git --html-path)
+          ln -s $(git --exec-path)/git-filter-repo \
+              $(python -c "import site; print(site.getsitepackages()[-1])")/git_filter_repo.py
+
+      - name: Add references to commit SHA in commit messages
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git-filter-repo --force --message-callback '
+            new_message = message
+            revisions = re.findall(b"\[(\d+)\]", message)
+
+            if revisions:
+              file = open("${GITHUB_WORKSPACE}/git/svn-git-maps/${{ matrix.svn_repo }}-revmap-new.txt", "r")
+              total_revisons = revisions.count
+              ref_added = 0
+
+              for line in file:
+                rev, sha = line.split(" | ")
+                sha = bytes(sha, "utf-8")
+                rev = bytes(rev.replace("r", ""), "utf-8")
+                if rev in revisions:
+                  new_message = new_message + b"\nNote: SVN reference [" + rev + b"] has been migrated to Git commit " + sha
+                  ref_added += 1
+
+                if total_revisons == ref_added:
+                  break
+
+              file.close()
+
+            return new_message'
+
+      - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git remote add origin \
+            git@github.com:ietf-ribose/${{ matrix.svn_repo }}.git
+
+      - name: Checkout to main branch
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git checkout main
+
+      - name: List git branches
+        # if: steps.git_status.outputs.STATUS != ''
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git branch
+
+      - name: List git tags
+        # if: steps.git_status.outputs.STATUS != ''
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          git tag
+
+      - name: Git push to GitHub ${{ matrix.svn_repo }}
+        # if: steps.git_status.outputs.STATUS != ''
+        working-directory: git/${{ matrix.svn_repo }}
+        run: |
+          max=$(git log --oneline|wc -l); \
+          for i in $(seq $max -500 1); do \
+            echo $i; g=$(git log --reverse --oneline --skip $i -n1|perl -alne'print $F[0]'); \
+            git push origin $g:refs/heads/gitconvert -f; \
+          done
+
+          for x in $(git branch | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
+            y="${x//#/ }"; \
+            echo $y; \
+            git push origin -f $y; \
+          done
+
+          for x in $(git tag | tr -ds '*' '' | paste -d " " - - - - - - - - - - | tr -s ' ' '#'); do \
+            y="${x//#/ }"; \
+            echo $y; \
+            git push origin -f $y; \
+          done
+
+          git push origin :refs/heads/gitconvert -f
 
       - name: Skip push to svn-git-maps if no changes
         id: git_status
