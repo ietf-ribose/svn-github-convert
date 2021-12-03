@@ -173,6 +173,20 @@ jobs:
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
             --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
 
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Add python to path
+        shell: bash
+        run: |
+          # setup-python puts `python` into the `PATH`, not `python3`, yet
+          # `git-filter-repo` expects `python3` in the `PATH`. Let's add
+          # a shim.
+          printf '#!/bin/sh\n\nexec python "$@"\n' >python3 &&
+          export PATH=$PWD:$PATH
+
       - name: git-filter-repo clone and install
         run: |
           git clone \
@@ -180,6 +194,7 @@ jobs:
             --single-branch \
             git@github.com:riboseinc/git-filter-repo.git
           cd git-filter-repo
+          git fetch origin docs:refs/remotes/origin/docs
           sudo make install
 
       - name: Add references to commit SHA in commit messages
