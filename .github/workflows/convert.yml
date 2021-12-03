@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main, use_forked_version_of_git_filter_repo ]
+    branches: [ main, use_forked_git_filter_repo ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
