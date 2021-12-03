@@ -207,7 +207,7 @@ jobs:
             revisions = re.findall(b"\[(\d+)\]", message)
 
             if revisions:
-              file = open("${GITHUB_WORKSPACE}/svn-git-maps/${{ matrix.svn_repo }}-revmap.txt", "r")
+              file = open("../../svn-git-maps/${{ matrix.svn_repo }}-revmap.txt", "r")
               total_revisons = revisions.count
               ref_added = 0
 
