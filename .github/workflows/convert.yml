@@ -180,9 +180,7 @@ jobs:
             --single-branch \
             git@github.com:riboseinc/git-filter-repo.git
           cd git-filter-repo
-          sudo cp -a git-filter-repo $(git --exec-path)
-          sudo ln -s $(git --exec-path)/git-filter-repo \
-              $(python -c "import site; print(site.getsitepackages()[-1])")/git_filter_repo.py
+          sudo make install
 
       - name: Add references to commit SHA in commit messages
         working-directory: git/${{ matrix.svn_repo }}
