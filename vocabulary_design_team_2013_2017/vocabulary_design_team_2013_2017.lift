@@ -5,6 +5,14 @@ branch rename refs/heads/vocabulary refs/heads/main
 
 =C append " - Legacy-Id: %LEGACY%" --legacy
 
+# Tags with the name prefix emptycommit were branch-creation commits
+# in Subversion. Usually there's nothing interesting in the comment
+# text, but you'll want to browse them and check. This command
+# will delete such tags.
+tag delete /emptycommit/
+
+tag delete /-root$/
+
 msgin --create <<EOF
 Tag-Name: git-conversion
 Tagger: IETF Bot <noreply@ietf.org> America/Los_Angeles
