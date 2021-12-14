@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, testing_updated_script ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
@@ -226,11 +226,61 @@ jobs:
 
             return new_message'
 
+      - name: Update ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
+      - name: Update ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website/rfcs \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
+      - name: Update ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo == 'xml2rfc-website' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
+      - name: Update ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo == 'vocabulary_design_team_2013_2017' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/vocabulary \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
+      - name: Update ${{ matrix.svn_repo }}-revmap.txt
+        if: ${{ matrix.svn_repo == 'datatracker' }}
+        working-directory: svn-git-maps
+        run: |
+          tractive generate-revmap \
+            --svn-url https://svn.ietf.org/svn/tools/ietfdb \
+            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
+            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
+            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
+
       - name: Add GitHub remote to ${{ matrix.svn_repo }} repo
         working-directory: git/${{ matrix.svn_repo }}
         run: |
           git remote add origin \
-            git@github.com:ietf-ribose/${{ matrix.svn_repo }}.git
+            git@github.com:ietf-svn-conversion/${{ matrix.svn_repo }}-updated.git
 
       - name: Checkout to main branch
         working-directory: git/${{ matrix.svn_repo }}
