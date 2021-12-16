@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: migrate_wikis
 
 # Controls when the workflow will run
 on:
@@ -18,18 +18,13 @@ jobs:
       fail-fast: false
       matrix:
         git_repo:
-          - ghostlinkd
           - ietfdb
           - mailarch
-          - mailreplay
-          - postconfirm
-          - postfind
-          - vocabulary_design_team_2013_2017
           - xml2rfc
           - xml2rfc-bibxml
           - xml2rfc-website
+          - vocabulary_design_team_2013_2017
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Setup Git
         run: |
