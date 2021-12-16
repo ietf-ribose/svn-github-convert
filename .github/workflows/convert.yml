@@ -178,31 +178,17 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Add python to path
-        shell: bash
-        run: |
-          # setup-python puts `python` into the `PATH`, not `python3`, yet
-          # `git-filter-repo` expects `python3` in the `PATH`. Let's add
-          # a shim.
-          printf '#!/bin/sh\n\nexec python "$@"\n' >python3 &&
-          export PATH=$PWD:$PATH
-
-      - name: git-filter-repo clone and install
+      - name: Clone git-filter-repo
         run: |
           git clone \
             --branch changing_order_of_msg_update \
             --single-branch \
             git@github.com:riboseinc/git-filter-repo.git
-          cd git-filter-repo
-          git fetch origin docs:refs/remotes/origin/docs
-          sudo cp -a git-filter-repo $(git --exec-path)
-          sudo ln -s $(git --exec-path)/git-filter-repo \
-              $(python -c "import site; print(site.getsitepackages()[-1])")/git_filter_repo.py
 
       - name: Add references to commit SHA in commit messages
         working-directory: git/${{ matrix.svn_repo }}
         run: |
-          git filter-repo --force --message-callback '
+          python ${GITHUB_WORKSPACE}/git-filter-repo/git-filter-repo.py --force --message-callback '
             new_message = message
             revisions = re.findall(b"\[(\d+)\]", message)
 
