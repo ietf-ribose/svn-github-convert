@@ -1,14 +1,14 @@
 # tractive -c "xml2rfc.config.yaml" --filter --column-name "component" --operator "!=" --column-value "v3 vocabulary" -M
 
 trac:
-  database: sqlite://../../trac-svn-db/trac/xml2rfc/db/trac.db
+  database: sqlite://trac-svn-db/trac/xml2rfc/db/trac.db
 
 github:
   token: "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"
   repo: "ietf-svn-conversion/xml2rfc-final"
 
 # need to fix in readme. (not under github)
-revmap_path: ../../svn-git-maps/xml2rfc-revmap.txt
+revmap_path: ./svn-git-maps/xml2rfc-revmap.txt
 # revmap_path: ./foobar-revmap.txt
 
 users:
