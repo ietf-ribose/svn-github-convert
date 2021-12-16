@@ -63,7 +63,7 @@ jobs:
       - name: Migrate Wikis
         run: |
           tractive migrate-wikis \
-            -c "${GITHUB_WORKSPACE}/conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
+            -c "conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
             --repo-path "${{ matrix.git_repo }}.wiki"
             
       - name: Push Wikis to Github
