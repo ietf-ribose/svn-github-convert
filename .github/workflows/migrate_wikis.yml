@@ -19,11 +19,7 @@ jobs:
       matrix:
         git_repo:
           - ietfdb
-          - mailarch
           - xml2rfc
-          - xml2rfc-bibxml
-          - xml2rfc-website
-          - vocabulary_design_team_2013_2017
 
     steps:
       - name: Setup Git
