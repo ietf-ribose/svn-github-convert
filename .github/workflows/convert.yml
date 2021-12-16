@@ -127,7 +127,7 @@ jobs:
         if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -137,7 +137,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website/rfcs \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -147,7 +147,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'xml2rfc-website' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -157,7 +157,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'vocabulary_design_team_2013_2017' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/vocabulary \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -167,7 +167,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'datatracker' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/ietfdb \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -216,7 +216,7 @@ jobs:
         if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -226,7 +226,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website/rfcs \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -236,7 +236,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'xml2rfc-website' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -246,7 +246,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'vocabulary_design_team_2013_2017' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/xml2rfc/vocabulary \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
@@ -256,7 +256,7 @@ jobs:
         if: ${{ matrix.svn_repo == 'datatracker' }}
         working-directory: svn-git-maps
         run: |
-          tractive generate-revmap \
+          tractive generate revmap \
             --svn-url https://svn.ietf.org/svn/tools/ietfdb \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
