@@ -1,0 +1,1781 @@
+# tractive -c "datatracker.config.yaml" --filter --column-name "component" --operator "NOT LIKE" --column-value "MailArchive:%" -M
+
+trac:
+  database: sqlite://../../trac-svn-db/trac/ietfdb/db/trac.db
+
+github:
+  token: "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"
+  repo: "ietf-svn-conversion/ietfdb"
+
+revmap_path: ../../svn-git-maps/datatracker-revmap.txt
+
+users:
+  fenner@research.att.com:
+    email: fenner@research.att.com
+    name:
+    username: hassanakbar
+  henrik@levkowetz.com:
+    email: henrik@levkowetz.com
+    name:
+    username: ronaldtse
+  barbara.fuller@neustar.biz:
+    email: barbara.fuller@neustar.biz
+    name:
+    username: ietf-ribose-ci
+  dinara.suleymanova@neustar.biz:
+    email: dinara.suleymanova@neustar.biz
+    name:
+    username:
+  amy.vezza@neustar.biz:
+    email: amy.vezza@neustar.biz
+    name:
+    username:
+  michael.lee@neustar.biz:
+    email: michael.lee@neustar.biz
+    name:
+    username:
+  fenner@fenron.com:
+    email: fenner@fenron.com
+    name:
+    username:
+  vidyut.luther@neustar.biz:
+    email: vidyut.luther@neustar.biz
+    name:
+    username:
+  rjs@nostrum.com:
+    email: rjs@nostrum.com
+    name:
+    username:
+  jari.arkko@piuha.net:
+    email: jari.arkko@piuha.net
+    name:
+    username:
+  pasi.eronen@nokia.com:
+    email: pasi.eronen@nokia.com
+    name:
+    username:
+  esanchez@yaco.es:
+    email: esanchez@yaco.es
+    name:
+    username:
+  rjsparks@nostrum.com:
+    email: rjsparks@nostrum.com
+    name:
+    username: hassanakbar
+  housley@vigilsec.com:
+    email: housley@vigilsec.com
+    name:
+    username:
+  turners@ieca.com:
+    email: turners@ieca.com
+    name:
+    username: ronaldtse
+  paul.hoffman@vpnc.org:
+    email: paul.hoffman@vpnc.org
+    name:
+    username:
+  cmorgan@amsl.com:
+    email: cmorgan@amsl.com
+    name:
+    username: ietf-ribose-ci
+  avezza@amsl.com:
+    email: avezza@amsl.com
+    name:
+    username:
+  lars.eggert@nokia.com:
+    email: lars.eggert@nokia.com
+    name:
+    username:
+  william.polk@nist.gov:
+    email: william.polk@nist.gov
+    name:
+    username: hassanakbar
+  adrian.farrel@huawei.com:
+    email: adrian.farrel@huawei.com
+    name:
+    username:
+  fenner@fenron.net:
+    email: fenner@fenron.net
+    name:
+    username:
+  adam@nostrum.com:
+    email: adam@nostrum.com
+    name:
+    username:
+  peter.musgrave@magorcorp.com:
+    email: peter.musgrave@magorcorp.com
+    name:
+    username:
+  acee.lindem@ericsson.com:
+    email: acee.lindem@ericsson.com
+    name:
+    username:
+  glen@amsl.com:
+    email: glen@amsl.com
+    name:
+    username:
+  shane@time-travellers.org:
+    email: shane@time-travellers.org
+    name:
+    username:
+  nick.delregno@verizon.com:
+    email: nick.delregno@verizon.com
+    name:
+    username:
+  tony@att.com:
+    email: tony@att.com
+    name:
+    username: ietf-ribose-ci
+  bmheight@gmail.com:
+    email: bmheight@gmail.com
+    name:
+    username:
+  presnick@qualcomm.com:
+    email: presnick@qualcomm.com
+    name:
+    username:
+  dotis@mail-abuse.org:
+    email: dotis@mail-abuse.org
+    name:
+    username: ronaldtse
+  cpignata@cisco.com:
+    email: cpignata@cisco.com
+    name:
+    username:
+  cyrus@daboo.name:
+    email: cyrus@daboo.name
+    name:
+    username:
+  lear@cisco.com:
+    email: lear@cisco.com
+    name:
+    username: hassanakbar
+  fred@cisco.com:
+    email: fred@cisco.com
+    name:
+    username:
+  barryleiba@computer.org:
+    email: barryleiba@computer.org
+    name:
+    username:
+  leontsinis@gmail.com:
+    email: leontsinis@gmail.com
+    name:
+    username:
+  hkaplan@acmepacket.com:
+    email: hkaplan@acmepacket.com
+    name:
+    username:
+  smccammon@amsl.com:
+    email: smccammon@amsl.com
+    name:
+    username:
+  hmdmhdfmhdjmzdtjmzdtzktdkztdjz@gmail.com:
+    email: hmdmhdfmhdjmzdtjmzdtzktdkztdjz@gmail.com
+    name:
+    username:
+  martin.thomson@andrew.com:
+    email: martin.thomson@andrew.com
+    name:
+    username:
+  amorris@amsl.com:
+    email: amorris@amsl.com
+    name:
+    username:
+  msk@cloudmark.com:
+    email: msk@cloudmark.com
+    name:
+    username: ronaldtse
+  olau@iola.dk:
+    email: olau@iola.dk
+    name:
+    username:
+  lars@netapp.com:
+    email: lars@netapp.com
+    name:
+    username:
+  marc.blanchet@viagenie.ca:
+    email: marc.blanchet@viagenie.ca
+    name:
+    username:
+  jhutz@cmu.edu:
+    email: jhutz@cmu.edu
+    name:
+    username: ietf-ribose-ci
+  marshall.eubanks@gmail.com:
+    email: marshall.eubanks@gmail.com
+    name:
+    username:
+  magnus.westerlund@ericsson.com:
+    email: magnus.westerlund@ericsson.com
+    name:
+    username:
+  andrew.g.malis@verizon.com:
+    email: andrew.g.malis@verizon.com
+    name:
+    username:
+  york@isoc.org:
+    email: york@isoc.org
+    name:
+    username:
+  dromasca@avaya.com:
+    email: dromasca@avaya.com
+    name:
+    username:
+  charliep@computer.org:
+    email: charliep@computer.org
+    name:
+    username:
+  ayourtch@gmail.com:
+    email: ayourtch@gmail.com
+    name:
+    username:
+  mamille2@cisco.com:
+    email: mamille2@cisco.com
+    name:
+    username:
+  paul.higgs@ericsson.com:
+    email: paul.higgs@ericsson.com
+    name:
+    username:
+  xing.cernet@gmail.com:
+    email: xing.cernet@gmail.com
+    name:
+    username:
+  weddy@grc.nasa.gov:
+    email: weddy@grc.nasa.gov
+    name:
+    username: ietf-ribose-ci
+  warren@kumari.net:
+    email: warren@kumari.net
+    name:
+    username:
+  mary.ietf.barnes@gmail.com:
+    email: mary.ietf.barnes@gmail.com
+    name:
+    username:
+  cheshire@apple.com:
+    email: cheshire@apple.com
+    name:
+    username:
+  lberger@labn.net:
+    email: lberger@labn.net
+    name:
+    username:
+  ietf@augustcellars.com:
+    email: ietf@augustcellars.com
+    name:
+    username:
+  mcr@sandelman.ca:
+    email: mcr@sandelman.ca
+    name:
+    username:
+  bclaise@cisco.com:
+    email: bclaise@cisco.com
+    name:
+    username:
+  ejimenez@yaco.es:
+    email: ejimenez@yaco.es
+    name:
+    username:
+  randy@psg.com:
+    email: randy@psg.com
+    name:
+    username:
+  bortzmeyer+ietf@nic.fr:
+    email: bortzmeyer+ietf@nic.fr
+    name:
+    username:
+  stbryant@cisco.com:
+    email: stbryant@cisco.com
+    name:
+    username:
+  rcross@amsl.com:
+    email: rcross@amsl.com
+    name:
+    username:
+  tglassey@earthlink.net:
+    email: tglassey@earthlink.net
+    name:
+    username:
+  worley@alum.mit.edu:
+    email: worley@alum.mit.edu
+    name:
+    username:
+  presnick@qti.qualcomm.com:
+    email: presnick@qti.qualcomm.com
+    name:
+    username:
+  dworley@avaya.com:
+    email: dworley@avaya.com
+    name:
+    username:
+  henrik@levkowetz.com, randy@qti.qualcomm.com:
+    email: henrik@levkowetz.com_and_randy@qti.qualcomm.com
+    name:
+    username:
+  kivinen@iki.fi:
+    email: kivinen@iki.fi
+    name:
+    username:
+  volz@cisco.com:
+    email: volz@cisco.com
+    name:
+    username:
+  n.brownlee@auckland.ac.nz:
+    email: n.brownlee@auckland.ac.nz
+    name:
+    username:
+  pe@iki.fi:
+    email: pe@iki.fi
+    name:
+    username:
+  superuser@gmail.com:
+    email: superuser@gmail.com
+    name:
+    username:
+  tim.wicinski@teamaol.com:
+    email: tim.wicinski@teamaol.com
+    name:
+    username:
+  weiler@tislabs.com:
+    email: weiler@tislabs.com
+    name:
+    username:
+  daniele.ceccarelli@ericsson.com:
+    email: daniele.ceccarelli@ericsson.com
+    name:
+    username:
+  bob.hinden@gmail.com:
+    email: bob.hinden@gmail.com
+    name:
+    username:
+  loa@pi.nu:
+    email: loa@pi.nu
+    name:
+    username:
+  ford@isoc.org:
+    email: ford@isoc.org
+    name:
+    username:
+  markus.stenberg@iki.fi:
+    email: markus.stenberg@iki.fi
+    name:
+    username:
+  dcrocker@bbiw.net:
+    email: dcrocker@bbiw.net
+    name:
+    username:
+  shwethab@cisco.com:
+    email: shwethab@cisco.com
+    name:
+    username:
+  bensons@queuefull.net:
+    email: bensons@queuefull.net
+    name:
+    username:
+  david.black@emc.com:
+    email: david.black@emc.com
+    name:
+    username:
+  jguichar@cisco.com:
+    email: jguichar@cisco.com
+    name:
+    username:
+  rmarshall@telecomsys.com:
+    email: rmarshall@telecomsys.com
+    name:
+    username:
+  mariainesrobles@gmail.com:
+    email: mariainesrobles@gmail.com
+    name:
+    username:
+  acmorton@att.com:
+    email: acmorton@att.com
+    name:
+    username:
+  jeff.hodges@kingsmountain.com:
+    email: jeff.hodges@kingsmountain.com
+    name:
+    username:
+  nishida@sfc.wide.ad.jp:
+    email: nishida@sfc.wide.ad.jp
+    name:
+    username:
+  ray.bellis@nominet.org.uk:
+    email: ray.bellis@nominet.org.uk
+    name:
+    username:
+  martin.thomson@gmail.com:
+    email: martin.thomson@gmail.com
+    name:
+    username:
+  Thomas Morin <thomas.morin@orange.com>:
+    email: Thomas Morin <thomas.morin@orange.com>
+    name:
+    username:
+  martin.vigoureux@alcatel-lucent.com:
+    email: martin.vigoureux@alcatel-lucent.com
+    name:
+    username:
+  julian.reschke@gmx.de:
+    email: julian.reschke@gmx.de
+    name:
+    username:
+  nkhan@amsl.com:
+    email: nkhan@amsl.com
+    name:
+    username:
+  simon.perreault@viagenie.ca:
+    email: simon.perreault@viagenie.ca
+    name:
+    username:
+  ted.lemon@nominum.com:
+    email: ted.lemon@nominum.com
+    name:
+    username:
+  shollenbeck@verisign.com:
+    email: shollenbeck@verisign.com
+    name:
+    username:
+  paitken@cisco.com:
+    email: paitken@cisco.com
+    name:
+    username:
+  rs@netapp.com:
+    email: rs@netapp.com
+    name:
+    username:
+  ncamwing@cisco.com:
+    email: ncamwing@cisco.com
+    name:
+    username:
+  adrian@olddog.co.uk:
+    email: adrian@olddog.co.uk
+    name:
+    username:
+  pkyzivat@alum.mit.edu:
+    email: pkyzivat@alum.mit.edu
+    name:
+    username:
+  elwynd@dial.pipex.com:
+    email: elwynd@dial.pipex.com
+    name:
+    username:
+  pusateri@bangj.com:
+    email: pusateri@bangj.com
+    name:
+    username:
+  mthornbu@adobe.com:
+    email: mthornbu@adobe.com
+    name:
+    username:
+  mlarson@amsl.com:
+    email: mlarson@amsl.com
+    name:
+    username:
+  sunqi.csnet.thu@gmail.com:
+    email: sunqi.csnet.thu@gmail.com
+    name:
+    username:
+  gnocuil@gmail.com:
+    email: gnocuil@gmail.com
+    name:
+    username:
+  bruno.decraene@orange.com:
+    email: bruno.decraene@orange.com
+    name:
+    username:
+  brian@innovationslab.net:
+    email: brian@innovationslab.net
+    name:
+    username:
+  melinda.shore@gmail.com:
+    email: melinda.shore@gmail.com
+    name:
+    username:
+  paul@nohats.ca:
+    email: paul@nohats.ca
+    name:
+    username:
+  adam.w.montville@gmail.com:
+    email: adam.w.montville@gmail.com
+    name:
+    username:
+  stephen.farrell@cs.tcd.ie:
+    email: stephen.farrell@cs.tcd.ie
+    name:
+    username:
+  ari.keranen@ericsson.com:
+    email: ari.keranen@ericsson.com
+    name:
+    username:
+  kireeti.kompella@gmail.com:
+    email: kireeti.kompella@gmail.com
+    name:
+    username:
+  jonathan@vidyo.com:
+    email: jonathan@vidyo.com
+    name:
+    username:
+  gorry@erg.abdn.ac.uk:
+    email: gorry@erg.abdn.ac.uk
+    name:
+    username:
+  dkg@fifthhorseman.net:
+    email: dkg@fifthhorseman.net
+    name:
+    username:
+  kathleen.moriarty@emc.com:
+    email: kathleen.moriarty@emc.com
+    name:
+    username:
+  mnot@pobox.com:
+    email: mnot@pobox.com
+    name:
+    username:
+  davemgarrett@gmail.com:
+    email: davemgarrett@gmail.com
+    name:
+    username:
+  ron.even.tlv@gmail.com:
+    email: ron.even.tlv@gmail.com
+    name:
+    username:
+  akatlas@gmail.com:
+    email: akatlas@gmail.com
+    name:
+    username:
+  brian.e.carpenter@gmail.com:
+    email: brian.e.carpenter@gmail.com
+    name:
+    username:
+  amalis@gmail.com:
+    email: amalis@gmail.com
+    name:
+    username:
+  ray@bellis.me.uk:
+    email: ray@bellis.me.uk
+    name:
+    username:
+  chopps@rawdofmt.org:
+    email: chopps@rawdofmt.org
+    name:
+    username:
+  samita.chakrabarti@ericsson.com:
+    email: samita.chakrabarti@ericsson.com
+    name:
+    username:
+  mnot@mnot.net:
+    email: mnot@mnot.net
+    name:
+    username:
+  ben@nostrum.com:
+    email: ben@nostrum.com
+    name:
+    username:
+  hannu.flinck@nokia.com:
+    email: hannu.flinck@nokia.com
+    name:
+    username:
+  cbowers@juniper.net:
+    email: cbowers@juniper.net
+    name:
+    username:
+  spencerdawkins.ietf@gmail.com:
+    email: spencerdawkins.ietf@gmail.com
+    name:
+    username:
+  lloyd.wood@yahoo.co.uk:
+    email: lloyd.wood@yahoo.co.uk
+    name:
+    username:
+  odonoghue@isoc.org:
+    email: odonoghue@isoc.org
+    name:
+    username:
+  laurent.ciavaglia@alcatel-lucent.com:
+    email: laurent.ciavaglia@alcatel-lucent.com
+    name:
+    username:
+  sratliff@idirect.net:
+    email: sratliff@idirect.net
+    name:
+    username:
+  fielding@gbiv.com:
+    email: fielding@gbiv.com
+    name:
+    username:
+  shares@ndzh.com:
+    email: shares@ndzh.com
+    name:
+    username:
+  christianbundy@fraction.io:
+    email: christianbundy@fraction.io
+    name:
+    username:
+  matt@conundrum.com:
+    email: matt@conundrum.com
+    name:
+    username:
+  rsalz@akamai.com:
+    email: rsalz@akamai.com
+    name:
+    username:
+  jhildebr@cisco.com:
+    email: jhildebr@cisco.com
+    name:
+    username:
+  arusso@amsl.com:
+    email: arusso@amsl.com
+    name:
+    username:
+  mahoney@nostrum.com:
+    email: mahoney@nostrum.com
+    name:
+    username:
+  mstjohns@comcast.net:
+    email: mstjohns@comcast.net
+    name:
+    username:
+  rrahman@cisco.com:
+    email: rrahman@cisco.com
+    name:
+    username:
+  mirja.kuehlewind@tik.ee.ethz.ch:
+    email: mirja.kuehlewind@tik.ee.ethz.ch
+    name:
+    username:
+  andreas.steffen@strongswan.org:
+    email: andreas.steffen@strongswan.org
+    name:
+    username:
+  marka@isc.org:
+    email: marka@isc.org
+    name:
+    username:
+  mglt.ietf@gmail.com:
+    email: mglt.ietf@gmail.com
+    name:
+    username:
+  william.atwood@concordia.ca:
+    email: william.atwood@concordia.ca
+    name:
+    username:
+  agmalis@gmail.com:
+    email: agmalis@gmail.com
+    name:
+    username:
+  sbanks@encrypted.net:
+    email: sbanks@encrypted.net
+    name:
+    username:
+  cabo@tzi.org:
+    email: cabo@tzi.org
+    name:
+    username:
+  Sandra Murphy <sandy@tislabs.com>:
+    email: Sandra Murphy <sandy@tislabs.com>
+    name:
+    username:
+  stephane.litkowski@orange.com:
+    email: stephane.litkowski@orange.com
+    name:
+    username:
+  aretana@cisco.com:
+    email: aretana@cisco.com
+    name:
+    username:
+  mersue@gmail.com:
+    email: mersue@gmail.com
+    name:
+    username:
+  vkg@bell-labs.com:
+    email: vkg@bell-labs.com
+    name:
+    username:
+  csp@csperkins.org:
+    email: csp@csperkins.org
+    name:
+    username:
+  worley@ariadne.com:
+    email: worley@ariadne.com
+    name:
+    username:
+  juancarlos.zuniga@interdigital.com:
+    email: juancarlos.zuniga@interdigital.com
+    name:
+    username:
+  guntervandeveldecc@icloud.com:
+    email: guntervandeveldecc@icloud.com
+    name:
+    username:
+  jbasney@illinois.edu:
+    email: jbasney@illinois.edu
+    name:
+    username:
+  alissa@cooperw.in:
+    email: alissa@cooperw.in
+    name:
+    username:
+  nohlmeier@mozilla.com:
+    email: nohlmeier@mozilla.com
+    name:
+    username:
+  jhaas@pfrc.org:
+    email: jhaas@pfrc.org
+    name:
+    username:
+  jclarke@cisco.com:
+    email: jclarke@cisco.com
+    name:
+    username:
+  hlflanagan@gmail.com:
+    email: hlflanagan@gmail.com
+    name:
+    username:
+  mdb@juniper.net:
+    email: mdb@juniper.net
+    name:
+    username:
+  bill@wjcerveny.com:
+    email: bill@wjcerveny.com
+    name:
+    username:
+  mehmet.ersue@nsn.com:
+    email: mehmet.ersue@nsn.com
+    name:
+    username:
+  j.schoenwaelder@jacobs-university.de:
+    email: j.schoenwaelder@jacobs-university.de
+    name:
+    username:
+  trammell@tik.ee.ethz.ch:
+    email: trammell@tik.ee.ethz.ch
+    name:
+    username:
+  pthubert@cisco.com:
+    email: pthubert@cisco.com
+    name:
+    username:
+  ginsberg@cisco.com:
+    email: ginsberg@cisco.com
+    name:
+    username:
+  johnl@iecc.com:
+    email: johnl@iecc.com
+    name:
+    username:
+  jason@zx2c4.com:
+    email: jason@zx2c4.com
+    name:
+    username:
+  david.palma@ntnu.no:
+    email: david.palma@ntnu.no
+    name:
+    username:
+  Jason_Livingood@comcast.com:
+    email: Jason_Livingood@comcast.com
+    name:
+    username:
+  tte@cs.fau.de:
+    email: tte@cs.fau.de
+    name:
+    username:
+  jabley@hopcount.ca:
+    email: jabley@hopcount.ca
+    name:
+    username:
+  sean@sn3rd.com:
+    email: sean@sn3rd.com
+    name:
+    username:
+  brong@fastmailteam.com:
+    email: brong@fastmailteam.com
+    name:
+    username:
+  mbishop@evequefou.be:
+    email: mbishop@evequefou.be
+    name:
+    username:
+  kaduk@mit.edu:
+    email: kaduk@mit.edu
+    name:
+    username:
+  wood@isoc.org:
+    email: wood@isoc.org
+    name:
+    username:
+  ylee@huawei.com:
+    email: ylee@huawei.com
+    name:
+    username:
+  aaron.falk@gmail.com:
+    email: aaron.falk@gmail.com
+    name:
+    username:
+  jbui@amsl.com:
+    email: jbui@amsl.com
+    name:
+    username:
+  peter@akayla.com:
+    email: peter@akayla.com
+    name:
+    username:
+  mcr+ietf@sandelman.ca:
+    email: mcr+ietf@sandelman.ca
+    name:
+    username:
+  mail@nielstenoever.net:
+    email: mail@nielstenoever.net
+    name:
+    username:
+  evyncke@cisco.com:
+    email: evyncke@cisco.com
+    name:
+    username:
+  Vigoureux, Martin <martin.vigoureux@nokia.com>:
+    email: Vigoureux_and_Martin <martin.vigoureux@nokia.com>
+    name:
+    username:
+  nick@foobar.org:
+    email: nick@foobar.org
+    name:
+    username:
+  mjethanandani@gmail.com:
+    email: mjethanandani@gmail.com
+    name:
+    username:
+  valery@smyslov.net:
+    email: valery@smyslov.net
+    name:
+    username:
+  william.panwei@huawei.com:
+    email: william.panwei@huawei.com
+    name:
+    username:
+  serge.raes@orange.com:
+    email: serge.raes@orange.com
+    name:
+    username:
+  fenton@bluepopcorn.net:
+    email: fenton@bluepopcorn.net
+    name:
+    username:
+  rdd@cert.org:
+    email: rdd@cert.org
+    name:
+    username:
+  dhruv.ietf@gmail.com:
+    email: dhruv.ietf@gmail.com
+    name:
+    username:
+  phill@hallambaker.com:
+    email: phill@hallambaker.com
+    name:
+    username:
+  resnick@episteme.net:
+    email: resnick@episteme.net
+    name:
+    username:
+  lars@eggert.org:
+    email: lars@eggert.org
+    name:
+    username:
+  rg+ietf@qti.qualcomm.com:
+    email: rg+ietf@qti.qualcomm.com
+    name:
+    username:
+  chopps@chopps.org:
+    email: chopps@chopps.org
+    name:
+    username:
+  watsonbladd@gmail.com:
+    email: watsonbladd@gmail.com
+    name:
+    username:
+  mcr@sandleman.ca:
+    email: mcr@sandleman.ca
+    name:
+    username:
+  yarronf.ietf@gmail.com:
+    email: yarronf.ietf@gmail.com
+    name:
+    username:
+  ietf@kuehlewind.net:
+    email: ietf@kuehlewind.net
+    name:
+    username:
+  gregimirsky@gmail.com:
+    email: gregimirsky@gmail.com
+    name:
+    username:
+  jmagallanes@amsl.com:
+    email: jmagallanes@amsl.com
+    name:
+    username:
+  jordi.palet@theipv6company.com:
+    email: jordi.palet@theipv6company.com
+    name:
+    username:
+  samita.chakrabarti@verizon.com:
+    email: samita.chakrabarti@verizon.com
+    name:
+    username:
+  martin.h.duke@gmail.com:
+    email: martin.h.duke@gmail.com
+    name:
+    username:
+  jennifer@painless-security.com:
+    email: jennifer@painless-security.com
+    name:
+    username:
+  jared@puck.nether.net:
+    email: jared@puck.nether.net
+    name:
+    username:
+  michelle.cotton@iana.org:
+    email: michelle.cotton@iana.org
+    name:
+    username:
+  skinfoniqa@gmail.com:
+    email: skinfoniqa@gmail.com
+    name:
+    username:
+  ghwood@ietf.org:
+    email: ghwood@ietf.org
+    name:
+    username:
+  paul.hoffman@icann.org:
+    email: paul.hoffman@icann.org
+    name:
+    username:
+  phoffman@proper.com:
+    email: phoffman@proper.com
+    name:
+    username:
+  aretana.ietf@gmail.com:
+    email: aretana.ietf@gmail.com
+    name:
+    username:
+  lflynn@amsl.com:
+    email: lflynn@amsl.com
+    name:
+    username:
+  jmh@joelhalpern.com:
+    email: jmh@joelhalpern.com
+    name:
+    username:
+  sm@smcquistin.uk:
+    email: sm@smcquistin.uk
+    name:
+    username:
+  jay@ietf.org:
+    email: jay@ietf.org
+    name:
+    username:
+  ekr@rtfm.com:
+    email: ekr@rtfm.com
+    name:
+    username:
+  benoit@claise.be:
+    email: benoit@claise.be
+    name:
+    username:
+  sam:
+    email: sam
+    name:
+    username:
+  tte+anima@cs.fau.de:
+    email: tte+anima@cs.fau.de
+    name:
+    username:
+  krathnayake@ietf.org:
+    email: krathnayake@ietf.org
+    name:
+    username:
+  danielbarclay.oss@gmail.com:
+    email: danielbarclay.oss@gmail.com
+    name:
+    username:
+  prz@juniper.net:
+    email: prz@juniper.net
+    name:
+    username:
+  ietf@bobbriscoe.net:
+    email: ietf@bobbriscoe.net
+    name:
+    username:
+  joeysalazar@article19.org:
+    email: joeysalazar@article19.org
+    name:
+    username:
+  christian@amsuess.com:
+    email: christian@amsuess.com
+    name:
+    username:
+  adehnert@mit.edu:
+    email: adehnert@mit.edu
+    name:
+    username:
+  kesara@staff.ietf.org:
+    email: kesara@staff.ietf.org
+    name:
+    username:
+  aaron@parecki.com:
+    email: aaron@parecki.com
+    name:
+    username:
+  g.e.montenegro@hotmail.com:
+    email: g.e.montenegro@hotmail.com
+    name:
+    username:
+  mt@lowentropy.net:
+    email: mt@lowentropy.net
+    name:
+    username:
+  henrik:
+    email: henrik
+    name:
+    username:
+  comimom@gmail.com:
+    email: comimom@gmail.com
+    name:
+    username:
+  galvin@elistx.com:
+    email: galvin@elistx.com
+    name:
+    username:
+  olau@iola.com:
+    email: olau@iola.com
+    name:
+    username:
+  wiggins@concentricsky.com:
+    email: wiggins@concentricsky.com
+    name:
+    username:
+  suresh.krishnan@ericsson.com:
+    email: suresh.krishnan@ericsson.com
+    name:
+    username:
+  liudapeng@chinamobile.com:
+    email: liudapeng@chinamobile.com
+    name:
+    username:
+  jelte@isc.org:
+    email: jelte@isc.org
+    name:
+    username:
+  azarubin@yaco.es:
+    email: azarubin@yaco.es
+    name:
+    username:
+  jtarragon@yaco.es:
+    email: jtarragon@yaco.es
+    name:
+    username:
+  esanchez:
+    email: esanchez
+    name:
+    username:
+  esanches@yaco.es:
+    email: esanches@yaco.es
+    name:
+    username:
+  anurag_nc@yahoo.com:
+    email: anurag_nc@yahoo.com
+    name:
+    username:
+  denghui02@gmail.com:
+    email: denghui02@gmail.com
+    name:
+    username:
+  rcross:
+    email: rcross
+    name:
+    username:
+  fanpeng@chinamobile.com:
+    email: fanpeng@chinamobile.com
+    name:
+    username:
+  sprint:
+    email: sprint
+    name:
+    username:
+  ejimenez@yaco.es, esanchez@yaco.es:
+    email: ejimenez@yaco.es_and_esanchez@yaco.es
+    name:
+    username:
+  bartosz.balazinski@interdigital.com:
+    email: bartosz.balazinski@interdigital.com
+    name:
+    username:
+  suresh@kaloom.com:
+    email: suresh@kaloom.com
+    name:
+    username:
+  sasha@dashcare.nl:
+    email: sasha@dashcare.nl
+    name:
+    username:
+  Elwyn Davies:
+    email: Elwyn Davies
+    name:
+    username:
+  oflaherty@isoc.org:
+    email: oflaherty@isoc.org
+    name:
+    username:
+  Peter Yee:
+    email: Peter Yee
+    name:
+    username:
+  mark@painless-security.com:
+    email: mark@painless-security.com
+    name:
+    username:
+  peter:
+    email: peter
+    name:
+    username:
+  duerst@it.aoyama.ac.jp:
+    email: duerst@it.aoyama.ac.jp
+    name:
+    username:
+  mrcullen42@gmail.com:
+    email: mrcullen42@gmail.com
+    name:
+    username:
+  rhousley:
+    email: rhousley
+    name:
+    username:
+  spikeekips@gmail.com:
+    email: spikeekips@gmail.com
+    name:
+    username:
+  jeroen@unfix.org:
+    email: jeroen@unfix.org
+    name:
+    username:
+  tterriberry@mozilla.com:
+    email: tterriberry@mozilla.com
+    name:
+    username:
+  RjS@nostrum.com:
+    email: RjS@nostrum.com
+    name:
+    username:
+  denghui@chinamobile.com:
+    email: denghui@chinamobile.com
+    name:
+    username:
+  phdgang@gmail.com:
+    email: phdgang@gmail.com
+    name:
+    username:
+  harald@alvestrand.no:
+    email: harald@alvestrand.no
+    name:
+    username:
+  jgs@juniper.net:
+    email: jgs@juniper.net
+    name:
+    username:
+  alireza.mohammadi@icann.org:
+    email: alireza.mohammadi@icann.org
+    name:
+    username:
+  sbirkholz@amsl.com:
+    email: sbirkholz@amsl.com
+    name:
+    username:
+  jyasskin@chromium.org:
+    email: jyasskin@chromium.org
+    name:
+    username:
+  jaym113@yahoo.com:
+    email: jaym113@yahoo.com
+    name:
+    username:
+  alexey.melnikov@isode.com:
+    email: alexey.melnikov@isode.com
+    name:
+    username:
+  otroan@employees.org:
+    email: otroan@employees.org
+    name:
+    username:
+  wls@painless-security.com:
+    email: wls@painless-security.com
+    name:
+    username:
+  brjb2020@gmail.com:
+    email: brjb2020@gmail.com
+    name:
+    username:
+  ramtinbeheshti@yahoo.com:
+    email: ramtinbeheshti@yahoo.com
+    name:
+    username:
+  nathan@resolutehosting.com:
+    email: nathan@resolutehosting.com
+    name:
+    username:
+  fluffy@cisco.com:
+    email: fluffy@cisco.com
+    name:
+    username:
+  chris.newman@sun.com:
+    email: chris.newman@sun.com
+    name:
+    username:
+  jelte@nlnetlabs.nl:
+    email: jelte@nlnetlabs.nl
+    name:
+    username:
+  arifumi@nttv6.net:
+    email: arifumi@nttv6.net
+    name:
+    username:
+  matthijs@nlnetlabs.nl:
+    email: matthijs@nlnetlabs.nl
+    name:
+    username:
+  martin@iola.dk:
+    email: martin@iola.dk
+    name:
+    username:
+  rbarnes@bbn.com:
+    email: rbarnes@bbn.com
+    name:
+    username:
+  denglingli@chinamobile.com:
+    email: denglingli@chinamobile.com
+    name:
+    username:
+  buildbot@tools.ietf.org:
+    email: buildbot@tools.ietf.org
+    name:
+    username:
+  willem@nlnetlabs.nl:
+    email: willem@nlnetlabs.nl
+    name:
+    username:
+  tjw.ietf@gmail.com:
+    email: tjw.ietf@gmail.com
+    name:
+    username:
+  mdouglass@sphericalcowgroup.com:
+    email: mdouglass@sphericalcowgroup.com
+    name:
+    username:
+  david.i.allan@ericsson.com:
+    email: david.i.allan@ericsson.com
+    name:
+    username:
+  johnl@taugh.com:
+    email: johnl@taugh.com
+    name:
+    username: ietf-ribose-ci
+  adityachunar12345@gmail.com:
+    email: adityachunar12345@gmail.com
+    name:
+    username:
+milestones:
+  Cleanup:
+    :name: Cleanup
+    :due: 0
+    :completed: 0
+    :description: ''
+  '2.02':
+    :name: '2.02'
+    :due: 1183327200000000
+    :completed: 1183413805000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.02&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.02&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.02)]]
+  '2.03':
+    :name: '2.03'
+    :due: 1183932000000000
+    :completed: 1184083819000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.03&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.03&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.03)]]
+  Soonish:
+    :name: Soonish
+    :due: 1214863200000000
+    :completed: 1214863200000000
+    :description: ''
+  '2.04':
+    :name: '2.04'
+    :due: 1184536800000000
+    :completed: 1184617555000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.03&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.04&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.04)]]
+  '2.05':
+    :name: '2.05'
+    :due: 1186351200000000
+    :completed: 1193816257000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.03&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.05&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.05)]]
+  Database Schema Conversion:
+    :name: Database Schema Conversion
+    :due: 0
+    :completed: 1394028718000000
+    :description: ''
+  Draft Submission Tool:
+    :name: Draft Submission Tool
+    :due: 0
+    :completed: 1394028719000000
+    :description: "[query:status=new|assigned|reopened&milestone=Submission+Tool&order=priority
+      Open Tickets]:\r\n  [[TicketQuery(status=new|assigned|reopened&milestone=Submission+Tool&order=priority)]]\r\n\r\n[[MilestoneTickets(milestone:Draft
+      Submission Tool)]]"
+  Philly Sprint:
+    :name: Philly Sprint
+    :due: 0
+    :completed: 1204963200000000
+    :description: ''
+  2.12 - Vancouver Sprint:
+    :name: 2.12 - Vancouver Sprint
+    :due: 0
+    :completed: 1196496000000000
+    :description: ''
+  '2.06':
+    :name: '2.06'
+    :due: 1194217200000000
+    :completed: 1194278106000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.03&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.06&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.06)]]
+  '2.07':
+    :name: '2.07'
+    :due: 1209279600000000
+    :completed: 1211094000000000
+    :description: |-
+      This milestone does not have any specific targeted issues, but covers the various
+      code committed on the 2.00 branch since [milestone:2.06 Milestone 2.06] -- see
+      log:branch/2.00@969:HEAD
+
+      [query:status=new|assigned|reopened&milestone=2.07&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.07&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.07)]]
+  '2.08':
+    :name: '2.08'
+    :due: 1210489200000000
+    :completed: 1224658800000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=2.08&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=2.08&order=priority)]]
+
+      [[MilestoneTickets(milestone:2.08)]]
+  '3.01':
+    :name: '3.01'
+    :due: 0
+    :completed: 1279644120000000
+    :description: ''
+  '3.02':
+    :name: '3.02'
+    :due: 1279749600000000
+    :completed: 1279749600000000
+    :description: ''
+  '3.05':
+    :name: '3.05'
+    :due: 1282600800000000
+    :completed: 1282656711000000
+    :description: |-
+      [query:status=new|assigned|reopened&milestone=Submission+Tool&order=priority Open Tickets]:
+        [[TicketQuery(status=new|assigned|reopened&milestone=3.05&order=priority)]]
+
+      [[MilestoneTickets(milestone:3.05)]]
+  '3.06':
+    :name: '3.06'
+    :due: 0
+    :completed: 1284977460000000
+    :description: ''
+  '3.09':
+    :name: '3.09'
+    :due: 1289084400000000
+    :completed: 1289296537000000
+    :description: ''
+  '3.10':
+    :name: '3.10'
+    :due: 0
+    :completed: 1291754357000000
+    :description: "\n  * Fix css for IPR header (status column was included by mistake).
+      \ Fixes \n    issue #546.\n\n  * Tweak some GUI strings in the Liaison Manager\n\n
+      \ From adam@nostrum.com: \n\n  * Added week-at-a-time view to agenda page when
+      viewing selected areas \n    and/or groups. If no groups are selected, the week
+      view is hidden, leaving the\n    base-level functionality unchanged. \n\n  From
+      peter.musgrave@magorcorp.com: \n\n  * 548# Link in IPR column should use an
+      absolute, not relative URL.  This \n    fixes issue #546.\n\n  From kivinen@iki.fi:
+      \n\n  * Added new setting to the /cookies page which enables always showing\n
+      \   full document text instead of showing beginning of the document. This \n
+      \   fixes issue #551.\n\n  From rjsparks@nostrum.com: \n\n  * Refined the email
+      sent when an position changes.\n"
+  WG Chairs Tracker:
+    :name: WG Chairs Tracker
+    :due: 0
+    :completed: 0
+    :description: ''
+  Alternate Streams Support:
+    :name: Alternate Streams Support
+    :due: 0
+    :completed: 0
+    :description: ''
+  RFC/IANA State Support:
+    :name: RFC/IANA State Support
+    :due: 0
+    :completed: 1394028720000000
+    :description: ''
+  WG Charters Toolo:
+    :name: WG Charters Toolo
+    :due: 0
+    :completed: 1394028722000000
+    :description: ''
+  Community Support:
+    :name: Community Support
+    :due: 0
+    :completed: 1394028716000000
+    :description: ''
+  '4.00':
+    :name: '4.00'
+    :due: 1330167600000000
+    :completed: 1332581623000000
+    :description: "Major Release: Transition to new database schema\r\n\r\n[[TicketStats(
+      height=250,daterange=4w,res_days=1,query=version='4.00'&type='defect'&milestone='')]]\r\n\r\n[query:status=new|assigned|reopened&version=4.00&type=defect&milestone=&order=priority
+      Open Defect Tickets]:\r\n  [[TicketQuery(status=new|assigned|reopened&version=4.00&type=defect&milestone=&order=priority)]]\r\n\r\n[[MilestoneTickets(version:4.00;type:defect;milestone:)]]"
+  '4.01':
+    :name: '4.01'
+    :due: 1330956000000000
+    :completed: 1394028697000000
+    :description: ''
+  Agenda-1:
+    :name: Agenda-1
+    :due: 1353020400000000
+    :completed: 1394028699000000
+    :description: ''
+  Agenda-2:
+    :name: Agenda-2
+    :due: 1354834800000000
+    :completed: 1394028700000000
+    :description: ''
+  Agenda-3:
+    :name: Agenda-3
+    :due: 1367013600000000
+    :completed: 1394028702000000
+    :description: ''
+  Agenda-IETF-86:
+    :name: Agenda-IETF-86
+    :due: 1363302000000000
+    :completed: 1394028701000000
+    :description: ''
+  Agenda-IETF-87:
+    :name: Agenda-IETF-87
+    :due: 1374962400000000
+    :completed: 1394028708000000
+    :description: ''
+  Agenda-4:
+    :name: Agenda-4
+    :due: 1370120400000000
+    :completed: 1394028704000000
+    :description: ''
+  Agenda-5:
+    :name: Agenda-5
+    :due: 1372712400000000
+    :completed: 1394028706000000
+    :description: ''
+  Agenda-6:
+    :name: Agenda-6
+    :due: 1375390800000000
+    :completed: 1394028710000000
+    :description: ''
+  Agenda - manual placement:
+    :name: Agenda - manual placement
+    :due: 0
+    :completed: 1389996392000000
+    :description: ''
+  Agenda - automatic placement:
+    :name: Agenda - automatic placement
+    :due: 0
+    :completed: 1394028712000000
+    :description: ''
+  Agenda - javascript testing:
+    :name: Agenda - javascript testing
+    :due: 0
+    :completed: 0
+    :description: ''
+  Agenda - future:
+    :name: Agenda - future
+    :due: 0
+    :completed: 0
+    :description: ''
+  5.y.y:
+    :name: 5.y.y
+    :due: 0
+    :completed: 1428660000000000
+    :description: ''
+  'Maintenance: IRTF Groups':
+    :name: 'Maintenance: IRTF Groups'
+    :due: 0
+    :completed: 0
+    :description: ''
+  'Maintenance: Team Pages':
+    :name: 'Maintenance: Team Pages'
+    :due: 0
+    :completed: 0
+    :description: ''
+  'Maintenance: Performance':
+    :name: 'Maintenance: Performance'
+    :due: 0
+    :completed: 0
+    :description: ''
+  'Maintenance: Charters':
+    :name: 'Maintenance: Charters'
+    :due: 0
+    :completed: 0
+    :description: ''
+  'Maintenance: Choosing People':
+    :name: 'Maintenance: Choosing People'
+    :due: 0
+    :completed: 0
+    :description: ''
+  6.x.x:
+    :name: 6.x.x
+    :due: 0
+    :completed: 0
+    :description: ''
+labels:
+  type:
+    task: type_task
+    defect: type_defect
+    cleanup: type_cleanup
+    enhancement: type_enhancement
+  component:
+    admin/:
+      name: 'component: admin/'
+      color: 00000f
+    doc/:
+      name: 'component: doc/'
+      color: 00000f
+    ipr/:
+      name: 'component: ipr/'
+      color: 00000f
+    'Datatracker: Base templates':
+      name: 'component: Datatracker: Base templates'
+      color: 00000f
+    idtracker/:
+      name: 'component: idtracker/'
+      color: 00000f
+    submit/:
+      name: 'component: submit/'
+      color: 00000f
+    list/:
+      name: 'component: list/'
+      color: 00000f
+    'Datatracker: Infrastructure':
+      name: 'component: Datatracker: Infrastructure'
+      color: 00000f
+    "-- Other":
+      name: 'component: -- Other'
+      color: 00000f
+    'Datatracker: Testing':
+      name: 'component: Datatracker: Testing'
+      color: 00000f
+    'Datatracker: Redirects':
+      name: 'component: Datatracker: Redirects'
+      color: 00000f
+    drafts/:
+      name: 'component: drafts/'
+      color: 00000f
+    meeting/:
+      name: 'component: meeting/'
+      color: 00000f
+    feed/:
+      name: 'component: feed/'
+      color: 00000f
+    ann/:
+      name: 'component: ann/'
+      color: 00000f
+    liaison/:
+      name: 'component: liaison/'
+      color: 00000f
+    'Project: Liaison Management':
+      name: 'component: Project: Liaison Management'
+      color: 00000f
+    'Datatracker: Email sending':
+      name: 'component: Datatracker: Email sending'
+      color: 00000f
+    ietfauth/:
+      name: 'component: ietfauth/'
+      color: 00000f
+    wg/:
+      name: 'component: wg/'
+      color: 00000f
+    iesg/:
+      name: 'component: iesg/'
+      color: 00000f
+    datatracker.ietf.org:
+      name: 'component: datatracker.ietf.org'
+      color: 00000f
+    Other ==:
+      name: 'component: Other =='
+      color: 00000f
+    doc/ ==:
+      name: 'component: doc/ =='
+      color: 00000f
+    wgtracker:
+      name: 'component: wgtracker'
+      color: 00000f
+    notify:
+      name: 'component: notify'
+      color: 00000f
+    wgcharter:
+      name: 'component: wgcharter'
+      color: 00000f
+    community/:
+      name: 'component: community/'
+      color: 00000f
+    doc/charter-:
+      name: 'component: doc/charter-'
+      color: 00000f
+    doc/draft-:
+      name: 'component: doc/draft-'
+      color: 00000f
+    'Project: Agenda':
+      name: 'component: Project: Agenda'
+      color: 00000f
+    Nomcom:
+      name: 'component: Nomcom'
+      color: 00000f
+    secr/sreq/:
+      name: 'component: secr/sreq/'
+      color: 00000f
+    secr/:
+      name: 'component: secr/'
+      color: 00000f
+    nomcom/:
+      name: 'component: nomcom/'
+      color: 00000f
+    group/:
+      name: 'component: group/'
+      color: 00000f
+    statesync:
+      name: 'component: statesync'
+      color: 00000f
+    meeting/*/schedule/:
+      name: 'component: meeting/*/schedule/'
+      color: 00000f
+    'Project: IPR Tool':
+      name: 'component: Project: IPR Tool'
+      color: 00000f
+    person/:
+      name: 'component: person/'
+      color: 00000f
+    sync/:
+      name: 'component: sync/'
+      color: 00000f
+    mailtrigger/:
+      name: 'component: mailtrigger/'
+      color: 00000f
+    accounts/:
+      name: 'component: accounts/'
+      color: 00000f
+    review/:
+      name: 'component: review/'
+      color: 00000f
+    'Datatracker: Yang':
+      name: 'component: Datatracker: Yang'
+      color: 00000f
+    stats/:
+      name: 'component: stats/'
+      color: 00000f
+    'Project: GDPR Compliance':
+      name: 'component: Project: GDPR Compliance'
+      color: 00000f
+    api/:
+      name: 'component: api/'
+      color: 00000f
+  resolution:
+    fixed: resolution_fixed
+    wontfix: resolution_wontfix
+    duplicate: resolution_duplicate
+    invalid: resolution_invalid
+    overtaken by events: resolution_overtaken by events
+    worksforme: resolution_worksforme
+    cannot reproduce: resolution_cannot reproduce
+    deployed: resolution_deployed
+  severity: {}
+  priority:
+    major:
+      name: major
+      color: 22dd00
+    minor:
+      name: minor
+      color: ee00aa
+    blocker:
+      name: blocker
+      color:
+    medium:
+      name: medium
+      color:
+    trivial:
+      name: trivial
+      color: 22dd00
+    critical:
+      name: critical
+      color: aadd88
+  tracstate:
+    accepted:
+      name: accepted
+      color: 22dd00
+    archived:
+      name: archived
+      color: aadd88
+    assigned:
+      name: assigned
+      color: ee00aa
+    close:
+      name: close
+      color: 22dd00
+    closed:
+      name: closed
+      color: aadd88
+    deployed:
+      name: deployed
+      color: ee00aa
+    new:
+      name: new
+      color: 22dd00
+    reopened:
+      name: reopened
+      color: aadd88
+    under_review:
+      name: under_review
+      color: ee00aa
+    waiting:
+      name: waiting
+      color:
+
+ticket:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/ticket
+    hashed: true
+
+wiki:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/wiki
+    hashed: true
