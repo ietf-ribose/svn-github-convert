@@ -188,8 +188,8 @@ jobs:
       - name: Add references to commit SHA in commit messages
         working-directory: git/${{ matrix.svn_repo }}
         run: |
-          python -c "print($(ls))"
-          python -c "print($(pwd))"
+          python -c "import os; print(os.getcwd())"
+          python -c "import os; print(os.listdir(os.curdir))"
           python ${GITHUB_WORKSPACE}/git-filter-repo/git-filter-repo.py --force --message-callback '
             new_message = message
             revisions = re.findall(b"\[(\d+)\]", message)
