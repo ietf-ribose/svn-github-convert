@@ -1,13 +1,13 @@
 # tractive -c "datatracker.config.yaml" --filter --column-name "component" --operator "NOT LIKE" --column-value "MailArchive:%" -M
 
 trac:
-  database: sqlite://../../trac-svn-db/trac/ietfdb/db/trac.db
+  database: sqlite://trac-svn-db/trac/ietfdb/db/trac.db
 
 github:
   token: "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"
   repo: "ietf-svn-conversion/ietfdb"
 
-revmap_path: ../../svn-git-maps/datatracker-revmap.txt
+revmap_path: ./svn-git-maps/datatracker-revmap.txt
 
 users:
   fenner@research.att.com:
