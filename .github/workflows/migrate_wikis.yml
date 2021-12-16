@@ -4,6 +4,8 @@ name: migrate_wikis
 
 # Controls when the workflow will run
 on:
+  push:
+    branches: [ adding_wiki_migration_workflow ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
