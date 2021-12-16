@@ -1,0 +1,80 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  migrate_wikis:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        git_repo:
+          - ghostlinkd
+          - ietfdb
+          - mailarch
+          - mailreplay
+          - postconfirm
+          - postfind
+          - vocabulary_design_team_2013_2017
+          - xml2rfc
+          - xml2rfc-bibxml
+          - xml2rfc-website
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Setup Git
+        run: |
+          git config --global init.defaultBranch main
+          git config --global user.name "ietf-ribose-ci"
+          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
+          
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_PRIVATE }}
+          
+      - uses: actions/checkout@v2
+        with:
+          path: conversion
+          
+      - name: Checkout trac-svn-db repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/trac-svn-db
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: trac-svn-db
+          
+      - name: Checkout svn-git-maps repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/svn-git-maps
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: svn-git-maps
+          
+      - name: Tractive - Install tractive
+        run: |
+          sudo gem install tractive
+          
+      - name: Clone ${{ matrix.git_repo }}.wiki
+        run: |
+          git clone git@github.com:ietf-svn-conversion/${{ matrix.git_repo }}.wiki.git
+          
+      - name: Migrate Wikis
+        run: |
+          tractive migrate-wikis \
+            -c "${GITHUB_WORKSPACE}/conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
+            --repo-path "${{ matrix.git_repo }}.wiki"
+            
+      - name: Push Wikis to Github
+        working-directory: ${{ matrix.git_repo }}.wiki
+        run: |
+          git push
+      
