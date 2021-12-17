@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
       matrix:
         git_repo:
-          - ietfdb
+          - datatracker
           - xml2rfc
 
     steps:
@@ -58,16 +58,16 @@ jobs:
           
       - name: Clone ${{ matrix.git_repo }}.wiki
         run: |
-          git clone git@github.com:ietf-svn-conversion/${{ matrix.git_repo }}.wiki.git
+          git clone git@github.com:ietf-svn-conversion/${{ matrix.git_repo }}-updated.wiki.git
           
       - name: Migrate Wikis
         run: |
           tractive migrate-wikis \
             -c "conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
-            --repo-path "${{ matrix.git_repo }}.wiki"
+            --repo-path "${{ matrix.git_repo }}-updated.wiki"
             
       - name: Push Wikis to Github
-        working-directory: ${{ matrix.git_repo }}.wiki
+        working-directory: ${{ matrix.git_repo }}-updated.wiki
         run: |
           git push
       
