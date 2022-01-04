@@ -16,16 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         svn_repo:
-          - ghostlinkd
-          - datatracker
           - mailarch
-          - mailreplay
-          - postconfirm
-          - postfind
-          - vocabulary_design_team_2013_2017
           - xml2rfc
-          - xml2rfc-bibxml
-          - xml2rfc-website
 
     steps:
       - name: Setup Git
