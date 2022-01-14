@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main, testing_updated_script ]
+    branches: [ main ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
@@ -16,8 +16,16 @@ jobs:
       fail-fast: false
       matrix:
         svn_repo:
+          - ghostlinkd
+          - datatracker
           - mailarch
+          - mailreplay
+          - postconfirm
+          - postfind
+          - vocabulary_design_team_2013_2017
           - xml2rfc
+          - xml2rfc-bibxml
+          - xml2rfc-website
 
     steps:
       - name: Setup Git
@@ -258,7 +266,7 @@ jobs:
         working-directory: git/${{ matrix.svn_repo }}
         run: |
           git remote add origin \
-            git@github.com:ietf-svn-conversion/${{ matrix.svn_repo }}.git
+            git@github.com:ietf-ribose/${{ matrix.svn_repo }}.git
 
       - name: Checkout to main branch
         working-directory: git/${{ matrix.svn_repo }}
