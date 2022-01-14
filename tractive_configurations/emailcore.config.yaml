@@ -1,0 +1,89 @@
+# tractive -c "emailcore.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
+
+trac:
+  database: sqlite://../../trac-svn-db/trac/emailcore/db/trac.db
+
+github:
+  repo: "ietf-svn-conversion/emailcore"
+
+users:
+  alexey.melnikov@isode.com:
+    email: alexey.melnikov@isode.com
+    name: Alexey Melnikov
+    username:
+
+  julien@trigofacile.com:
+    email: julien@trigofacile.com
+    name: Julien ÉLIE
+    username: Julien-Elie
+
+  vesely@tana.it:
+    email: vesely@tana.it
+    name: Alessandro Vesely
+    username: alevesely
+
+  ned.freed@mrochek.com:
+    email: ned.freed@mrochek.com
+    name: Ned Freed
+    username: NedFreed
+
+  todd.herr@valimail.com:
+    email: todd.herr@valimail.com
+    name: Todd Herr
+    username: toddherr
+
+  resnick@episteme.net:
+    email: resnick@episteme.net
+    name: Pete Resnick
+    username:
+
+milestones: {}
+labels:
+  type:
+    defect: type_defect
+    enhancement: type_enhancement
+    task: type_task
+  resolution:
+    fixed: resolution_fixed
+    wontfix: resolution_wontfix
+  component:
+    email-applicability-statement:
+      name: "component_email-applicability-statement"
+      color: ff0000
+    smtp:
+      name: "component_smtp"
+      color: ff0000
+    email-format:
+      name: "component_email-format"
+      color: ff0000
+    smtp-auth:
+      name: "component_smtp-auth"
+      color: ff0000
+  severity: {}
+  priority:
+    major:
+      name: major
+      color: ff00ff
+    minor:
+      name: minor
+      color: 00ff00
+  tracstate:
+    assigned:
+      name: assigned
+      color: 98765f
+    closed:
+      name: closed
+      color: 12345f
+    new:
+      name: new
+      color: 54fdea
+
+ticket:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/ticket
+    hashed: true
+
+wiki:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/wiki
+    hashed: true

@@ -1,0 +1,189 @@
+# tractive -c "tsvwg.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
+
+trac:
+  database: sqlite://../../trac-svn-db/trac/tsvwg/db/trac.db
+
+github:
+  repo: "ietf-svn-conversion/tsvwg"
+
+users:
+  lars.eggert@nokia.com:
+    email: lars@eggert.org
+    name: Lars Eggert
+    username: larseggert
+
+  gorry@erg.abdn.ac.uk:
+    email: gorry@erg.abdn.ac.uk
+    name: Gorry Fairhurst
+    username: gorryfair
+
+  wes@mti-systems.com:
+    email: wes@mti-systems.com
+    name: Wesley Eddy
+    username:
+
+  moeller0@gmx.de:
+    email: moeller0@gmx.de
+    name: Sebastian Moeller
+    username:
+
+  pete@heistp.net:
+    email: pete@heistp.net
+    name: Pete Heist
+    username: heistp
+
+  jmpolk@cisco.com:
+    email: jmpolk@cisco.com
+    name: James Polk
+    username:
+
+  draft-ietf-tsvwg-source-quench@tools.ietf.org:
+    email: draft-ietf-tsvwgsource-quench@tools.ietf.org
+    name:
+    username:
+
+  draft-ietf-tsvwg-l4s-arch@ietf.org:
+    email: draft-ietf-tsvwg-l4s-arch@ietf.org
+    name:
+    username:
+
+  draft-ietf-tsvwg-aqm-dualq-coupled@ietf.org:
+    email: draft-ietf-tsvwg-aqm-dualq-coupled@ietf.org
+    name:
+    username:
+
+  magnus.westerlund@ericsson.com:
+    email: magnus.westerlund@ericsson.com
+    name: Magnus Westerlund
+    username: gloinul
+
+  david.black@emc.com:
+    email: david.black@emc.com
+    name: David Black
+    username: dlb237
+
+  chromatix99@gmail.com:
+    email: chromatix99@gmail.com
+    name: Jonathan Morton
+    username: chromi
+
+  ietf@bobbriscoe.net:
+    email: ietf@bobbriscoe.net
+    name: Bob Briscoe
+    username: bbriscoe
+
+  jholland@akamai.com:
+    email: jholland@akamai.com
+    name: Jake Holland
+    username: GrumpyOldTroll
+
+  g.white@cablelabs.com:
+    email: g.white@cablelabs.com
+    name: Greg White
+    username:
+
+milestones:
+  L4S Suite - WGLC Preparation:
+    :name: L4S Suite - WGLC Preparation
+    :due: 0
+    :completed: 0
+    :description: "This is a milestone to track closure on issues raised regarding
+      the L4S document suite, initially populated with issues discussed at IETF 105.\r\n\r\nThere
+      has not been a working group last call yet on the documents, and this milestone
+      is for dispositioning what appear to be open issues that should be addressed
+      before a WGLC."
+labels:
+  type:
+    task: type_task
+    defect: type_defect
+    issue: type_issue
+  component:
+    udp-guidelines:
+      name: 'component: udp-guidelines'
+      color: ff00ff
+    iana-ports:
+      name: 'component: iana-ports'
+      color: ff00ff
+    rsvp-proxy-approaches:
+      name: 'component: rsvp-proxy-approaches'
+      color: ff00ff
+    rsvp-proxy-proto:
+      name: 'component: rsvp-proxy-proto'
+      color: ff00ff
+    port-randomization:
+      name: 'component: port-randomization'
+      color: ff00ff
+    rsvp-l3vpn:
+      name: 'component: rsvp-l3vpn'
+      color: ff00ff
+    admitted-realtime-dscp:
+      name: 'component: admitted-realtime-dscp'
+      color: ff00ff
+    byte-pkt-congest:
+      name: 'component: byte-pkt-congest'
+      color: ff00ff
+    ecn-tunnel:
+      name: 'component: ecn-tunnel'
+      color: ff00ff
+    rsvp-security-groupkeying:
+      name: 'component: rsvp-security-groupkeying'
+      color: ff00ff
+    emergency-rsvp:
+      name: 'component: emergency-rsvp'
+      color: ff00ff
+    tsvwg-sctpstrrst:
+      name: 'component: tsvwg-sctpstrrst'
+      color: ff00ff
+    dtls-for-sctp:
+      name: 'component: dtls-for-sctp'
+      color: ff00ff
+    source-quench:
+      name: 'component: source-quench'
+      color: ff00ff
+    l4s-arch:
+      name: 'component: l4s-arch'
+      color: ff00ff
+    aqm-dualq-coupled:
+      name: 'component: aqm-dualq-coupled'
+      color: ff00ff
+  resolution:
+    fixed: resolution_fixed
+    wontfix: resolution_wontfix
+    invalid: resolution_invalid
+  severity:
+    Submitted WG Document:
+      name: Submitted WG Document
+      color: 00f000
+    In WG Last Call:
+      name: In WG Last Call
+      color: f00000
+    Waiting for Shepherd Writeup:
+      name: Waiting for Shepherd Writeup
+      color: 12345f
+    Reviews Needed:
+      name: Reviews Needed
+      color: f1f2f3
+    Revised ID Needed:
+      name: Revised ID Needed
+      color: ff12aa
+  priority:
+    major:
+      name: major
+      color: 00ff00
+  tracstate:
+    closed:
+      name: closed
+      color: f09876
+    new:
+      name: new
+      color: ffffff
+
+ticket:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/ticket
+    hashed: true
+
+wiki:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/wiki
+    hashed: true

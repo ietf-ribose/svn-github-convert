@@ -1,0 +1,253 @@
+# tractive -c "dmarc.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
+
+trac:
+  database: sqlite://../../trac-svn-db/trac/dmarc/db/trac.db
+
+github:
+  repo: "ietf-svn-conversion/dmarc"
+
+revmap_path: ../../svn-git-maps/dmarc-revmap.txt
+
+users:
+  superuser@gmail.com:
+    email: superuser@gmail.com
+    name: Murray Kucherawy
+    username: mskucherawy
+
+  tim@eudaemon.net:
+    email: tim@eudaemon.net
+    name: Tim Draegen
+    username: tdraegen
+
+  kboth+ietf@drkurt.com:
+    email: kboth+ietf@drkurt.com
+    name: Kurt Andersen
+    username: kurta
+
+  vesely@tana.it:
+    email: vesely@tana.it
+    name: Alessandro Vesely
+    username: alevesely
+
+  tjw.ietf@gmail.com:
+    email: tjw.ietf@gmail.com
+    name: Tim Wicinski
+    username: moonshiner
+
+  seth@sethblank.com:
+    email: seth@sethblank.com
+    name: Seth Blank
+    username: AntiFreeze
+
+  scott@kitterman.com:
+    email: scott@kitterman.com
+    name: Scott Kitterman
+    username: kitterma
+
+  fenton@bluepopcorn.net:
+    email: fenton@bluepopcorn.net
+    name: Jim Fenton
+    username: jimfenton
+
+  dcrocker@bbiw.net:
+    email: dcrocker@bbiw.net
+    name: Dave Crocker
+    username: davecrocker
+
+  todd.herr@valimail.com:
+    email: todd.herr@valimail.com
+    name: Todd Herr
+    username: toddherr
+
+  fosterd@bayviewphysicians.com:
+    email: fosterd@bayviewphysicians.com
+    name: Doug Foster
+    username:
+
+  alexey.melnikov@isode.com:
+    email: alexey.melnikov@isode.com
+    name: Alexey Melnikov
+    username:
+
+  johnl@taugh.com:
+    email: johnl@taugh.com
+    name: John R. Levine
+    username: jrlevine
+
+  mike@mtcc.com:
+    email: mike@mtcc.com
+    name: Michael Thomas
+    username:
+
+  dougfoster.emailstandards@gmail.com:
+    email: dougfoster.emailstandards@gmail.com
+    name: Doug Foster
+    username:
+
+  mail@wander.science:
+    email: mail@wander.science
+    name: Matthaus Wander
+    username: mwander
+
+  dpa-ietf@aegee.org:
+    email: dpa-ietf@aegee.org
+    name: Дилян Палаузов
+    username: dilyanpalauzov
+
+  alex_brotman@comcast.com:
+    email: alex_brotman@comcast.com
+    name: Alex Brotman
+    username: abrotman
+
+  draft-ietf-dmarc-arc-protocol@ietf.org:
+    email: draft-ietf-dmarc-arc-protocol@ietf.org
+    name:
+    username:
+
+  draft-ietf-dmarc-rfc7601bis@ietf.org:
+    email: draft-ietf-dmarc-rfc7601bis@ietf.org
+    name:
+    username:
+
+  draft-ietf-dmarc-interoperability@ietf.org:
+    email: draft-ietf-dmarc-interoperability@ietf.org
+    name:
+    username:
+
+  draft-ietf-dmarc-arc-multi@ietf.org:
+    email: draft-ietf-dmarc-arc-multi@ietf.org
+    name:
+    username:
+
+  draft-ietf-dmarc-psd@ietf.org:
+    email: draft-ietf-dmarc-psd@ietf.org
+    name:
+    username:
+
+  Todd Herr:
+    email: toddmherr@gmail.com
+    name: Todd Herr
+    username: toddherr
+
+  freddie@leemankuiper.nl:
+    email: freddie@freddieleeman.nl
+    name: Freddie Leeman
+    username: freddieleeman
+
+  smj@crash.com:
+    email: smj@crash.com
+    name: Steve Jones
+    username: smjones
+
+milestones:
+  'Document: interop issues with DMARC and indirect email flows':
+    :name: 'Document: interop issues with DMARC and indirect email flows'
+    :due: 1415412000000000
+    :completed: 1422558491000000
+    :description: "This document captures all known interoperability issues between
+      DMARC and indirect email flows.  See the [wiki:MilestoneOneWiki Milestone 1
+      Wiki].\r\n\r\nSee https://datatracker.ietf.org/doc/draft-ietf-dmarc-interoperability/"
+  'Deliverable #1 (DMARC interop issues + possible methods to address)':
+    :name: 'Deliverable #1 (DMARC interop issues + possible methods to address)'
+    :due: 1420077600000000
+    :completed: 0
+    :description: 'This is the first chartered deliverable: a document describing
+      DMARC interoperability issues with indirect email flows plus possible methods
+      to address issues.  See the [wiki:MilestoneTwoWiki Milestone 2 Wiki].'
+  draft DMARC Usage Guide:
+    :name: draft DMARC Usage Guide
+    :due: 1424484000000000
+    :completed: 0
+    :description: DMARC Usage Guide draft to be ready for review.
+  'Deliverable #2 (DMARC improvements to better support indirect email flows)':
+    :name: 'Deliverable #2 (DMARC improvements to better support indirect email flows)'
+    :due: 1426899600000000
+    :completed: 0
+    :description: 'This is the second chartered deliverable: a document describing
+      possible DMARC improvements to better support indirect email flows.'
+  'Deliverable #3 (changes to DMARC base spec + DMARC Usage Guide':
+    :name: 'Deliverable #3 (changes to DMARC base spec + DMARC Usage Guide'
+    :due: 1432947600000000
+    :completed: 0
+    :description: 'This is the third chartered deliverable: any proposed DMARC base
+      specification changes and the final DMARC Usage Guide.'
+labels:
+  type:
+    defect: type_defect
+    enhancement: type_enhancement
+    task: type_task
+  resolution:
+    fixed-consensus: resolution_fixed-consensus
+    wontfix: resolution_wontfix
+    fixed: resolution_fixed
+    worksforme: resolution_worksforme
+    out-of-scope: resolution_out-of-scope
+    invalid: resolution_invalid
+  component:
+    dmarc-bis:
+      name: 'component: dmarc-bis'
+      color: ff00ff
+    dmarc-aggregate-reporting:
+      name: 'component: dmarc-aggregate-reporting'
+      color: ff00ff
+    arc-protocol:
+      name: 'component: arc-protocol'
+      color: ff00ff
+    rfc7601bis:
+      name: 'component: rfc7601bis'
+      color: ff00ff
+    interoperability:
+      name: 'component: interoperability'
+      color: ff00ff
+    psd:
+      name: 'component: psd'
+      color: ff00ff
+    dmarc-failure-reporting:
+      name: 'component: dmarc-failure-reporting'
+      color: ff00ff
+    dmarc-future-notes:
+      name: 'component: dmarc-future-notes'
+      color: ff00ff
+  severity:
+    Active WG Document:
+      name: Active WG Document
+      color: ff00df
+  priority:
+    major:
+      name: major
+      color: 00ff00
+    minor:
+      name: minor
+      color: 0000ff
+    trivial:
+      name: trivial
+      color: f00ff0
+    critical:
+      name: critical
+      color: 0f0f0f
+  tracstate:
+    assigned:
+      name: assigned
+      color: 00f00f
+    closed:
+      name: closed
+      color: f00000
+    infoneeded:
+      name: infoneeded
+      color: dffadf
+    new:
+      name: new
+      color: 1111f0
+    started:
+      name: started
+      color: ddff10
+
+ticket:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/ticket
+    hashed: true
+
+wiki:
+  attachments:
+    url: https://github.com/hassanakbar4/attachments/tree/main/wiki
+    hashed: true

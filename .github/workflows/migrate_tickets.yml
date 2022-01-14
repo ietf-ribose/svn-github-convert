@@ -1,0 +1,48 @@
+name: migrate_tickets
+
+on:
+  workflow_run:
+    workflows: [convert]
+    types:
+      - completed
+
+jobs:
+  migrate_tickets:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        git_repo:
+          - tsvwg
+          - emailcore
+          - dmarc
+
+    steps:
+      - name: Tractive - Install tractive
+        run: |
+          sudo gem install tractive
+
+      - uses: actions/checkout@v2
+        with:
+          path: conversion
+
+      - name: Checkout trac-svn-db repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/trac-svn-db
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: trac-svn-db
+
+      - name: Checkout svn-git-maps repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/svn-git-maps
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: svn-git-maps
+
+      - name: Migrate Tickets
+        working-directory: conversion/tractive_configurations
+        run: |
+          tractive -c "{{ matrix.git_repo }}.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
+
+
