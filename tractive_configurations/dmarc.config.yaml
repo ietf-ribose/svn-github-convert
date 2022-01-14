@@ -6,8 +6,6 @@ trac:
 github:
   repo: "ietf-svn-conversion/dmarc"
 
-revmap_path: ../../svn-git-maps/dmarc-revmap.txt
-
 users:
   superuser@gmail.com:
     email: superuser@gmail.com
