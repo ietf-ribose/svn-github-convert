@@ -11,1275 +11,1275 @@ revmap_path: ./svn-git-maps/datatracker-revmap.txt
 
 users:
   fenner@research.att.com:
-    email: fenner@research.att.com
+    email:
     name:
-    username: hassanakbar
+    username:
   henrik@levkowetz.com:
     email: henrik@levkowetz.com
-    name:
-    username: ronaldtse
+    name: Henrik Levkowetz
+    username: levkowetz
   barbara.fuller@neustar.biz:
-    email: barbara.fuller@neustar.biz
+    email:
     name:
-    username: ietf-ribose-ci
+    username:
   dinara.suleymanova@neustar.biz:
-    email: dinara.suleymanova@neustar.biz
+    email:
     name:
     username:
   amy.vezza@neustar.biz:
-    email: amy.vezza@neustar.biz
+    email:
     name:
     username:
   michael.lee@neustar.biz:
     email: michael.lee@neustar.biz
-    name:
+    name: Michael Lee
     username:
   fenner@fenron.com:
-    email: fenner@fenron.com
+    email:
     name:
     username:
   vidyut.luther@neustar.biz:
-    email: vidyut.luther@neustar.biz
+    email:
     name:
     username:
   rjs@nostrum.com:
-    email: rjs@nostrum.com
+    email:
     name:
     username:
   jari.arkko@piuha.net:
-    email: jari.arkko@piuha.net
+    email:
     name:
     username:
   pasi.eronen@nokia.com:
-    email: pasi.eronen@nokia.com
+    email:
     name:
     username:
   esanchez@yaco.es:
     email: esanchez@yaco.es
-    name:
-    username:
+    name: Emilio A. Sánchez López
+    username: emiliosanchez
   rjsparks@nostrum.com:
     email: rjsparks@nostrum.com
-    name:
-    username: hassanakbar
+    name: Robert Sparks
+    username: rjsparks
   housley@vigilsec.com:
     email: housley@vigilsec.com
+    name: Russ Housley
+    username: russhousley
+  turners@ieca.com:
+    email:
     name:
     username:
-  turners@ieca.com:
-    email: turners@ieca.com
-    name:
-    username: ronaldtse
   paul.hoffman@vpnc.org:
     email: paul.hoffman@vpnc.org
+    name: Paul Hoffman
+    username: paulvpnc
+  cmorgan@amsl.com:
+    email:
     name:
     username:
-  cmorgan@amsl.com:
-    email: cmorgan@amsl.com
-    name:
-    username: ietf-ribose-ci
   avezza@amsl.com:
-    email: avezza@amsl.com
+    email:
     name:
     username:
   lars.eggert@nokia.com:
-    email: lars.eggert@nokia.com
+    email:
     name:
     username:
   william.polk@nist.gov:
-    email: william.polk@nist.gov
+    email:
     name:
-    username: hassanakbar
+    username:
   adrian.farrel@huawei.com:
-    email: adrian.farrel@huawei.com
+    email:
     name:
     username:
   fenner@fenron.net:
     email: fenner@fenron.net
-    name:
-    username:
+    name: Bill Fenner
+    username: fenner
   adam@nostrum.com:
     email: adam@nostrum.com
-    name:
-    username:
+    name: Adam Roach
+    username: adamroach
   peter.musgrave@magorcorp.com:
     email: peter.musgrave@magorcorp.com
-    name:
-    username:
+    name: Peter Musgrave
+    username: nil
   acee.lindem@ericsson.com:
-    email: acee.lindem@ericsson.com
+    email:
     name:
     username:
   glen@amsl.com:
-    email: glen@amsl.com
+    email:
     name:
     username:
   shane@time-travellers.org:
     email: shane@time-travellers.org
-    name:
-    username:
+    name: Shane Kerr
+    username: shane-kerr
   nick.delregno@verizon.com:
-    email: nick.delregno@verizon.com
+    email:
     name:
     username:
   tony@att.com:
     email: tony@att.com
-    name:
-    username: ietf-ribose-ci
+    name: Tony Hansen
+    username: TonyLHansen
   bmheight@gmail.com:
     email: bmheight@gmail.com
-    name:
-    username:
+    name: Brandon Height
+    username: lasko
   presnick@qualcomm.com:
-    email: presnick@qualcomm.com
+    email:
     name:
     username:
   dotis@mail-abuse.org:
-    email: dotis@mail-abuse.org
+    email:
     name:
-    username: ronaldtse
+    username:
   cpignata@cisco.com:
-    email: cpignata@cisco.com
+    email:
     name:
     username:
   cyrus@daboo.name:
-    email: cyrus@daboo.name
+    email:
     name:
     username:
   lear@cisco.com:
-    email: lear@cisco.com
+    email:
     name:
-    username: hassanakbar
+    username:
   fred@cisco.com:
-    email: fred@cisco.com
+    email:
     name:
     username:
   barryleiba@computer.org:
-    email: barryleiba@computer.org
+    email:
     name:
     username:
   leontsinis@gmail.com:
-    email: leontsinis@gmail.com
+    email:
     name:
     username:
   hkaplan@acmepacket.com:
-    email: hkaplan@acmepacket.com
+    email:
     name:
     username:
   smccammon@amsl.com:
-    email: smccammon@amsl.com
+    email:
     name:
     username:
   hmdmhdfmhdjmzdtjmzdtzktdkztdjz@gmail.com:
-    email: hmdmhdfmhdjmzdtjmzdtzktdkztdjz@gmail.com
+    email:
     name:
     username:
   martin.thomson@andrew.com:
-    email: martin.thomson@andrew.com
+    email:
     name:
     username:
   amorris@amsl.com:
-    email: amorris@amsl.com
+    email:
     name:
     username:
   msk@cloudmark.com:
-    email: msk@cloudmark.com
-    name:
-    username: ronaldtse
-  olau@iola.dk:
-    email: olau@iola.dk
+    email:
     name:
     username:
+  olau@iola.dk:
+    email: olau@iola.dk
+    name: Ole Laursen
+    username: OleLaursen
   lars@netapp.com:
-    email: lars@netapp.com
+    email:
     name:
     username:
   marc.blanchet@viagenie.ca:
-    email: marc.blanchet@viagenie.ca
+    email:
     name:
     username:
   jhutz@cmu.edu:
-    email: jhutz@cmu.edu
+    email:
     name:
-    username: ietf-ribose-ci
+    username:
   marshall.eubanks@gmail.com:
-    email: marshall.eubanks@gmail.com
+    email:
     name:
     username:
   magnus.westerlund@ericsson.com:
     email: magnus.westerlund@ericsson.com
-    name:
-    username:
+    name: Magnus Westerlund
+    username: gloinul
   andrew.g.malis@verizon.com:
-    email: andrew.g.malis@verizon.com
+    email:
     name:
     username:
   york@isoc.org:
     email: york@isoc.org
-    name:
-    username:
+    name: Dan York
+    username: danyork
   dromasca@avaya.com:
-    email: dromasca@avaya.com
+    email:
     name:
     username:
   charliep@computer.org:
-    email: charliep@computer.org
+    email:
     name:
     username:
   ayourtch@gmail.com:
-    email: ayourtch@gmail.com
+    email:
     name:
     username:
   mamille2@cisco.com:
-    email: mamille2@cisco.com
+    email:
     name:
     username:
   paul.higgs@ericsson.com:
-    email: paul.higgs@ericsson.com
+    email:
     name:
     username:
   xing.cernet@gmail.com:
-    email: xing.cernet@gmail.com
+    email:
     name:
     username:
   weddy@grc.nasa.gov:
-    email: weddy@grc.nasa.gov
+    email:
     name:
-    username: ietf-ribose-ci
+    username:
   warren@kumari.net:
-    email: warren@kumari.net
+    email:
     name:
     username:
   mary.ietf.barnes@gmail.com:
-    email: mary.ietf.barnes@gmail.com
+    email:
     name:
     username:
   cheshire@apple.com:
-    email: cheshire@apple.com
+    email:
     name:
     username:
   lberger@labn.net:
-    email: lberger@labn.net
+    email:
     name:
     username:
   ietf@augustcellars.com:
     email: ietf@augustcellars.com
-    name:
-    username:
+    name: Jim Schaad
+    username: coffindragger
   mcr@sandelman.ca:
     email: mcr@sandelman.ca
-    name:
-    username:
+    name: Michael Richardson
+    username: mcr
   bclaise@cisco.com:
-    email: bclaise@cisco.com
+    email:
     name:
     username:
   ejimenez@yaco.es:
-    email: ejimenez@yaco.es
+    email:
     name:
     username:
   randy@psg.com:
-    email: randy@psg.com
+    email:
     name:
     username:
   bortzmeyer+ietf@nic.fr:
-    email: bortzmeyer+ietf@nic.fr
+    email:
     name:
     username:
   stbryant@cisco.com:
-    email: stbryant@cisco.com
+    email:
     name:
     username:
   rcross@amsl.com:
     email: rcross@amsl.com
-    name:
-    username:
+    name: Ryan Cross
+    username: rpcross
   tglassey@earthlink.net:
-    email: tglassey@earthlink.net
+    email:
     name:
     username:
   worley@alum.mit.edu:
-    email: worley@alum.mit.edu
+    email:
     name:
     username:
   presnick@qti.qualcomm.com:
     email: presnick@qti.qualcomm.com
-    name:
-    username:
+    name: Pete Resnick
+    username: peteresnick
   dworley@avaya.com:
-    email: dworley@avaya.com
+    email:
     name:
     username:
   henrik@levkowetz.com, randy@qti.qualcomm.com:
-    email: henrik@levkowetz.com_and_randy@qti.qualcomm.com
+    email:
     name:
     username:
   kivinen@iki.fi:
     email: kivinen@iki.fi
-    name:
-    username:
+    name: Tero Kivinen
+    username: kivinen
   volz@cisco.com:
-    email: volz@cisco.com
+    email:
     name:
     username:
   n.brownlee@auckland.ac.nz:
-    email: n.brownlee@auckland.ac.nz
+    email:
     name:
     username:
   pe@iki.fi:
     email: pe@iki.fi
-    name:
-    username:
+    name: Pasi Eronen
+    username: pasieronen
   superuser@gmail.com:
-    email: superuser@gmail.com
+    email:
     name:
     username:
   tim.wicinski@teamaol.com:
-    email: tim.wicinski@teamaol.com
+    email:
     name:
     username:
   weiler@tislabs.com:
-    email: weiler@tislabs.com
+    email:
     name:
     username:
   daniele.ceccarelli@ericsson.com:
-    email: daniele.ceccarelli@ericsson.com
+    email:
     name:
     username:
   bob.hinden@gmail.com:
-    email: bob.hinden@gmail.com
+    email:
     name:
     username:
   loa@pi.nu:
-    email: loa@pi.nu
+    email:
     name:
     username:
   ford@isoc.org:
     email: ford@isoc.org
-    name:
-    username:
+    name: Mat Ford
+    username: madofo
   markus.stenberg@iki.fi:
     email: markus.stenberg@iki.fi
-    name:
-    username:
+    name: Markus Stenberg
+    username: fingon
   dcrocker@bbiw.net:
-    email: dcrocker@bbiw.net
+    email:
     name:
     username:
   shwethab@cisco.com:
-    email: shwethab@cisco.com
+    email:
     name:
     username:
   bensons@queuefull.net:
-    email: bensons@queuefull.net
+    email:
     name:
     username:
   david.black@emc.com:
-    email: david.black@emc.com
+    email:
     name:
     username:
   jguichar@cisco.com:
-    email: jguichar@cisco.com
+    email:
     name:
     username:
   rmarshall@telecomsys.com:
-    email: rmarshall@telecomsys.com
+    email:
     name:
     username:
   mariainesrobles@gmail.com:
-    email: mariainesrobles@gmail.com
+    email:
     name:
     username:
   acmorton@att.com:
-    email: acmorton@att.com
+    email:
     name:
     username:
   jeff.hodges@kingsmountain.com:
-    email: jeff.hodges@kingsmountain.com
+    email:
     name:
     username:
   nishida@sfc.wide.ad.jp:
-    email: nishida@sfc.wide.ad.jp
+    email:
     name:
     username:
   ray.bellis@nominet.org.uk:
-    email: ray.bellis@nominet.org.uk
+    email:
     name:
     username:
   martin.thomson@gmail.com:
-    email: martin.thomson@gmail.com
+    email:
     name:
     username:
   Thomas Morin <thomas.morin@orange.com>:
-    email: Thomas Morin <thomas.morin@orange.com>
+    email:
     name:
     username:
   martin.vigoureux@alcatel-lucent.com:
-    email: martin.vigoureux@alcatel-lucent.com
+    email:
     name:
     username:
   julian.reschke@gmx.de:
     email: julian.reschke@gmx.de
-    name:
-    username:
+    name: Julian Reschke
+    username: reschke
   nkhan@amsl.com:
-    email: nkhan@amsl.com
+    email:
     name:
     username:
   simon.perreault@viagenie.ca:
-    email: simon.perreault@viagenie.ca
+    email:
     name:
     username:
   ted.lemon@nominum.com:
-    email: ted.lemon@nominum.com
+    email:
     name:
     username:
   shollenbeck@verisign.com:
-    email: shollenbeck@verisign.com
+    email:
     name:
     username:
   paitken@cisco.com:
-    email: paitken@cisco.com
+    email:
     name:
     username:
   rs@netapp.com:
-    email: rs@netapp.com
+    email:
     name:
     username:
   ncamwing@cisco.com:
-    email: ncamwing@cisco.com
+    email:
     name:
     username:
   adrian@olddog.co.uk:
-    email: adrian@olddog.co.uk
+    email:
     name:
     username:
   pkyzivat@alum.mit.edu:
-    email: pkyzivat@alum.mit.edu
+    email:
     name:
     username:
   elwynd@dial.pipex.com:
-    email: elwynd@dial.pipex.com
+    email:
     name:
     username:
   pusateri@bangj.com:
     email: pusateri@bangj.com
-    name:
-    username:
+    name: Tom Pusateri
+    username: pusateri
   mthornbu@adobe.com:
-    email: mthornbu@adobe.com
+    email:
     name:
     username:
   mlarson@amsl.com:
-    email: mlarson@amsl.com
+    email:
     name:
     username:
   sunqi.csnet.thu@gmail.com:
-    email: sunqi.csnet.thu@gmail.com
+    email:
     name:
     username:
   gnocuil@gmail.com:
     email: gnocuil@gmail.com
-    name:
-    username:
+    name: Cong Liu
+    username: gnocuil
   bruno.decraene@orange.com:
-    email: bruno.decraene@orange.com
+    email:
     name:
     username:
   brian@innovationslab.net:
-    email: brian@innovationslab.net
+    email:
     name:
     username:
   melinda.shore@gmail.com:
-    email: melinda.shore@gmail.com
+    email:
     name:
     username:
   paul@nohats.ca:
-    email: paul@nohats.ca
+    email:
     name:
     username:
   adam.w.montville@gmail.com:
-    email: adam.w.montville@gmail.com
+    email:
     name:
     username:
   stephen.farrell@cs.tcd.ie:
     email: stephen.farrell@cs.tcd.ie
-    name:
-    username:
+    name: Stephen Farrell
+    username: sftcd
   ari.keranen@ericsson.com:
-    email: ari.keranen@ericsson.com
+    email:
     name:
     username:
   kireeti.kompella@gmail.com:
-    email: kireeti.kompella@gmail.com
+    email:
     name:
     username:
   jonathan@vidyo.com:
-    email: jonathan@vidyo.com
+    email:
     name:
     username:
   gorry@erg.abdn.ac.uk:
-    email: gorry@erg.abdn.ac.uk
+    email:
     name:
     username:
   dkg@fifthhorseman.net:
-    email: dkg@fifthhorseman.net
+    email:
     name:
     username:
   kathleen.moriarty@emc.com:
-    email: kathleen.moriarty@emc.com
+    email:
     name:
     username:
   mnot@pobox.com:
-    email: mnot@pobox.com
+    email:
     name:
     username:
   davemgarrett@gmail.com:
-    email: davemgarrett@gmail.com
+    email:
     name:
     username:
   ron.even.tlv@gmail.com:
-    email: ron.even.tlv@gmail.com
+    email:
     name:
     username:
   akatlas@gmail.com:
-    email: akatlas@gmail.com
+    email:
     name:
     username:
   brian.e.carpenter@gmail.com:
-    email: brian.e.carpenter@gmail.com
+    email:
     name:
     username:
   amalis@gmail.com:
-    email: amalis@gmail.com
+    email:
     name:
     username:
   ray@bellis.me.uk:
-    email: ray@bellis.me.uk
+    email:
     name:
     username:
   chopps@rawdofmt.org:
-    email: chopps@rawdofmt.org
+    email:
     name:
     username:
   samita.chakrabarti@ericsson.com:
-    email: samita.chakrabarti@ericsson.com
+    email:
     name:
     username:
   mnot@mnot.net:
-    email: mnot@mnot.net
+    email:
     name:
     username:
   ben@nostrum.com:
     email: ben@nostrum.com
-    name:
-    username:
+    name: Ben Campbell
+    username: bacampbe
   hannu.flinck@nokia.com:
-    email: hannu.flinck@nokia.com
+    email:
     name:
     username:
   cbowers@juniper.net:
-    email: cbowers@juniper.net
+    email:
     name:
     username:
   spencerdawkins.ietf@gmail.com:
-    email: spencerdawkins.ietf@gmail.com
+    email:
     name:
     username:
   lloyd.wood@yahoo.co.uk:
-    email: lloyd.wood@yahoo.co.uk
+    email:
     name:
     username:
   odonoghue@isoc.org:
-    email: odonoghue@isoc.org
+    email:
     name:
     username:
   laurent.ciavaglia@alcatel-lucent.com:
-    email: laurent.ciavaglia@alcatel-lucent.com
+    email:
     name:
     username:
   sratliff@idirect.net:
-    email: sratliff@idirect.net
+    email:
     name:
     username:
   fielding@gbiv.com:
-    email: fielding@gbiv.com
+    email:
     name:
     username:
   shares@ndzh.com:
-    email: shares@ndzh.com
+    email:
     name:
     username:
   christianbundy@fraction.io:
-    email: christianbundy@fraction.io
+    email:
     name:
     username:
   matt@conundrum.com:
-    email: matt@conundrum.com
+    email:
     name:
     username:
   rsalz@akamai.com:
-    email: rsalz@akamai.com
+    email:
     name:
     username:
   jhildebr@cisco.com:
-    email: jhildebr@cisco.com
+    email:
     name:
     username:
   arusso@amsl.com:
     email: arusso@amsl.com
-    name:
-    username:
+    name: Alice Russo
+    username: arusso-rpc
   mahoney@nostrum.com:
     email: mahoney@nostrum.com
-    name:
-    username:
+    name: Jean Mahoney
+    username: ajeanmahoney
   mstjohns@comcast.net:
-    email: mstjohns@comcast.net
+    email:
     name:
     username:
   rrahman@cisco.com:
-    email: rrahman@cisco.com
+    email:
     name:
     username:
   mirja.kuehlewind@tik.ee.ethz.ch:
-    email: mirja.kuehlewind@tik.ee.ethz.ch
+    email:
     name:
     username:
   andreas.steffen@strongswan.org:
-    email: andreas.steffen@strongswan.org
+    email:
     name:
     username:
   marka@isc.org:
-    email: marka@isc.org
+    email:
     name:
     username:
   mglt.ietf@gmail.com:
-    email: mglt.ietf@gmail.com
+    email:
     name:
     username:
   william.atwood@concordia.ca:
-    email: william.atwood@concordia.ca
+    email:
     name:
     username:
   agmalis@gmail.com:
-    email: agmalis@gmail.com
+    email:
     name:
     username:
   sbanks@encrypted.net:
-    email: sbanks@encrypted.net
+    email:
     name:
     username:
   cabo@tzi.org:
     email: cabo@tzi.org
-    name:
-    username:
+    name: Carsten Bormann
+    username: cabo
   Sandra Murphy <sandy@tislabs.com>:
-    email: Sandra Murphy <sandy@tislabs.com>
+    email:
     name:
     username:
   stephane.litkowski@orange.com:
-    email: stephane.litkowski@orange.com
+    email:
     name:
     username:
   aretana@cisco.com:
-    email: aretana@cisco.com
+    email:
     name:
     username:
   mersue@gmail.com:
-    email: mersue@gmail.com
+    email:
     name:
     username:
   vkg@bell-labs.com:
-    email: vkg@bell-labs.com
+    email:
     name:
     username:
   csp@csperkins.org:
-    email: csp@csperkins.org
+    email:
     name:
     username:
   worley@ariadne.com:
-    email: worley@ariadne.com
+    email:
     name:
     username:
   juancarlos.zuniga@interdigital.com:
-    email: juancarlos.zuniga@interdigital.com
+    email:
     name:
     username:
   guntervandeveldecc@icloud.com:
-    email: guntervandeveldecc@icloud.com
+    email:
     name:
     username:
   jbasney@illinois.edu:
-    email: jbasney@illinois.edu
+    email:
     name:
     username:
   alissa@cooperw.in:
-    email: alissa@cooperw.in
+    email:
     name:
     username:
   nohlmeier@mozilla.com:
-    email: nohlmeier@mozilla.com
+    email:
     name:
     username:
   jhaas@pfrc.org:
-    email: jhaas@pfrc.org
+    email:
     name:
     username:
   jclarke@cisco.com:
-    email: jclarke@cisco.com
+    email:
     name:
     username:
   hlflanagan@gmail.com:
-    email: hlflanagan@gmail.com
+    email:
     name:
     username:
   mdb@juniper.net:
-    email: mdb@juniper.net
+    email:
     name:
     username:
   bill@wjcerveny.com:
-    email: bill@wjcerveny.com
+    email:
     name:
     username:
   mehmet.ersue@nsn.com:
-    email: mehmet.ersue@nsn.com
+    email:
     name:
     username:
   j.schoenwaelder@jacobs-university.de:
-    email: j.schoenwaelder@jacobs-university.de
+    email:
     name:
     username:
   trammell@tik.ee.ethz.ch:
-    email: trammell@tik.ee.ethz.ch
+    email:
     name:
     username:
   pthubert@cisco.com:
-    email: pthubert@cisco.com
+    email:
     name:
     username:
   ginsberg@cisco.com:
-    email: ginsberg@cisco.com
+    email:
     name:
     username:
   johnl@iecc.com:
-    email: johnl@iecc.com
+    email:
     name:
     username:
   jason@zx2c4.com:
-    email: jason@zx2c4.com
+    email:
     name:
     username:
   david.palma@ntnu.no:
-    email: david.palma@ntnu.no
+    email:
     name:
     username:
   Jason_Livingood@comcast.com:
-    email: Jason_Livingood@comcast.com
+    email:
     name:
     username:
   tte@cs.fau.de:
-    email: tte@cs.fau.de
+    email:
     name:
     username:
   jabley@hopcount.ca:
-    email: jabley@hopcount.ca
+    email:
     name:
     username:
   sean@sn3rd.com:
-    email: sean@sn3rd.com
+    email:
     name:
     username:
   brong@fastmailteam.com:
-    email: brong@fastmailteam.com
+    email:
     name:
     username:
   mbishop@evequefou.be:
-    email: mbishop@evequefou.be
+    email:
     name:
     username:
   kaduk@mit.edu:
-    email: kaduk@mit.edu
+    email:
     name:
     username:
   wood@isoc.org:
-    email: wood@isoc.org
+    email:
     name:
     username:
   ylee@huawei.com:
-    email: ylee@huawei.com
+    email:
     name:
     username:
   aaron.falk@gmail.com:
-    email: aaron.falk@gmail.com
+    email:
     name:
     username:
   jbui@amsl.com:
-    email: jbui@amsl.com
+    email:
     name:
     username:
   peter@akayla.com:
-    email: peter@akayla.com
+    email:
     name:
     username:
   mcr+ietf@sandelman.ca:
-    email: mcr+ietf@sandelman.ca
+    email:
     name:
     username:
   mail@nielstenoever.net:
-    email: mail@nielstenoever.net
+    email:
     name:
     username:
   evyncke@cisco.com:
-    email: evyncke@cisco.com
+    email:
     name:
     username:
   Vigoureux, Martin <martin.vigoureux@nokia.com>:
-    email: Vigoureux_and_Martin <martin.vigoureux@nokia.com>
+    email:
     name:
     username:
   nick@foobar.org:
-    email: nick@foobar.org
+    email:
     name:
     username:
   mjethanandani@gmail.com:
-    email: mjethanandani@gmail.com
+    email:
     name:
     username:
   valery@smyslov.net:
     email: valery@smyslov.net
-    name:
-    username:
+    name: Valery Smyslov
+    username: smyslov
   william.panwei@huawei.com:
-    email: william.panwei@huawei.com
+    email:
     name:
     username:
   serge.raes@orange.com:
-    email: serge.raes@orange.com
+    email:
     name:
     username:
   fenton@bluepopcorn.net:
     email: fenton@bluepopcorn.net
-    name:
-    username:
+    name: Jim Fenton
+    username: jimfenton
   rdd@cert.org:
-    email: rdd@cert.org
+    email:
     name:
     username:
   dhruv.ietf@gmail.com:
-    email: dhruv.ietf@gmail.com
+    email:
     name:
     username:
   phill@hallambaker.com:
-    email: phill@hallambaker.com
+    email:
     name:
     username:
   resnick@episteme.net:
-    email: resnick@episteme.net
+    email:
     name:
     username:
   lars@eggert.org:
     email: lars@eggert.org
-    name:
-    username:
+    name: Lars Eggert
+    username: larseggert
   rg+ietf@qti.qualcomm.com:
-    email: rg+ietf@qti.qualcomm.com
+    email:
     name:
     username:
   chopps@chopps.org:
-    email: chopps@chopps.org
+    email:
     name:
     username:
   watsonbladd@gmail.com:
-    email: watsonbladd@gmail.com
+    email:
     name:
     username:
   mcr@sandleman.ca:
-    email: mcr@sandleman.ca
+    email:
     name:
     username:
   yarronf.ietf@gmail.com:
-    email: yarronf.ietf@gmail.com
+    email:
     name:
     username:
   ietf@kuehlewind.net:
-    email: ietf@kuehlewind.net
+    email:
     name:
     username:
   gregimirsky@gmail.com:
-    email: gregimirsky@gmail.com
+    email:
     name:
     username:
   jmagallanes@amsl.com:
-    email: jmagallanes@amsl.com
+    email:
     name:
     username:
   jordi.palet@theipv6company.com:
-    email: jordi.palet@theipv6company.com
+    email:
     name:
     username:
   samita.chakrabarti@verizon.com:
-    email: samita.chakrabarti@verizon.com
+    email:
     name:
     username:
   martin.h.duke@gmail.com:
-    email: martin.h.duke@gmail.com
+    email:
     name:
     username:
   jennifer@painless-security.com:
     email: jennifer@painless-security.com
-    name:
-    username:
+    name: Jennifer Richards
+    username: jennifer-richards
   jared@puck.nether.net:
-    email: jared@puck.nether.net
+    email:
     name:
     username:
   michelle.cotton@iana.org:
-    email: michelle.cotton@iana.org
+    email:
     name:
     username:
   skinfoniqa@gmail.com:
-    email: skinfoniqa@gmail.com
+    email:
     name:
     username:
   ghwood@ietf.org:
-    email: ghwood@ietf.org
+    email:
     name:
     username:
   paul.hoffman@icann.org:
-    email: paul.hoffman@icann.org
+    email:
     name:
     username:
   phoffman@proper.com:
-    email: phoffman@proper.com
+    email:
     name:
     username:
   aretana.ietf@gmail.com:
-    email: aretana.ietf@gmail.com
+    email:
     name:
     username:
   lflynn@amsl.com:
-    email: lflynn@amsl.com
+    email:
     name:
     username:
   jmh@joelhalpern.com:
     email: jmh@joelhalpern.com
-    name:
-    username:
+    name: Joel M. Halpern
+    username: JoelHalpern
   sm@smcquistin.uk:
-    email: sm@smcquistin.uk
+    email:
     name:
     username:
   jay@ietf.org:
-    email: jay@ietf.org
+    email:
     name:
     username:
   ekr@rtfm.com:
     email: ekr@rtfm.com
-    name:
-    username:
+    name: Eric Rescorla
+    username: ekr
   benoit@claise.be:
-    email: benoit@claise.be
+    email:
     name:
     username:
   sam:
-    email: sam
+    email:
     name:
     username:
   tte+anima@cs.fau.de:
-    email: tte+anima@cs.fau.de
+    email:
     name:
     username:
   krathnayake@ietf.org:
     email: krathnayake@ietf.org
-    name:
-    username:
+    name: Kesara Rathnayake
+    username: kesara
   danielbarclay.oss@gmail.com:
-    email: danielbarclay.oss@gmail.com
+    email:
     name:
     username:
   prz@juniper.net:
-    email: prz@juniper.net
+    email:
     name:
     username:
   ietf@bobbriscoe.net:
-    email: ietf@bobbriscoe.net
+    email:
     name:
     username:
   joeysalazar@article19.org:
-    email: joeysalazar@article19.org
+    email:
     name:
     username:
   christian@amsuess.com:
-    email: christian@amsuess.com
+    email:
     name:
     username:
   adehnert@mit.edu:
-    email: adehnert@mit.edu
+    email:
     name:
     username:
   kesara@staff.ietf.org:
-    email: kesara@staff.ietf.org
+    email:
     name:
     username:
   aaron@parecki.com:
-    email: aaron@parecki.com
+    email:
     name:
     username:
   g.e.montenegro@hotmail.com:
-    email: g.e.montenegro@hotmail.com
+    email:
     name:
     username:
   mt@lowentropy.net:
-    email: mt@lowentropy.net
+    email:
     name:
     username:
   henrik:
-    email: henrik
+    email:
     name:
     username:
   comimom@gmail.com:
     email: comimom@gmail.com
-    name:
+    name: comimom
     username:
   galvin@elistx.com:
-    email: galvin@elistx.com
+    email:
     name:
     username:
   olau@iola.com:
-    email: olau@iola.com
+    email:
     name:
     username:
   wiggins@concentricsky.com:
     email: wiggins@concentricsky.com
-    name:
-    username:
+    name: Wiggins
+    username: coffindragger
   suresh.krishnan@ericsson.com:
-    email: suresh.krishnan@ericsson.com
+    email:
     name:
     username:
   liudapeng@chinamobile.com:
-    email: liudapeng@chinamobile.com
+    email:
     name:
     username:
   jelte@isc.org:
-    email: jelte@isc.org
+    email:
     name:
     username:
   azarubin@yaco.es:
     email: azarubin@yaco.es
-    name:
+    name: Alexey Zarubin
     username:
   jtarragon@yaco.es:
-    email: jtarragon@yaco.es
+    email:
     name:
     username:
   esanchez:
-    email: esanchez
+    email:
     name:
     username:
   esanches@yaco.es:
-    email: esanches@yaco.es
+    email:
     name:
     username:
   anurag_nc@yahoo.com:
     email: anurag_nc@yahoo.com
-    name:
-    username:
+    name: Anurag Bhargava
+    username: anuragnc72
   denghui02@gmail.com:
-    email: denghui02@gmail.com
+    email:
     name:
     username:
   rcross:
-    email: rcross
+    email:
     name:
     username:
   fanpeng@chinamobile.com:
-    email: fanpeng@chinamobile.com
+    email:
     name:
     username:
   sprint:
-    email: sprint
+    email:
     name:
     username:
   ejimenez@yaco.es, esanchez@yaco.es:
-    email: ejimenez@yaco.es_and_esanchez@yaco.es
+    email:
     name:
     username:
   bartosz.balazinski@interdigital.com:
     email: bartosz.balazinski@interdigital.com
-    name:
-    username:
+    name: Bartosz Balazinski
+    username: bartbalaz
   suresh@kaloom.com:
-    email: suresh@kaloom.com
+    email:
     name:
     username:
   sasha@dashcare.nl:
     email: sasha@dashcare.nl
-    name:
-    username:
+    name: Sasha Romijn
+    username: mxsasha
   Elwyn Davies:
-    email: Elwyn Davies
+    email:
     name:
     username:
   oflaherty@isoc.org:
-    email: oflaherty@isoc.org
+    email:
     name:
     username:
   Peter Yee:
-    email: Peter Yee
+    email:
     name:
     username:
   mark@painless-security.com:
     email: mark@painless-security.com
-    name:
-    username:
+    name: Mark J. Donnelly
+    username: meadmaker
   peter:
-    email: peter
+    email:
     name:
     username:
   duerst@it.aoyama.ac.jp:
-    email: duerst@it.aoyama.ac.jp
+    email:
     name:
     username:
   mrcullen42@gmail.com:
-    email: mrcullen42@gmail.com
+    email:
     name:
     username:
   rhousley:
-    email: rhousley
+    email:
     name:
     username:
   spikeekips@gmail.com:
     email: spikeekips@gmail.com
-    name:
-    username:
+    name: Spike^ekipS
+    username: spikeekips
   jeroen@unfix.org:
-    email: jeroen@unfix.org
+    email:
     name:
     username:
   tterriberry@mozilla.com:
     email: tterriberry@mozilla.com
-    name:
-    username:
+    name: Timothy B. Terriberry
+    username: tterribe
   RjS@nostrum.com:
-    email: RjS@nostrum.com
+    email:
     name:
     username:
   denghui@chinamobile.com:
-    email: denghui@chinamobile.com
+    email:
     name:
     username:
   phdgang@gmail.com:
     email: phdgang@gmail.com
-    name:
-    username:
+    name: Gang Chen
+    username: phdgang
   harald@alvestrand.no:
     email: harald@alvestrand.no
-    name:
-    username:
+    name: Harald T. Alvestrand
+    username: alvestrand
   jgs@juniper.net:
-    email: jgs@juniper.net
+    email:
     name:
     username:
   alireza.mohammadi@icann.org:
     email: alireza.mohammadi@icann.org
-    name:
-    username:
+    name: Alireza Mohammadi
+    username: alireza83
   sbirkholz@amsl.com:
     email: sbirkholz@amsl.com
-    name:
+    name: Seth Birkholz
     username:
   jyasskin@chromium.org:
-    email: jyasskin@chromium.org
+    email:
     name:
     username:
   jaym113@yahoo.com:
-    email: jaym113@yahoo.com
+    email:
     name:
     username:
   alexey.melnikov@isode.com:
-    email: alexey.melnikov@isode.com
+    email:
     name:
     username:
   otroan@employees.org:
-    email: otroan@employees.org
+    email:
     name:
     username:
   wls@painless-security.com:
-    email: wls@painless-security.com
+    email:
     name:
     username:
   brjb2020@gmail.com:
-    email: brjb2020@gmail.com
+    email:
     name:
     username:
   ramtinbeheshti@yahoo.com:
-    email: ramtinbeheshti@yahoo.com
+    email:
     name:
     username:
   nathan@resolutehosting.com:
     email: nathan@resolutehosting.com
-    name:
-    username:
+    name: Nathan Cassano
+    username: nathancassano
   fluffy@cisco.com:
     email: fluffy@cisco.com
-    name:
-    username:
+    name: Cullen Jennings
+    username: fluffy
   chris.newman@sun.com:
-    email: chris.newman@sun.com
+    email:
     name:
     username:
   jelte@nlnetlabs.nl:
-    email: jelte@nlnetlabs.nl
+    email:
     name:
     username:
   arifumi@nttv6.net:
-    email: arifumi@nttv6.net
+    email:
     name:
     username:
   matthijs@nlnetlabs.nl:
-    email: matthijs@nlnetlabs.nl
+    email:
     name:
     username:
   martin@iola.dk:
-    email: martin@iola.dk
+    email:
     name:
     username:
   rbarnes@bbn.com:
-    email: rbarnes@bbn.com
+    email:
     name:
     username:
   denglingli@chinamobile.com:
     email: denglingli@chinamobile.com
-    name:
-    username:
+    name: Deng Lingli
+    username: DeniseDeng
   buildbot@tools.ietf.org:
     email: buildbot@tools.ietf.org
-    name:
+    name: buildbot
     username:
   willem@nlnetlabs.nl:
     email: willem@nlnetlabs.nl
-    name:
-    username:
+    name: Willem Toorop
+    username: wtoorop
   tjw.ietf@gmail.com:
     email: tjw.ietf@gmail.com
-    name:
-    username:
+    name: Tim Wicinski
+    username: moonshiner
   mdouglass@sphericalcowgroup.com:
     email: mdouglass@sphericalcowgroup.com
-    name:
-    username:
+    name: Mike Douglass
+    username: douglm
   david.i.allan@ericsson.com:
     email: david.i.allan@ericsson.com
-    name:
+    name: David I. Allan
     username:
   johnl@taugh.com:
     email: johnl@taugh.com
-    name:
-    username: ietf-ribose-ci
+    name: John R. Levine
+    username: jrlevine
   adityachunar12345@gmail.com:
-    email: adityachunar12345@gmail.com
+    email:
     name:
     username:
 milestones:
