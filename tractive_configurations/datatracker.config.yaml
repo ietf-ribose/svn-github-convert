@@ -4,7 +4,6 @@ trac:
   database: sqlite://trac-svn-db/trac/ietfdb/db/trac.db
 
 github:
-  token: "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"
   repo: "ietf-svn-conversion/ietfdb"
 
 revmap_path: ./svn-git-maps/datatracker-revmap.txt
