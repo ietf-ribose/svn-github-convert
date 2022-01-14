@@ -1,7 +1,7 @@
 # tractive -c "tsvwg.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
 
 trac:
-  database: sqlite://../../trac-svn-db/trac/tsvwg/db/trac.db
+  database: sqlite://trac-svn-db/trac/tsvwg/db/trac.db
 
 github:
   repo: "ietf-svn-conversion/tsvwg"
