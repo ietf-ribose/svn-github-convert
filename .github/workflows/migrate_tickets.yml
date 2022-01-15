@@ -42,6 +42,4 @@ jobs:
 
       - name: Migrate Tickets
         run: |
-          tractive -c "./conversion/tractive_configurations/{{ matrix.git_repo }}.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}"
-
-
+          tractive -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
