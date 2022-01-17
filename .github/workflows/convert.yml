@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, using_local_svn_server ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
