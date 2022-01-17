@@ -34,7 +34,7 @@ jobs:
         # Docker Hub image
         image: elleflorio/svn-server
         volumes:
-          - ${GITHUB_WORKSPACE}/svn-server:/home/svn
+          - ${{ github.workspace }}/svn-server:/home/svn
         ports:
           # Maps tcp ports on service container to the host
           - 80:80
