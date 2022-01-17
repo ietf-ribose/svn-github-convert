@@ -27,6 +27,20 @@ jobs:
           - xml2rfc-bibxml
           - xml2rfc-website
 
+    # Service containers to run with `runner-job`
+    services:
+      # Label used to access the service container
+      svn:
+        # Docker Hub image
+        image: elleflorio/svn-server
+        volumes:
+          - ${GITHUB_WORKSPACE}/svn-server:/home/svn
+        ports:
+          # Maps tcp ports on service container to the host
+          - 80:80
+          - 443:443
+          - 3690:3690
+
     steps:
       - name: Setup Git
         run: |
@@ -70,6 +84,11 @@ jobs:
           repository: ietf-ribose/trac-svn-db
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: trac-svn-db
+
+      - name: Copy SVN server data to svn-server folder
+        run: |
+          ln -s trac-svn-db/svn/${{ matrix.svn_repo }} svn-server
+
 
       - name: Convert SVN to Git via reposurgeon
         if: ${{ matrix.svn_repo != 'xml2rfc-bibxml' && matrix.svn_repo != 'xml2rfc-website' && matrix.svn_repo != 'vocabulary_design_team_2013_2017' && matrix.svn_repo != 'datatracker' }}
@@ -128,47 +147,7 @@ jobs:
         working-directory: svn-git-maps
         run: |
           tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Convert ${{ matrix.svn_repo }}.fo to ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website/rfcs \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Convert ${{ matrix.svn_repo }}.fo to ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'xml2rfc-website' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Convert ${{ matrix.svn_repo }}.fo to ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'vocabulary_design_team_2013_2017' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/vocabulary \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Convert ${{ matrix.svn_repo }}.fo to ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'datatracker' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/ietfdb \
+            --svn-url svn:3690 \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
             --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
@@ -217,47 +196,7 @@ jobs:
         working-directory: svn-git-maps
         run: |
           tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/${{ matrix.svn_repo }} \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Update ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'xml2rfc-bibxml' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website/rfcs \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Update ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'xml2rfc-website' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/website \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Update ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'vocabulary_design_team_2013_2017' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/xml2rfc/vocabulary \
-            --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
-            --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
-            --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
-
-      - name: Update ${{ matrix.svn_repo }}-revmap.txt
-        if: ${{ matrix.svn_repo == 'datatracker' }}
-        working-directory: svn-git-maps
-        run: |
-          tractive generate revmap \
-            --svn-url https://svn.ietf.org/svn/tools/ietfdb \
+            --svn-url svn:3690 \
             --git-local-repo-path ${GITHUB_WORKSPACE}/git/${{ matrix.svn_repo }} \
             --rev-timestamp-file ${{ matrix.svn_repo }}.fo \
             --revmap-output-file ./${{ matrix.svn_repo }}-revmap.txt
