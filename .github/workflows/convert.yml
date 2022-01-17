@@ -92,7 +92,7 @@ jobs:
           TERM: xterm-256color
         run: |
           ln -s ../../trac-svn-db/svn/${{ matrix.svn_repo }} ${{ matrix.svn_repo }}-mirror
-          cp -r ../../trac-svn-db/svn/${{ matrix.svn_repo }} ../../svn-server
+          cp -r ../../trac-svn-db/svn/${{ matrix.svn_repo }}/. ../../svn-server
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
@@ -103,7 +103,7 @@ jobs:
           TERM: xterm-256color
         run: |
           ln -s ../../trac-svn-db/svn/xml2rfc ${{ matrix.svn_repo }}-mirror
-          cp -r ../../trac-svn-db/svn/xml2rfc ../../svn-server
+          cp -r ../../trac-svn-db/svn/xml2rfc/. ../../svn-server
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
@@ -114,7 +114,7 @@ jobs:
           TERM: xterm-256color
         run: |
           ln -s ../../trac-svn-db/svn/ietfdb ${{ matrix.svn_repo }}-mirror
-          cp -r ../../trac-svn-db/svn/ietfdb ../../svn-server
+          cp -r ../../trac-svn-db/svn/ietfdb/. ../../svn-server
           make
           mv ${{ matrix.svn_repo }}-git ../../git/${{ matrix.svn_repo }}
 
