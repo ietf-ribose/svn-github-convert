@@ -1,8 +1,6 @@
 name: migrate_tickets
 
 on:
-  push:
-    branches: [ fixing_typo_in_code ]
   workflow_run:
     workflows: [convert]
     types:
