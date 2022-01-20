@@ -10,32 +10,32 @@ users:
   alexey.melnikov@isode.com:
     email: alexey.melnikov@isode.com
     name: Alexey Melnikov
-    username:
+    username: # aamelnikov@gmail.com
 
   julien@trigofacile.com:
     email: julien@trigofacile.com
     name: Julien ÉLIE
-    username: Julien-Elie
+    username: # Julien-Elie
 
   vesely@tana.it:
     email: vesely@tana.it
     name: Alessandro Vesely
-    username: alevesely
+    username: # alevesely
 
   ned.freed@mrochek.com:
     email: ned.freed@mrochek.com
     name: Ned Freed
-    username: NedFreed
+    username: # NedFreed
 
   todd.herr@valimail.com:
     email: todd.herr@valimail.com
     name: Todd Herr
-    username: toddherr
+    username: # toddherr
 
   resnick@episteme.net:
     email: resnick@episteme.net
     name: Pete Resnick
-    username:
+    username: # peteresnick
 
 milestones: {}
 labels:

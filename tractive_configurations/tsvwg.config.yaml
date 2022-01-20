@@ -10,77 +10,77 @@ users:
   lars.eggert@nokia.com:
     email: lars@eggert.org
     name: Lars Eggert
-    username: larseggert
+    username: # larseggert
 
   gorry@erg.abdn.ac.uk:
     email: gorry@erg.abdn.ac.uk
     name: Gorry Fairhurst
-    username: gorryfair
+    username: # gorryfair
 
   wes@mti-systems.com:
     email: wes@mti-systems.com
     name: Wesley Eddy
-    username:
+    username: # wesley-eddy
 
   moeller0@gmx.de:
     email: moeller0@gmx.de
     name: Sebastian Moeller
-    username:
+    username: # moeller0
 
   pete@heistp.net:
     email: pete@heistp.net
     name: Pete Heist
-    username: heistp
+    username: # heistp
 
   jmpolk@cisco.com:
     email: jmpolk@cisco.com
     name: James Polk
-    username:
+    username: #
 
   draft-ietf-tsvwg-source-quench@tools.ietf.org:
     email: draft-ietf-tsvwgsource-quench@tools.ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-tsvwg-l4s-arch@ietf.org:
     email: draft-ietf-tsvwg-l4s-arch@ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-tsvwg-aqm-dualq-coupled@ietf.org:
     email: draft-ietf-tsvwg-aqm-dualq-coupled@ietf.org
     name:
-    username:
+    username: #
 
   magnus.westerlund@ericsson.com:
     email: magnus.westerlund@ericsson.com
     name: Magnus Westerlund
-    username: gloinul
+    username: # gloinul
 
   david.black@emc.com:
     email: david.black@emc.com
     name: David Black
-    username: dlb237
+    username: # dlb237
 
   chromatix99@gmail.com:
     email: chromatix99@gmail.com
     name: Jonathan Morton
-    username: chromi
+    username: # chromi
 
   ietf@bobbriscoe.net:
     email: ietf@bobbriscoe.net
     name: Bob Briscoe
-    username: bbriscoe
+    username: # bbriscoe
 
   jholland@akamai.com:
     email: jholland@akamai.com
     name: Jake Holland
-    username: GrumpyOldTroll
+    username: # GrumpyOldTroll
 
   g.white@cablelabs.com:
     email: g.white@cablelabs.com
     name: Greg White
-    username:
+    username: # gwhiteCL
 
 milestones:
   L4S Suite - WGLC Preparation:

@@ -10,132 +10,132 @@ users:
   superuser@gmail.com:
     email: superuser@gmail.com
     name: Murray Kucherawy
-    username: mskucherawy
+    username: # mskucherawy
 
   tim@eudaemon.net:
     email: tim@eudaemon.net
     name: Tim Draegen
-    username: tdraegen
+    username: # tdraegen
 
   kboth+ietf@drkurt.com:
     email: kboth+ietf@drkurt.com
     name: Kurt Andersen
-    username: kurta
+    username: # kurta
 
   vesely@tana.it:
     email: vesely@tana.it
     name: Alessandro Vesely
-    username: alevesely
+    username: # alevesely
 
   tjw.ietf@gmail.com:
     email: tjw.ietf@gmail.com
     name: Tim Wicinski
-    username: moonshiner
+    username: # moonshiner
 
   seth@sethblank.com:
     email: seth@sethblank.com
     name: Seth Blank
-    username: AntiFreeze
+    username: # AntiFreeze
 
   scott@kitterman.com:
     email: scott@kitterman.com
     name: Scott Kitterman
-    username: kitterma
+    username: # kitterma
 
   fenton@bluepopcorn.net:
     email: fenton@bluepopcorn.net
     name: Jim Fenton
-    username: jimfenton
+    username: # jimfenton
 
   dcrocker@bbiw.net:
     email: dcrocker@bbiw.net
     name: Dave Crocker
-    username: davecrocker
+    username: # davecrocker
 
   todd.herr@valimail.com:
     email: todd.herr@valimail.com
     name: Todd Herr
-    username: toddherr
+    username: # toddherr
 
   fosterd@bayviewphysicians.com:
     email: fosterd@bayviewphysicians.com
     name: Doug Foster
-    username:
+    username: # dougfoster-email
 
   alexey.melnikov@isode.com:
     email: alexey.melnikov@isode.com
     name: Alexey Melnikov
-    username:
+    username: # aamelnikov@gmail.com
 
   johnl@taugh.com:
     email: johnl@taugh.com
     name: John R. Levine
-    username: jrlevine
+    username: # jrlevine
 
   mike@mtcc.com:
     email: mike@mtcc.com
     name: Michael Thomas
-    username:
+    username: #
 
   dougfoster.emailstandards@gmail.com:
     email: dougfoster.emailstandards@gmail.com
     name: Doug Foster
-    username:
+    username: # dougfoster-email
 
   mail@wander.science:
     email: mail@wander.science
     name: Matthaus Wander
-    username: mwander
+    username: # mwander
 
   dpa-ietf@aegee.org:
     email: dpa-ietf@aegee.org
     name: Дилян Палаузов
-    username: dilyanpalauzov
+    username: # dilyanpalauzov
 
   alex_brotman@comcast.com:
     email: alex_brotman@comcast.com
     name: Alex Brotman
-    username: abrotman
+    username: # abrotman
 
   draft-ietf-dmarc-arc-protocol@ietf.org:
     email: draft-ietf-dmarc-arc-protocol@ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-dmarc-rfc7601bis@ietf.org:
     email: draft-ietf-dmarc-rfc7601bis@ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-dmarc-interoperability@ietf.org:
     email: draft-ietf-dmarc-interoperability@ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-dmarc-arc-multi@ietf.org:
     email: draft-ietf-dmarc-arc-multi@ietf.org
     name:
-    username:
+    username: #
 
   draft-ietf-dmarc-psd@ietf.org:
     email: draft-ietf-dmarc-psd@ietf.org
     name:
-    username:
+    username: #
 
   Todd Herr:
     email: toddmherr@gmail.com
     name: Todd Herr
-    username: toddherr
+    username: # toddherr
 
   freddie@leemankuiper.nl:
     email: freddie@freddieleeman.nl
     name: Freddie Leeman
-    username: freddieleeman
+    username: # freddieleeman
 
   smj@crash.com:
     email: smj@crash.com
     name: Steve Jones
-    username: smjones
+    username: # smjones
 
 milestones:
   'Document: interop issues with DMARC and indirect email flows':
