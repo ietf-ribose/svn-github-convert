@@ -1,8 +1,6 @@
 name: migrate_tickets
 
 on:
-  push:
-    branches: [ running_migration_without_assignees ]
   workflow_run:
     workflows: [convert]
     types:
@@ -26,7 +24,6 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          ref: running_migration_without_assignees
           path: conversion
 
       - name: Checkout trac-svn-db repo
