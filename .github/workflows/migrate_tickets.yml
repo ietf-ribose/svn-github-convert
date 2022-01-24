@@ -44,7 +44,7 @@ jobs:
           
       - name: Test token
         run: |
-          curl -H "Authorization: bearer ${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}" -X POST -d "{ \"query\": \"query { viewer { login }}\" }" https://api.github.com/graphql
+          curl -H "Authorization: bearer ${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}" -X GET https://api.github.com/graphql
 
       - name: Migrate Tickets
         run: |
