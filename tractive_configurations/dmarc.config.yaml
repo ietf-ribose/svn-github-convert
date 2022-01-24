@@ -181,6 +181,30 @@ labels:
     worksforme: resolution_worksforme
     out-of-scope: resolution_out-of-scope
     invalid: resolution_invalid
+  keywords:
+    arc-protocol_wordsmithing: keyword_arc-protocol_wordsmithing
+    arc-protocol_formatting: keyword_arc-protocol_formatting
+    arc-protocol_content_AAR: keyword_arc-protocol_content_AAR
+    arc-protocol_content_AAR_7601bis: keyword_arc-protocol_content_AAR_7601bis
+    reporting_nit: keyword_reporting_nit
+    nit_tag-update: keyword_nit_tag-update
+    clarify_report: keyword_clarify_report
+    nits_reports: keyword_nits_reports
+    reports: keyword_reports
+    clarify_reports: keyword_clarify_reports
+    clarify_nit: keyword_clarify_nit
+    improve: keyword_improve
+    improve_reports: keyword_improve_reports
+    clarify: keyword_clarify
+    alignment: keyword_alignment
+    rua: keyword_rua
+    policy: keyword_policy
+    reporting: keyword_reporting
+    Authentication-Results: keyword_Authentication-Results
+    From:_rewriting: keyword_From:_rewriting
+    From:_munging: keyword_From:_munging
+    Introduction: keyword_Introduction
+    unique-id_msg-id_report_id: keyword_unique-id_msg-id_report_id
   component:
     dmarc-bis:
       name: 'component: dmarc-bis'
