@@ -39,6 +39,10 @@ jobs:
           repository: ietf-ribose/svn-git-maps
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: svn-git-maps
+          
+      - name: Test token
+        run: |
+          curl -H "Authorization: bearer ${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}" -X POST -d "{ \"query\": \"query { viewer { login }}\" }" https://api.github.com/graphql
 
       - name: Migrate Tickets
         run: |
