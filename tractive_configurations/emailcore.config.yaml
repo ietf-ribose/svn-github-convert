@@ -46,6 +46,9 @@ labels:
   resolution:
     fixed: resolution_fixed
     wontfix: resolution_wontfix
+  keywords:
+    SMTP: keyword_SMTP
+    rfc5322: keyword_rfc5322
   component:
     email-applicability-statement:
       name: "component_email-applicability-statement"

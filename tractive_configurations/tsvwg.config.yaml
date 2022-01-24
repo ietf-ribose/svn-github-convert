@@ -97,6 +97,8 @@ labels:
     task: type_task
     defect: type_defect
     issue: type_issue
+  keywords:
+    dualq_L4S: keyword_dualq_L4S
   component:
     udp-guidelines:
       name: 'component: udp-guidelines'
