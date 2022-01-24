@@ -43,6 +43,7 @@ jobs:
           path: svn-git-maps
           
       - name: Test token
+        working-directory: conversion
         run: |
           ruby tmp.rb "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
 
