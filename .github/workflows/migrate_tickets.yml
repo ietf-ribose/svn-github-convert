@@ -15,7 +15,6 @@ jobs:
         git_repo:
           - tsvwg
           - emailcore
-          - dmarc
 
     steps:
       - name: Tractive - Install tractive
