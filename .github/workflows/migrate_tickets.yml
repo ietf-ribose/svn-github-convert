@@ -62,7 +62,7 @@ jobs:
         run: |
           tractive -M --filter \
             --column-name "component" \
-            --operator "NOT LIKE" \
+            --operator "LIKE" \
             --column-value "MailArchive:%"
             -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
             --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
