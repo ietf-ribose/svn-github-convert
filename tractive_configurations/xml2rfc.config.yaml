@@ -5,6 +5,8 @@ trac:
 
 github:
   repo: "ietf-svn-conversion/xml2rfc"
+  
+revmap_path: ./svn-git-maps/xml2rfc-revmap.txt
 
 labels:
   type:
