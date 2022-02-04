@@ -13,8 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         git_repo:
-          - tsvwg
-          - emailcore
+          - xml2rfc
+          - datatracker
+          - mailarch
 
     steps:
       - name: Tractive - Install tractive
@@ -40,5 +41,28 @@ jobs:
           path: svn-git-maps
 
       - name: Migrate Tickets
+        if: ${{ matrix.git_repo != 'datatracker' && matrix.git_repo != 'mailarch' }}
         run: |
-          tractive -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}" -M
+          tractive -M \
+            -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
+            --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
+
+      - name: Migrate Tickets
+        if: ${{ matrix.git_repo == 'datatracker' }}
+        run: |
+          tractive -M --include-null --filter \
+            --column-name "component" \
+            --operator "NOT LIKE" \
+            --column-value "MailArchive:%"
+            -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
+            --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
+
+      - name: Migrate Tickets
+        if: ${{ matrix.git_repo == 'mailarch' }}
+        run: |
+          tractive -M --filter \
+            --column-name "component" \
+            --operator "NOT LIKE" \
+            --column-value "MailArchive:%"
+            -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
+            --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"

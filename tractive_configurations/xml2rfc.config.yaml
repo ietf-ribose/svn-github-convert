@@ -1,0 +1,154 @@
+# tractive -c "xml2rfc.config.yaml" --git-token "{{ IETF_SVN_BOT_PAT_TOKEN }}" -M
+
+trac:
+  database: sqlite://trac-svn-db/trac/xml2rfc/db/trac.db
+
+github:
+  repo: "ietf-svn-conversion/xml2rfc"
+
+labels:
+  type:
+    defect: type_defect
+    task: type_task
+    enhancement: type_enhancement
+  resolution:
+    fixed: resolution_fixed
+    overtaken by events: resolution_overtaken by events
+    invalid: resolution_invalid
+    duplicate: resolution_duplicate
+    wontfix: resolution_wontfix
+    worksforme: resolution_worksforme
+    obe: resolution_obe
+  keywords:
+    author_list: keyword_author_list
+    list_symbols: keyword_list_symbols
+    table_page_break_keep: keyword_table_page_break_keep
+    caption_table: keyword_caption_table
+    table: keyword_table
+    header: keyword_header
+    install: keyword_install
+    Line_Breaks: keyword_Line_Breaks
+    Windows: keyword_Windows
+    private: keyword_private
+    processing_driective: keyword_processing_driective
+    crash_output: keyword_crash_output
+    date: keyword_date
+    rfcmixer: keyword_rfcmixer
+    doc_2629bis.html: keyword_doc_2629bis.html
+    zerolength_output: keyword_zerolength_output
+    xml2rfc_gui_table_captions: keyword_xml2rfc_gui_table_captions
+    ipr_bioilerplate: keyword_ipr_bioilerplate
+    vspace: keyword_vspace
+    xml:space: keyword_xml:space
+    spanx: keyword_spanx
+    style: keyword_style
+    reference_anchor: keyword_reference_anchor
+    filter: keyword_filter
+    appendix: keyword_appendix
+    appendices: keyword_appendices
+    section: keyword_section
+    reference: keyword_reference
+    wordwrap: keyword_wordwrap
+    v3: keyword_v3
+    pdf: keyword_pdf
+    pdf_(s): keyword_pdf_(s)
+    TI_state_risk: keyword_TI_state_risk
+    tests: keyword_tests
+    v2v3: keyword_v2v3
+    referencegroup: keyword_referencegroup
+    v2_to_v3_conversion: keyword_v2_to_v3_conversion
+  component:
+    Version 2 cli:
+      name: 'component: Version 2 cli'
+      color:
+    vocabulary:
+      name: 'component: vocabulary'
+      color:
+    xml2rfc.tcl:
+      name: 'component: xml2rfc.tcl'
+      color:
+    Version 2 cli nroff:
+      name: 'component: Version 2 cli nroff'
+      color:
+    Version 2 cli html:
+      name: 'component: Version 2 cli html'
+      color:
+    Version 2 cli install:
+      name: 'component: Version 2 cli install'
+      color:
+    Version 2 build:
+      name: 'component: Version 2 build'
+      color:
+    Version 2 cli txt:
+      name: 'component: Version 2 cli txt'
+      color:
+    Version 2 gui:
+      name: 'component: Version 2 gui'
+      color:
+    Version_3_cli_txt:
+      name: 'component: Version_3_cli_txt'
+      color:
+    Version_3_cli_html:
+      name: 'component: Version_3_cli_html'
+      color:
+    v3 vocabulary:
+      name: 'component: v3 vocabulary'
+      color:
+    preptool:
+      name: 'component: preptool'
+      color:
+    idnits3:
+      name: 'component: idnits3'
+      color:
+    rfclint:
+      name: 'component: rfclint'
+      color:
+  severity: {}
+  priority:
+    trivial:
+      name: trivial
+      color:
+    major:
+      name: major
+      color:
+    minor:
+      name: minor
+      color:
+    medium:
+      name: medium
+      color:
+    critical:
+      name: critical
+      color:
+    blocker:
+      name: blocker
+      color:
+  tracstate:
+    accepted:
+      name: accepted
+      color:
+    assigned:
+      name: assigned
+      color:
+    closed:
+      name: closed
+      color:
+    new:
+      name: new
+      color:
+    under_review:
+      name: under_review
+      color:
+    waiting:
+      name: waiting
+      color:
+
+ticket:
+  attachments:
+    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/ietfdb/attachments/ticket
+    hashed: true
+
+wiki:
+  attachments:
+    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/ietfdb/attachments/wiki
+    hashed: true

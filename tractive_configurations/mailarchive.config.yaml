@@ -1,12 +1,12 @@
-# tractive -c "datatracker.config.yaml" --filter --column-name "component" --operator "NOT LIKE" --column-value "MailArchive:%" -M
+# tractive -c "mailarchive.config.yaml" --filter --column-name "component" --operator "LIKE" --column-value "MailArchive:%" -M
 
 trac:
-  database: sqlite://trac-svn-db/trac/ietfdb/db/trac.db
+  database: sqlite://../../trac-svn-db/trac/ietfdb/db/trac.db
 
 github:
-  repo: "ietf-svn-conversion/datatracker"
+  repo: "ietf-svn-conversion/mailarch-final"
 
-revmap_path: ./svn-git-maps/datatracker-revmap.txt
+revmap_path: ./svn-git-maps/mailarch-revmap.txt
 
 milestones:
   Cleanup:
