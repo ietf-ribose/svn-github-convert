@@ -1,6 +1,8 @@
 name: migrate_tickets
 
 on:
+  push:
+    branches: [ for_migrating_ietfdb_repo ]
   workflow_run:
     workflows: [convert]
     types:
