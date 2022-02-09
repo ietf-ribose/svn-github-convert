@@ -15,7 +15,6 @@ jobs:
       fail-fast: false
       matrix:
         git_repo:
-          - xml2rfc
           - datatracker
           - mailarch
 
@@ -55,7 +54,7 @@ jobs:
           tractive -M --include-null --filter \
             --column-name "component" \
             --operator "NOT LIKE" \
-            --column-value "MailArchive:%"
+            --column-value "MailArchive:%" \
             -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
             --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
 
@@ -65,6 +64,6 @@ jobs:
           tractive -M --filter \
             --column-name "component" \
             --operator "LIKE" \
-            --column-value "MailArchive:%"
+            --column-value "MailArchive:%" \
             -c "./conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
             --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
