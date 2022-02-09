@@ -4,7 +4,7 @@ trac:
   database: sqlite://trac-svn-db/trac/ietfdb/db/trac.db
 
 github:
-  repo: "ietf-svn-conversion/mailarch-final"
+  repo: "ietf-svn-conversion/mailarch"
 
 revmap_path: ./svn-git-maps/mailarch-revmap.txt
 
