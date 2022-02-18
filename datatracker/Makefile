@@ -39,7 +39,7 @@ CVS_HOST = datatracker.cvs.sourceforge.net
 #CVS_HOST = cvs.savannah.gnu.org
 CVS_MODULE = datatracker
 #REMOTE_URL = cvs://$(CVS_HOST)/datatracker\#$(CVS_MODULE)
-READ_OPTIONS = --branchify=trunk:attic/*:branch/*:branch/*/*:personal/*:personal/*/*:sprint/*:sprint/*/*:tags/*:tags/dev/*:*
+READ_OPTIONS = --branchify=trunk:attic/*:branch/2.00:branch/3.00:branch/3.xx-trunk:branch/auth:branch/idsubmit:branch/iesg-datatracker:branch/new:branch/tzaware:branch/akayla/irsg/*:branch/elft:branch/hawk:branch/csky:branch/legacy:branch/amsl/*:branch/dash/*:branch/iola/*:branch/proceedings/*:branch/scow/*:branch/sean/*:branch/ssw/*:branch/yaco/*:personal/*/*:sprint/*:tags/*:tags/dev/*:tags/amsl/*:tags/id2xml/*:tags/idnits3/*:*
 DUMPFILTER = cat
 VERBOSITY = "set progress"
 REPOSURGEON = reposurgeon
