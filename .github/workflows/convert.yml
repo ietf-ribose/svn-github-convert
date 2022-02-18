@@ -18,10 +18,6 @@ jobs:
         svn_repo:
           - datatracker
           - mailarch
-          - vocabulary_design_team_2013_2017
-          - xml2rfc
-          - xml2rfc-bibxml
-          - xml2rfc-website
 
     # Service containers to run with `runner-job`
     services:
