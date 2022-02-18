@@ -2,7 +2,7 @@ name: convert
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, for_migrating_ietfdb_repo ]
     paths-ignore:
       - '.github/workflows/install_reposurgeon.yml'
   schedule:
