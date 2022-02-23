@@ -1908,6 +1908,7 @@ labels:
       color:
 
 ticket:
+  delete_mocked: true
   attachments:
     url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/ietfdb/attachments/ticket
     hashed: true
