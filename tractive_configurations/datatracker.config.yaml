@@ -1910,10 +1910,10 @@ labels:
 ticket:
   delete_mocked: true
   attachments:
-    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/ietfdb/attachments/ticket
+    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/datatracker/attachments/ticket
     hashed: true
 
 wiki:
   attachments:
-    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/ietfdb/attachments/wiki
+    url: https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/datatracker/attachments/wiki
     hashed: true
