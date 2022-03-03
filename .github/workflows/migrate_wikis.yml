@@ -61,7 +61,8 @@ jobs:
         run: |
           tractive migrate-wikis \
             -c "conversion/tractive_configurations/${{ matrix.git_repo }}.config.yaml" \
-            --repo-path "${{ matrix.git_repo }}.wiki"
+            --repo-path "${{ matrix.git_repo }}.wiki" \
+            --git-token "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
             
       - name: Push Wikis to Github
         working-directory: ${{ matrix.git_repo }}.wiki
