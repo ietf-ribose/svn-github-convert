@@ -14,7 +14,6 @@ jobs:
       matrix:
         git_repo:
           - datatracker
-          - mailarch
 
     steps:
       - name: Tractive - Install tractive
