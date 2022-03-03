@@ -12,7 +12,6 @@ jobs:
       matrix:
         svn_repo:
           - datatracker
-          - mailarch
 
     # Service containers to run with `runner-job`
     services:
