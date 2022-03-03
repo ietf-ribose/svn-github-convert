@@ -1,12 +1,7 @@
 name: convert
 
 on:
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - '.github/workflows/install_reposurgeon.yml'
-  schedule:
-    - cron: '0 2 * * *'  # every day at 2:00
+  workflow_dispatch:
 
 jobs:
   convert:
