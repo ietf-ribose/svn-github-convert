@@ -51,6 +51,7 @@ jobs:
           gem install rest-client
           gem install json
           gem install sequel
+          gem install sqlite3
       
       - name: Run script
         working-directory: conversion
