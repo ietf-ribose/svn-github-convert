@@ -41,7 +41,13 @@ jobs:
           repository: ietf-ribose/trac-svn-db
           token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
           path: trac-svn-db
-            
+      
+      - name: Install Gems
+        run: |
+          gem install rest-client
+          gem install json
+          gem install sequel
+      
       - name: Run script
         working-directory: conversion
         run: |
