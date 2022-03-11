@@ -15,11 +15,17 @@ REPO_IMAGE_FOLDER_MAPPING = {
   "xml2rfc" => "ietfdb"
 }.freeze
 
-DB_URL = "sqlite://../trac-svn-db/trac/xml2rfc/db/trac.db"
+REPO_DB_MAPPING = {
+  "datatracker" => "ietfdb",
+  "mailarch" => "ietfdb",
+  "xml2rfc" => "xml2rfc"
+}.freeze
+
+DB_URL = "sqlite://../trac-svn-db/trac/#{REPO_DB_MAPPING[REPO]}/db/trac.db"
 BASE_URL = "https://raw.githubusercontent.com/ietf-tools/svntrac-converted-attachments/main/#{REPO_IMAGE_FOLDER_MAPPING.fetch(REPO, REPO)}/attachments"
 COMMENT = "The attachments for these issues were lost in trac before the transition to github, \
-           and cannot be recovered. If the issue is still relevant, and the attachments can be \
-           reconstructed, please add them as new comments."
+and cannot be recovered. If the issue is still relevant, and the attachments can be \
+reconstructed, please add them as new comments."
 
 def attachment_path(id, filename)
   folder_name = Digest::SHA1.hexdigest(id)
