@@ -1,0 +1,48 @@
+name: add_comments
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  add_comments:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        git_repo:
+          - datatracker
+          - mailarch
+          - xml2rfc
+
+    steps:
+      - name: Setup Git
+        run: |
+          git config --global init.defaultBranch main
+          git config --global user.name "ietf-ribose-ci"
+          git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
+          
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_PRIVATE }}
+          
+      - uses: actions/checkout@v2
+        with:
+          path: conversion
+          
+      - name: Checkout trac-svn-db repo
+        uses: actions/checkout@v2
+        with:
+          repository: ietf-ribose/trac-svn-db
+          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
+          path: trac-svn-db
+            
+      - name: Run script
+        working-directory: conversion
+        run: |
+          ruby scripts/add_comments.rb "ietf-tools" "${{ matrix.git_repo }}" "${{ secrets.IETF_SVN_BOT_PAT_TOKEN }}"
