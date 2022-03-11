@@ -27,6 +27,7 @@ jobs:
           git config --global user.name "ietf-ribose-ci"
           git config --global user.email "ietf-ribose-ci@users.noreply.github.com"
           
+      - uses: ruby/setup-ruby@v1
       - uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.IETF_RIBOSE_CI_SSH_PRIVATE }}
