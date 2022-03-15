@@ -35,13 +35,6 @@ jobs:
         with:
           path: conversion
 
-      - name: Checkout wikis repo
-        uses: actions/checkout@v2
-        with:
-          repository: ietf-ribose/trac-svn-db
-          token: ${{ secrets.IETF_RIBOSE_CI_PAT }}
-          path: trac-svn-db
-
       - name: Clone ${{ matrix.git_repo }}.wiki
         run: |
           git clone git@github.com:hassanakbar4/${{ matrix.git_repo }}.wiki.git
