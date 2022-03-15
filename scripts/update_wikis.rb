@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'English'
+
 OLD_VALUE = ARGV[0] # 'https://github.com/ietf-svn-conversion/datatracker'
 NEW_VALUE = ARGV[1] # 'https://github.com/ietf-tools/datatracker'
 COMMIT_AUTHOR = ARGV[2]
